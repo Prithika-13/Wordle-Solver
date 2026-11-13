@@ -1,0 +1,363 @@
+{
+  "n_words": 2309,
+  "mean_difficulty": 3.485924642702469,
+  "cv_r2": {
+    "mean baseline": 0.0,
+    "linear": 0.22589809764986457,
+    "tree (depth 3)": 0.12876549226565814,
+    "random forest": 0.2473205331581253
+  },
+  "coefficients": [
+    {
+      "feature": "min_letter_freq",
+      "label": "Rarest letter's frequency",
+      "coef": -0.09917593707728317,
+      "lo": -0.12282430264625879,
+      "hi": -0.08156700974640953,
+      "spearman": -0.31035263946578945
+    },
+    {
+      "feature": "mean_letter_freq",
+      "label": "Letter commonness (mean)",
+      "coef": -0.08593780478099769,
+      "lo": -0.10724377905409761,
+      "hi": -0.06350908491060142,
+      "spearman": -0.33942351067828336
+    },
+    {
+      "feature": "cluster_size",
+      "label": "Look-alike cluster size (words sharing 4 letters in place)",
+      "coef": 0.0780358429905717,
+      "lo": 0.042020018240809344,
+      "hi": 0.11088407474751662,
+      "spearman": 0.16227904996558307
+    },
+    {
+      "feature": "opener_bucket",
+      "label": "Words sharing its colours after the best opener (log2)",
+      "coef": 0.07081466567150792,
+      "lo": 0.05528537329490271,
+      "hi": 0.08815436777425434,
+      "spearman": 0.2834856020344614
+    },
+    {
+      "feature": "dup_letters",
+      "label": "Repeated letters",
+      "coef": 0.061260017996656785,
+      "lo": 0.0471312384298324,
+      "hi": 0.07589125110044821,
+      "spearman": 0.130889813349346
+    },
+    {
+      "feature": "n_vowels",
+      "label": "Number of vowels",
+      "coef": 0.02065634582592512,
+      "lo": 0.00032560315166014803,
+      "hi": 0.036495649775900356,
+      "spearman": -0.11557486621245727
+    },
+    {
+      "feature": "n_neighbors",
+      "label": "Total one-letter neighbours",
+      "coef": 0.01425347043506435,
+      "lo": -0.02366389104379683,
+      "hi": 0.04824560800953421,
+      "spearman": 0.1378419748407228
+    },
+    {
+      "feature": "pos_score",
+      "label": "Positional letter-frequency score",
+      "coef": 0.009651834042141502,
+      "lo": -0.009187211498098856,
+      "hi": 0.02831017151584525,
+      "spearman": -0.08116528629342336
+    }
+  ],
+  "tree_rules": "|--- min_letter_freq <= 0.15\n|   |--- mean_letter_freq <= 0.22\n|   |   |--- opener_bucket <= 6.14\n|   |   |   |--- value: [3.60]\n|   |   |--- opener_bucket >  6.14\n|   |   |   |--- value: [3.88]\n|   |--- mean_letter_freq >  0.22\n|   |   |--- cluster_size <= 2.50\n|   |   |   |--- value: [3.44]\n|   |   |--- cluster_size >  2.50\n|   |   |   |--- value: [3.62]\n|--- min_letter_freq >  0.15\n|   |--- opener_bucket <= 6.37\n|   |   |--- min_letter_freq <= 0.22\n|   |   |   |--- value: [3.28]\n|   |   |--- min_letter_freq >  0.22\n|   |   |   |--- value: [3.06]\n|   |--- opener_bucket >  6.37\n|   |   |--- n_neighbors <= 1.50\n|   |   |   |--- value: [3.36]\n|   |   |--- n_neighbors >  1.50\n|   |   |   |--- value: [3.61]\n",
+  "cluster_curve": [
+    {
+      "bin": "none",
+      "words": 572,
+      "mean_difficulty": 3.4313811188811187
+    },
+    {
+      "bin": "2-3",
+      "words": 1322,
+      "mean_difficulty": 3.4582072617246595
+    },
+    {
+      "bin": "4-6",
+      "words": 377,
+      "mean_difficulty": 3.6193633952254642
+    },
+    {
+      "bin": "7-9",
+      "words": 38,
+      "mean_difficulty": 3.9473684210526314
+    }
+  ],
+  "hardest": [
+    {
+      "word": "boxer",
+      "difficulty": 5.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 0,
+      "cluster_pattern": "",
+      "cluster_members": "",
+      "dup_letters": 0,
+      "min_letter_freq": 0.016,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "watch",
+      "difficulty": 5.25,
+      "entropy_guesses": 5.0,
+      "cluster_size": 7,
+      "cluster_pattern": "_atch",
+      "cluster_members": "batch, catch, hatch, latch, match, patch",
+      "dup_letters": 0,
+      "min_letter_freq": 0.084,
+      "opener_bucket": 7.098
+    },
+    {
+      "word": "waver",
+      "difficulty": 5.25,
+      "entropy_guesses": 6.0,
+      "cluster_size": 4,
+      "cluster_pattern": "wa_er",
+      "cluster_members": "wafer, wager, water",
+      "dup_letters": 0,
+      "min_letter_freq": 0.064,
+      "opener_bucket": 5.931
+    },
+    {
+      "word": "joker",
+      "difficulty": 5.25,
+      "entropy_guesses": 4.0,
+      "cluster_size": 2,
+      "cluster_pattern": "_oker",
+      "cluster_members": "poker",
+      "dup_letters": 0,
+      "min_letter_freq": 0.012,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "wight",
+      "difficulty": 5.0,
+      "entropy_guesses": 4.0,
+      "cluster_size": 9,
+      "cluster_pattern": "_ight",
+      "cluster_members": "eight, fight, light, might, night, right, sight, tight",
+      "dup_letters": 0,
+      "min_letter_freq": 0.084,
+      "opener_bucket": 7.508
+    },
+    {
+      "word": "bound",
+      "difficulty": 5.0,
+      "entropy_guesses": 4.0,
+      "cluster_size": 8,
+      "cluster_pattern": "_ound",
+      "cluster_members": "found, hound, mound, pound, round, sound, wound",
+      "dup_letters": 0,
+      "min_letter_freq": 0.115,
+      "opener_bucket": 6.443
+    },
+    {
+      "word": "cover",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 5,
+      "cluster_pattern": "_over",
+      "cluster_members": "hover, lover, mover, rover",
+      "dup_letters": 0,
+      "min_letter_freq": 0.064,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "mover",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 5,
+      "cluster_pattern": "_over",
+      "cluster_members": "cover, hover, lover, rover",
+      "dup_letters": 0,
+      "min_letter_freq": 0.064,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "bitty",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 4,
+      "cluster_pattern": "_itty",
+      "cluster_members": "ditty, kitty, witty",
+      "dup_letters": 1,
+      "min_letter_freq": 0.115,
+      "opener_bucket": 7.508
+    },
+    {
+      "word": "baker",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 3,
+      "cluster_pattern": "_aker",
+      "cluster_members": "maker, taker",
+      "dup_letters": 0,
+      "min_letter_freq": 0.087,
+      "opener_bucket": 5.931
+    },
+    {
+      "word": "poker",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 3,
+      "cluster_pattern": "po_er",
+      "cluster_members": "poser, power",
+      "dup_letters": 0,
+      "min_letter_freq": 0.087,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "frame",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 2,
+      "cluster_pattern": "f_ame",
+      "cluster_members": "flame",
+      "dup_letters": 0,
+      "min_letter_freq": 0.089,
+      "opener_bucket": 4.248
+    },
+    {
+      "word": "poppy",
+      "difficulty": 5.0,
+      "entropy_guesses": 5.0,
+      "cluster_size": 2,
+      "cluster_pattern": "p_ppy",
+      "cluster_members": "puppy",
+      "dup_letters": 2,
+      "min_letter_freq": 0.149,
+      "opener_bucket": 6.443
+    },
+    {
+      "word": "wound",
+      "difficulty": 4.75,
+      "entropy_guesses": 5.0,
+      "cluster_size": 8,
+      "cluster_pattern": "_ound",
+      "cluster_members": "bound, found, hound, mound, pound, round, sound",
+      "dup_letters": 0,
+      "min_letter_freq": 0.084,
+      "opener_bucket": 6.443
+    },
+    {
+      "word": "batch",
+      "difficulty": 4.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 7,
+      "cluster_pattern": "_atch",
+      "cluster_members": "catch, hatch, latch, match, patch, watch",
+      "dup_letters": 0,
+      "min_letter_freq": 0.115,
+      "opener_bucket": 7.098
+    },
+    {
+      "word": "cower",
+      "difficulty": 4.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 7,
+      "cluster_pattern": "_ower",
+      "cluster_members": "lower, mower, power, rower, sower, tower",
+      "dup_letters": 0,
+      "min_letter_freq": 0.084,
+      "opener_bucket": 4.459
+    },
+    {
+      "word": "brown",
+      "difficulty": 4.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 5,
+      "cluster_pattern": "_rown",
+      "cluster_members": "crown, drown, frown, grown",
+      "dup_letters": 0,
+      "min_letter_freq": 0.084,
+      "opener_bucket": 5.883
+    },
+    {
+      "word": "briny",
+      "difficulty": 4.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 4,
+      "cluster_pattern": "brin_",
+      "cluster_members": "brine, bring, brink",
+      "dup_letters": 0,
+      "min_letter_freq": 0.115,
+      "opener_bucket": 5.833
+    },
+    {
+      "word": "kitty",
+      "difficulty": 4.75,
+      "entropy_guesses": 5.0,
+      "cluster_size": 4,
+      "cluster_pattern": "_itty",
+      "cluster_members": "bitty, ditty, witty",
+      "dup_letters": 1,
+      "min_letter_freq": 0.087,
+      "opener_bucket": 7.508
+    },
+    {
+      "word": "vouch",
+      "difficulty": 4.75,
+      "entropy_guesses": 4.0,
+      "cluster_size": 4,
+      "cluster_pattern": "_ouch",
+      "cluster_members": "couch, pouch, touch",
+      "dup_letters": 0,
+      "min_letter_freq": 0.064,
+      "opener_bucket": 6.443
+    }
+  ],
+  "easiest": [
+    {
+      "word": "sauce",
+      "difficulty": 2.25
+    },
+    {
+      "word": "solve",
+      "difficulty": 2.25
+    },
+    {
+      "word": "title",
+      "difficulty": 2.25
+    },
+    {
+      "word": "later",
+      "difficulty": 2.25
+    },
+    {
+      "word": "easel",
+      "difficulty": 2.5
+    },
+    {
+      "word": "facet",
+      "difficulty": 2.5
+    },
+    {
+      "word": "lapse",
+      "difficulty": 2.5
+    },
+    {
+      "word": "satin",
+      "difficulty": 2.5
+    },
+    {
+      "word": "valet",
+      "difficulty": 2.5
+    },
+    {
+      "word": "alter",
+      "difficulty": 2.5
+    }
+  ]
+}

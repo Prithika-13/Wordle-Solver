@@ -1,4 +1,4 @@
-.PHONY: test baselines train eval plots app
+.PHONY: test baselines train eval plots difficulty app
 
 test:
 	python -m pytest -q
@@ -15,6 +15,9 @@ eval:
 
 plots:
 	python scripts/plots.py
+
+difficulty:
+	python scripts/difficulty.py
 
 app:
 	streamlit run app/streamlit_app.py

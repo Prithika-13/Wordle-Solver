@@ -40,9 +40,7 @@ On all 2,309 answers the entropy solver averages **3.463** (opener `soare`, 100%
 - **The assisted agent chose different openers** (`salet` for seeds 0 and 1, `raile` for
   seed 2) than the entropy solver (`soare`) yet scores the same, which shows that several
   openers are near-equivalent under the greedy criterion.
-- **Hardest words** (highest average guesses across the entropy and RL solvers on the test
-  split) include `joker`, `brown`, `witty`, `frame`, `goner`, `fight` and `paddy`. I did not
-  investigate why; a likely cause is that many look-alike words survive the first guesses.
+- **Hardest words** are analysed in the next section (look-alike clusters and rare letters).
 
 ### Caveats (read before quoting the numbers)
 - The assisted agent chooses among a **shortlist of 48 words ranked by entropy** (40 top-entropy
@@ -55,18 +53,60 @@ On all 2,309 answers the entropy solver averages **3.463** (opener `soare`, 100%
 - 300 PPO iterations × 128 episodes (~38k games) per seed; a longer run might close the small
   remaining gap, but I did not test that.
 
+## Interactive dashboard
+
+`streamlit run app/streamlit_app.py` opens **Wordle Solver Lab** with five tabs:
+
+| Tab | What it does |
+|---|---|
+| 🎮 Solve a game | Enter your real guesses and colours (click a square to cycle gray/yellow/green). See what all four solvers would play next, with expected bits. |
+| 🔎 Watch a word | Pick any answer and watch every solver play it side by side, with the information each guess revealed. |
+| 📊 Results | Held-out comparison, guess distribution and the RL learning curves. |
+| 🧠 Why words are hard | The difficulty analysis below, a top-20 table and a lookup for any word. |
+| 📖 How it works | Short explanation of the two techniques and the limits. |
+
+![play](docs/ui_play.png)
+![results](docs/ui_results.png)
+![insights](docs/ui_insights.png)
+
+## Why are some words hard? (difficulty analysis)
+
+`python scripts/difficulty.py` measures how many guesses each of the 2,309 answers needs
+(average over the entropy solver and the three assisted RL agents) and fits interpretable
+models on 8 word features.
+
+![difficulty](results/difficulty.png)
+
+- **Word features only explain a modest share of the difficulty.** Cross-validated R²:
+  linear model **0.23**, depth-3 decision tree 0.13, random forest 0.25. The rest depends on
+  which specific words survive each guess, which these features can't capture.
+- **Clear drivers** (standardised effect, 95% bootstrap interval excludes zero): words with a
+  **rare letter** (+0.10 guesses per standard deviation) or generally uncommon letters,
+  **look-alike clusters** (+0.08), words that stay **crowded after the best opener** (+0.07) and
+  **repeated letters** (+0.06). One-letter neighbours and positional letter frequency show no clear effect.
+- **Look-alike clusters matter most at the extreme.** Words sharing 4 letters in place with
+  7-9 other words (`_ATCH`, `_IGHT`, `_OUND`) average **3.95** guesses, versus 3.43 for words
+  with no cluster. Only 38 words are in that bucket.
+- **Hardest words:** `boxer` (5.75), then `watch`, `waver`, `joker` (5.25), then `wight`, `bound`,
+  `cover`, `mover`, `bitty`, `baker`, `poker`, `frame`, `poppy` (5.00). Two kinds: crowded
+  clusters (`watch`, `wight`, `bound`, `cover`) and rare or repeated letters (`boxer`, `joker`, `poppy`).
+- **Caveats:** difficulty is measured for these solvers, not for human players, and the analysis is
+  correlational.
+
 ## Project layout
 ```
 data/        answers.txt, allowed.txt (+ cached feedback_matrix.npy, git-ignored, rebuilt on first run)
 src/
   feedback.py      feedback with correct duplicate letters, vectorised matrix
   features.py      per-word features + shortlist for the RL agent
+  difficulty.py    word-difficulty features (look-alike clusters, letter rarity, ...)
   env.py           Gymnasium environment
   evaluate.py      run solvers over all answers
   solvers/         random, frequency, entropy, rl_agent
 scripts/
   train_rl.py      PPO training    compare.py   held-out comparison    plots.py   figures
-app/streamlit_app.py   enter your real Wordle feedback, get the best next guess
+  difficulty.py    why are some words hard?  (results/difficulty.csv, difficulty_report.json)
+app/streamlit_app.py   the 5-tab dashboard
 tests/             pytest suite (feedback edge cases, solvers, env)
 results/           CSVs, figures, trained policies (*.pt)
 ```
@@ -79,7 +119,8 @@ make baselines                                   # random / frequency / entropy 
 python scripts/train_rl.py --mode assisted --seed 0 --iters 300   # ~14 min on 1 CPU thread
 python scripts/train_rl.py --mode blind    --seed 0 --iters 300   # ~3.5 min
 python scripts/compare.py && python scripts/plots.py
-make app                                         # interactive helper
+python scripts/difficulty.py                     # difficulty analysis
+make app                                         # dashboard (needs torch for the RL solvers)
 ```
 
 ## Design notes
