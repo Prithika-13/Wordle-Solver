@@ -55,19 +55,31 @@ On all 2,309 answers the entropy solver averages **3.463** (opener `soare`, 100%
 
 ## Interactive dashboard
 
-`streamlit run app/streamlit_app.py` opens **Wordle Solver Lab** with five tabs:
+`streamlit run app/streamlit_app.py` opens **Wordle Solver Lab** with six tabs:
 
 | Tab | What it does |
 |---|---|
 | 🎮 Solve a game | Enter your real guesses and colours (click a square to cycle gray/yellow/green). See what all four solvers would play next, with expected bits. |
+| 🎓 Coach report | Grades every guess of your game (or a pasted one): **skill** (was it a good question?) versus **luck** (was the feedback kind?), with the best alternative for each guess and a replay of the entropy solver on the same answer. |
 | 🔎 Watch a word | Pick any answer and watch every solver play it side by side, with the information each guess revealed. |
 | 📊 Results | Held-out comparison, guess distribution and the RL learning curves. |
 | 🧠 Why words are hard | The difficulty analysis below, a top-20 table and a lookup for any word. |
 | 📖 How it works | Short explanation of the two techniques and the limits. |
 
 ![play](docs/ui_play.png)
+![coach](docs/ui_coach.png)
 ![results](docs/ui_results.png)
 ![insights](docs/ui_insights.png)
+
+## Coach report: skill vs. luck
+
+For each guess the coach computes the **expected bits** the guess should reveal (entropy over the
+words still possible) and compares it with the **best available** guess. The ratio is the guess's
+*skill* score. The information the colours *actually* revealed, minus the expectation, is the
+*luck*. Example: opening with `funny` scores 3.33 expected bits against 5.89 for `soare` (a "Weak"
+guess), and it was also unlucky (-2.15 bits). Pass a finished game and the report also replays the
+entropy solver on the same answer. Logic lives in `src/coach.py` (unit-tested); limits: it assumes
+all remaining words are equally likely, so it can't judge guesses by word familiarity.
 
 ## Why are some words hard? (difficulty analysis)
 
@@ -100,13 +112,14 @@ src/
   feedback.py      feedback with correct duplicate letters, vectorised matrix
   features.py      per-word features + shortlist for the RL agent
   difficulty.py    word-difficulty features (look-alike clusters, letter rarity, ...)
+  coach.py         per-guess skill / luck grading of a game
   env.py           Gymnasium environment
   evaluate.py      run solvers over all answers
   solvers/         random, frequency, entropy, rl_agent
 scripts/
   train_rl.py      PPO training    compare.py   held-out comparison    plots.py   figures
   difficulty.py    why are some words hard?  (results/difficulty.csv, difficulty_report.json)
-app/streamlit_app.py   the 5-tab dashboard
+app/streamlit_app.py   the 6-tab dashboard
 tests/             pytest suite (feedback edge cases, solvers, env)
 results/           CSVs, figures, trained policies (*.pt)
 ```

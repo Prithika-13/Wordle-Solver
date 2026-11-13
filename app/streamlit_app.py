@@ -17,7 +17,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from src.feedback import ALL_GREEN, decode, encode
+from src.coach import analyze as coach_analyze
+from src.coach import parse_game
+from src.feedback import ALL_GREEN, decode, encode, feedback as fb_code
 from src.solvers.entropy import EntropySolver, entropy_scores
 from src.solvers.heuristic import FrequencyHeuristic
 
@@ -223,8 +225,8 @@ st.markdown(
 if not RL_OK:
     st.warning("PyTorch isn't installed, so the RL agents are hidden. Run `pip install torch` to enable them.")
 
-tab_play, tab_watch, tab_results, tab_insights, tab_about = st.tabs(
-    ["🎮 Solve a game", "🔎 Watch a word", "📊 Results", "🧠 Why words are hard", "📖 How it works"]
+tab_play, tab_coach, tab_watch, tab_results, tab_insights, tab_about = st.tabs(
+    ["🎮 Solve a game", "🎓 Coach report", "🔎 Watch a word", "📊 Results", "🧠 Why words are hard", "📖 How it works"]
 )
 
 # ==============================================================================================
@@ -361,7 +363,161 @@ with tab_play:
             st.error("No word matches that feedback.")
 
 # ==============================================================================================
-# TAB 2 - watch solvers play a word
+# TAB 2 - coach report
+# ==============================================================================================
+RATING_COLOR = {"Excellent": GREEN, "Good": "#3f8fbf", "Okay": YELLOW, "Weak": "#c0504d"}
+
+
+@st.cache_data(show_spinner="Grading your guesses...")
+def coach_report(game: tuple) -> dict:
+    return coach_analyze(ENT, list(game))
+
+
+def make_example(answer: str, words: list[str]) -> list[tuple[str, str]]:
+    return [(w, decode(fb_code(w, answer))) for w in words]
+
+
+EXAMPLES = {
+    "Smart play, unlucky": make_example("witty", ["soare", "clint", "ditty", "aback", "witty"]),
+    "A rough game": make_example("joker", ["funny", "bacon", "stove", "poker", "joker"]),
+}
+
+
+def coach_load(game):
+    st.session_state.coach_game = game
+    st.session_state.coach_err = None
+
+
+def coach_parse():
+    try:
+        coach_load(parse_game(st.session_state.coach_text))
+        if not st.session_state.coach_game:
+            raise ValueError("paste at least one line, e.g.  soare -Y--G")
+    except (ValueError, KeyError) as e:
+        st.session_state.coach_err = str(e) if isinstance(e, ValueError) else "Use G / Y / - (or the emoji squares) for the colours."
+        st.session_state.coach_game = None
+
+
+def coach_reset():
+    st.session_state.coach_game = None
+    st.session_state.coach_err = None
+
+
+st.session_state.setdefault("coach_game", None)
+st.session_state.setdefault("coach_err", None)
+st.session_state.setdefault("coach_text", "")
+
+with tab_coach:
+    st.subheader("Coach report")
+    st.caption("Every guess is graded against the best possible guess. **Skill** = did you ask a good question? **Luck** = was the answer kind to you?")
+    game = st.session_state.coach_game
+    using_own = game is None
+    game = [tuple(x) for x in (st.session_state.history if using_own else game)]
+
+    src_cols = st.columns([3, 2.2, 2.2, 1])
+    src_cols[0].markdown(
+        f"Analysing: **{'your game from the Solve tab' if using_own else 'a loaded game'}** ({len(game)} guess{'es' if len(game) != 1 else ''})")
+    for col, (label, g) in zip(src_cols[1:], list(EXAMPLES.items())):
+        col.button(f"Try: {label}", key=f"ex_{label}", on_click=coach_load, args=(g,), width="stretch")
+    with st.expander("Paste a game to analyse", expanded=False):
+        st.text_area("One guess per line: word then colours (G = green, Y = yellow, - = gray, or the 🟩🟨⬛ squares)",
+                     key="coach_text", height=140, placeholder="soare -----\nclint --Y-Y\nditty -GGGG\nwitty GGGGG")
+        b1, b2 = st.columns([1, 1])
+        b1.button("Analyse pasted game", on_click=coach_parse, type="primary")
+        b2.button("Back to my game", on_click=coach_reset, disabled=using_own)
+    if st.session_state.coach_err:
+        st.error(st.session_state.coach_err)
+
+    if not game:
+        st.info("Play a few guesses in the **Solve a game** tab, or load an example above, to see your report.")
+    else:
+        try:
+            rep = coach_report(tuple(game))
+        except ValueError as e:
+            rep = None
+            st.error(f"Can't grade this game: {e}")
+        if rep:
+            sg = rep["solver_game"]
+            m1, m2, m3, m4 = st.columns(4)
+            m1.metric("Guesses used", rep["n_guesses"], f"solver: {len(sg)}" if sg else None, delta_color="off")
+            m2.metric("Skill", f"{rep['skill']:.0%}", help="Your guesses' expected information divided by the best possible guesses' (100% = perfect).")
+            m3.metric("Luck", f"{rep['luck_bits']:+.1f} bits", help="Information you actually got minus what your guesses were expected to give. Positive = lucky.")
+            m4.metric("Result", "Solved ✅" if rep["solved"] else f"{rep['remaining']:,} left")
+            st.markdown(f"<div class='takeaway'>{rep['verdict']}</div>", unsafe_allow_html=True)
+
+            if sg:
+                bc1, bc2 = st.columns(2)
+                with bc1:
+                    st.markdown("**Your game**")
+                    st.markdown(board([(t["word"], t["pattern"]) for t in rep["turns"]], rows=max(6, len(rep["turns"])), size="sm"),
+                                unsafe_allow_html=True)
+                with bc2:
+                    st.markdown("**Entropy solver on the same answer**")
+                    st.markdown(board(sg, rows=max(6, len(rep["turns"])), size="sm"), unsafe_allow_html=True)
+
+            st.markdown("<div style='height:1.2rem'></div>", unsafe_allow_html=True)
+            st.markdown("#### Guess by guess")
+            for t in rep["turns"]:
+                with st.container(border=True):
+                    cl, cr = st.columns([3, 8], gap="large")
+                    with cl:
+                        st.markdown(f"**Guess {t['turn']}** &nbsp; {pill(t['rating'], RATING_COLOR[t['rating']])}", unsafe_allow_html=True)
+                        st.markdown(f"<div class='board'>{tiles(t['word'], t['pattern'], 'sm')}</div>", unsafe_allow_html=True)
+                        st.caption(f"{t['n_before']:,} → {t['n_after']:,} answers")
+                    with cr:
+                        a, b, c = st.columns(3)
+                        gap = t["expected_bits"] - t["best_bits"]
+                        a.metric("Your guess (expected)", f"{t['expected_bits']:.2f} bits",
+                                 f"{gap:+.2f} vs best" if gap < -0.005 else "best choice", delta_color="normal" if gap < -0.005 else "off")
+                        b.metric(f"Best: {t['best_word'].upper()}", f"{t['best_bits']:.2f} bits")
+                        c.metric("Actually revealed", f"{t['actual_bits']:.2f} bits", f"{t['luck']:+.2f} luck" if abs(t["luck"]) > 0.005 else "as expected",
+                                 delta_color="normal" if abs(t["luck"]) > 0.005 else "off")
+                        st.caption(t["note"] + (f"  ·  Better than {t['percentile']:.0f}% of all words." if t["n_before"] > 1 else ""))
+
+            st.markdown("#### Expected vs. actual information per guess")
+            long = pd.DataFrame([
+                dict(guess=f"{t['turn']}. {t['word'].upper()}", series=name, bits=t[key])
+                for t in rep["turns"] for name, key in [("Your guess (expected)", "expected_bits"), ("Best possible (expected)", "best_bits"),
+                                                         ("Actually revealed", "actual_bits")]
+            ])
+            ch = alt.Chart(long).mark_bar().encode(
+                x=alt.X("guess:N", sort=None, title=None, axis=alt.Axis(labelAngle=0)),
+                xOffset=alt.XOffset("series:N", sort=None),
+                y=alt.Y("bits:Q", title="bits of information"),
+                color=alt.Color("series:N", sort=None, legend=alt.Legend(orient="top", title=None),
+                                scale=alt.Scale(domain=["Your guess (expected)", "Best possible (expected)", "Actually revealed"],
+                                                range=["#2f7fd8", "#3fbf8f", "#e0762b"])),
+                tooltip=["guess", "series", alt.Tooltip("bits:Q", format=".2f")],
+            )
+            st.altair_chart(ch.properties(height=280), width="stretch")
+
+            ins = []
+            if rep["biggest_miss"]:
+                m = rep["biggest_miss"]
+                ins.append(f"**Biggest missed opportunity:** guess {m['turn']} ({m['word'].upper()}) gave {m['expected_bits']:.2f} expected bits; "
+                           f"{m['best_word'].upper()} would have given {m['best_bits']:.2f}.")
+            if rep.get("luckiest") and rep["luckiest"]["luck"] > 0.3:
+                ins.append(f"**Luckiest guess:** {rep['luckiest']['turn']} ({rep['luckiest']['word'].upper()}), {rep['luckiest']['luck']:+.1f} bits above expectation.")
+            if rep.get("unluckiest") and rep["unluckiest"]["luck"] < -0.3:
+                ins.append(f"**Unluckiest guess:** {rep['unluckiest']['turn']} ({rep['unluckiest']['word'].upper()}), {rep['unluckiest']['luck']:+.1f} bits below expectation.")
+            if not ins:
+                ins.append("No clear mistakes and no big swings of luck. A clean game.")
+            for i in ins:
+                st.markdown(f"- {i}")
+
+    with st.expander("How is this graded?"):
+        st.markdown(
+            "- **Expected bits** of a guess: how much it should reveal on average, given the words still possible "
+            "(the same entropy score the solver maximises).\n"
+            "- **Skill** = your expected bits / the best available expected bits. 100% means you always asked the best question.\n"
+            "- **Actual bits** = log2(words before / words after). It depends on the colours you happened to get.\n"
+            "- **Luck** = actual - expected. Positive means the feedback eliminated more words than average.\n"
+            "- A guess that was still a possible answer is never marked down when two or fewer words remain.\n"
+            "- Limits: the grader assumes every remaining word is equally likely, so it can't judge guesses by word familiarity."
+        )
+
+# ==============================================================================================
+# TAB 3 - watch solvers play a word
 # ==============================================================================================
 diff_df, diff_rep = load_difficulty()
 
@@ -424,7 +580,7 @@ with tab_watch:
     st.caption("“left” = answers still possible after that guess · “bits” = information that guess revealed.")
 
 # ==============================================================================================
-# TAB 3 - results
+# TAB 4 - results
 # ==============================================================================================
 with tab_results:
     ev = load_eval()
@@ -514,7 +670,7 @@ with tab_results:
             )
 
 # ==============================================================================================
-# TAB 4 - difficulty analysis
+# TAB 5 - difficulty analysis
 # ==============================================================================================
 with tab_insights:
     if diff_df is None:
@@ -627,7 +783,7 @@ with tab_insights:
         st.caption("Difficulty is measured for these solvers, not for human players. Humans use word familiarity and intuition that this analysis doesn't model.")
 
 # ==============================================================================================
-# TAB 5 - how it works
+# TAB 6 - how it works
 # ==============================================================================================
 with tab_about:
     st.subheader("How it works")
@@ -655,6 +811,7 @@ with tab_about:
     st.markdown("#### Where this app gets its numbers")
     st.markdown(
         "- **Solve a game / Watch a word** run the trained solvers live.\n"
+        "- **Coach report** grades each of your guesses by information gained (skill) versus what the feedback happened to give (luck).\n"
         "- **Results** come from `results/eval_all.csv`, every solver playing every answer.\n"
         "- **Why words are hard** comes from `scripts/difficulty.py`, which regresses each word's difficulty on interpretable features."
     )
