@@ -1,0 +1,2310 @@
+solver,answer,solved,n_guesses,score,guesses
+entropy-cand,aback,True,3,3,raise float aback
+entropy-cand,abase,True,3,3,raise cease abase
+entropy-cand,abate,True,3,3,raise blade abate
+entropy-cand,abbey,True,4,4,raise cleat beady abbey
+entropy-cand,abbot,True,3,3,raise float abbot
+entropy-cand,abhor,True,4,4,raise adorn arbor abhor
+entropy-cand,abide,True,3,3,raise alike abide
+entropy-cand,abled,True,4,4,raise cleat fella abled
+entropy-cand,abode,True,3,3,raise blade abode
+entropy-cand,abort,True,3,3,raise adorn abort
+entropy-cand,about,True,3,3,raise float about
+entropy-cand,above,True,3,3,raise blade above
+entropy-cand,abuse,True,3,3,raise cease abuse
+entropy-cand,abyss,True,3,3,raise slash abyss
+entropy-cand,acorn,True,3,3,raise adorn acorn
+entropy-cand,acrid,True,3,3,raise trail acrid
+entropy-cand,actor,True,4,4,raise adorn arbor actor
+entropy-cand,acute,True,3,3,raise blade acute
+entropy-cand,adage,True,3,3,raise blade adage
+entropy-cand,adapt,True,3,3,raise float adapt
+entropy-cand,adept,True,3,3,raise cleat adept
+entropy-cand,admin,True,4,4,raise tidal aphid admin
+entropy-cand,admit,True,3,3,raise tidal admit
+entropy-cand,adobe,True,3,3,raise blade adobe
+entropy-cand,adopt,True,4,4,raise float about adopt
+entropy-cand,adore,True,3,3,raise grace adore
+entropy-cand,adorn,True,2,2,raise adorn
+entropy-cand,adult,True,3,3,raise float adult
+entropy-cand,affix,True,3,3,raise tidal affix
+entropy-cand,afire,True,2,2,raise afire
+entropy-cand,afoot,True,3,3,raise float afoot
+entropy-cand,afoul,True,3,3,raise float afoul
+entropy-cand,after,True,3,3,raise alert after
+entropy-cand,again,True,4,4,raise tidal affix again
+entropy-cand,agape,True,4,4,raise blade heave agape
+entropy-cand,agate,True,5,5,raise blade heave agape agate
+entropy-cand,agent,True,4,4,raise cleat adept agent
+entropy-cand,agile,True,3,3,raise alike agile
+entropy-cand,aging,True,3,3,raise align aging
+entropy-cand,aglow,True,4,4,raise float koala aglow
+entropy-cand,agony,True,3,3,raise float agony
+entropy-cand,agree,True,3,3,raise grace agree
+entropy-cand,ahead,True,3,3,raise cleat ahead
+entropy-cand,aider,True,2,2,raise aider
+entropy-cand,aisle,True,2,2,raise aisle
+entropy-cand,alarm,True,3,3,raise adorn alarm
+entropy-cand,album,True,4,4,raise float black album
+entropy-cand,alert,True,2,2,raise alert
+entropy-cand,algae,True,3,3,raise blade algae
+entropy-cand,alibi,True,3,3,raise align alibi
+entropy-cand,alien,True,2,2,raise alien
+entropy-cand,align,True,2,2,raise align
+entropy-cand,alike,True,2,2,raise alike
+entropy-cand,alive,True,3,3,raise alike alive
+entropy-cand,allay,True,3,3,raise float allay
+entropy-cand,alley,True,3,3,raise cleat alley
+entropy-cand,allot,True,3,3,raise float allot
+entropy-cand,allow,True,3,3,raise float allow
+entropy-cand,alloy,True,4,4,raise float allow alloy
+entropy-cand,aloft,True,3,3,raise float aloft
+entropy-cand,alone,True,4,4,raise blade algae alone
+entropy-cand,along,True,3,3,raise float along
+entropy-cand,aloof,True,3,3,raise float aloof
+entropy-cand,aloud,True,4,4,raise float along aloud
+entropy-cand,alpha,True,4,4,raise float black alpha
+entropy-cand,altar,True,3,3,raise adorn altar
+entropy-cand,alter,True,3,3,raise alert alter
+entropy-cand,amass,True,3,3,raise slash amass
+entropy-cand,amaze,True,5,5,raise blade heave agape amaze
+entropy-cand,amber,True,3,3,raise alert amber
+entropy-cand,amble,True,3,3,raise blade amble
+entropy-cand,amend,True,3,3,raise cleat amend
+entropy-cand,amiss,True,2,2,raise amiss
+entropy-cand,amity,True,3,3,raise align amity
+entropy-cand,among,True,4,4,raise float agony among
+entropy-cand,ample,True,3,3,raise blade ample
+entropy-cand,amply,True,3,3,raise float amply
+entropy-cand,amuse,True,4,4,raise cease abuse amuse
+entropy-cand,angel,True,4,4,raise cleat fella angel
+entropy-cand,anger,True,4,4,raise alert amber anger
+entropy-cand,angle,True,4,4,raise blade ample angle
+entropy-cand,angry,True,3,3,raise adorn angry
+entropy-cand,angst,True,3,3,raise slash angst
+entropy-cand,anime,True,4,4,raise alike abide anime
+entropy-cand,ankle,True,5,5,raise blade ample angle ankle
+entropy-cand,annex,True,4,4,raise cleat beady annex
+entropy-cand,annoy,True,4,4,raise float comma annoy
+entropy-cand,annul,True,4,4,raise float amply annul
+entropy-cand,anode,True,3,3,raise blade anode
+entropy-cand,antic,True,3,3,raise tidal antic
+entropy-cand,anvil,True,3,3,raise tidal anvil
+entropy-cand,aorta,True,4,4,raise adorn arbor aorta
+entropy-cand,apart,True,4,4,raise adorn alarm apart
+entropy-cand,aphid,True,3,3,raise tidal aphid
+entropy-cand,aping,True,4,4,raise align aging aping
+entropy-cand,apnea,True,5,5,raise cleat beady annex apnea
+entropy-cand,apple,True,4,4,raise blade ample apple
+entropy-cand,apply,True,4,4,raise float amply apply
+entropy-cand,apron,True,3,3,raise adorn apron
+entropy-cand,aptly,True,3,3,raise float aptly
+entropy-cand,arbor,True,3,3,raise adorn arbor
+entropy-cand,ardor,True,3,3,raise adorn ardor
+entropy-cand,arena,True,3,3,raise alert arena
+entropy-cand,argue,True,3,3,raise grace argue
+entropy-cand,arise,True,2,2,raise arise
+entropy-cand,armor,True,4,4,raise adorn arbor armor
+entropy-cand,aroma,True,3,3,raise adorn aroma
+entropy-cand,arose,True,2,2,raise arose
+entropy-cand,array,True,4,4,raise adorn altar array
+entropy-cand,arrow,True,4,4,raise adorn arbor arrow
+entropy-cand,arson,True,3,3,raise strap arson
+entropy-cand,artsy,True,3,3,raise brash artsy
+entropy-cand,ascot,True,3,3,raise stalk ascot
+entropy-cand,ashen,True,3,3,raise steak ashen
+entropy-cand,aside,True,2,2,raise aside
+entropy-cand,askew,True,3,3,raise steak askew
+entropy-cand,assay,True,3,3,raise stalk assay
+entropy-cand,asset,True,3,3,raise steak asset
+entropy-cand,atoll,True,3,3,raise float atoll
+entropy-cand,atone,True,4,4,raise blade acute atone
+entropy-cand,attic,True,4,4,raise tidal antic attic
+entropy-cand,audio,True,3,3,raise tidal audio
+entropy-cand,audit,True,3,3,raise tidal audit
+entropy-cand,augur,True,4,4,raise adorn altar augur
+entropy-cand,aunty,True,3,3,raise float aunty
+entropy-cand,avail,True,4,4,raise tidal anvil avail
+entropy-cand,avert,True,3,3,raise alert avert
+entropy-cand,avian,True,3,3,raise align avian
+entropy-cand,avoid,True,4,4,raise tidal aphid avoid
+entropy-cand,await,True,4,4,raise tidal antic await
+entropy-cand,awake,True,6,6,raise blade heave agape amaze awake
+entropy-cand,award,True,3,3,raise adorn award
+entropy-cand,aware,True,4,4,raise grace blare aware
+entropy-cand,awash,True,3,3,raise slash awash
+entropy-cand,awful,True,3,3,raise float awful
+entropy-cand,awoke,True,4,4,raise blade acute awoke
+entropy-cand,axial,True,3,3,raise align axial
+entropy-cand,axiom,True,4,4,raise align amity axiom
+entropy-cand,axion,True,4,4,raise align avian axion
+entropy-cand,azure,True,4,4,raise grace adore azure
+entropy-cand,bacon,True,4,4,raise tangy fauna bacon
+entropy-cand,badge,True,3,3,raise cable badge
+entropy-cand,badly,True,4,4,raise tangy bawdy badly
+entropy-cand,bagel,True,4,4,raise navel label bagel
+entropy-cand,baggy,True,3,3,raise tangy baggy
+entropy-cand,baker,True,4,4,raise taper lager baker
+entropy-cand,baler,True,4,4,raise taper lager baler
+entropy-cand,balmy,True,4,4,raise tangy bawdy balmy
+entropy-cand,banal,True,3,3,raise tangy banal
+entropy-cand,banjo,True,4,4,raise tangy banal banjo
+entropy-cand,barge,True,2,2,raise barge
+entropy-cand,baron,True,4,4,raise party carol baron
+entropy-cand,basal,True,3,3,raise salon basal
+entropy-cand,basic,True,2,2,raise basic
+entropy-cand,basil,True,3,3,raise basic basil
+entropy-cand,basin,True,4,4,raise basic basil basin
+entropy-cand,basis,True,5,5,raise basic basil basin basis
+entropy-cand,baste,True,3,3,raise caste baste
+entropy-cand,batch,True,4,4,raise tangy caput batch
+entropy-cand,bathe,True,4,4,raise cable badge bathe
+entropy-cand,baton,True,4,4,raise tangy daunt baton
+entropy-cand,batty,True,3,3,raise tangy batty
+entropy-cand,bawdy,True,3,3,raise tangy bawdy
+entropy-cand,bayou,True,3,3,raise tangy bayou
+entropy-cand,beach,True,3,3,raise cleat beach
+entropy-cand,beady,True,3,3,raise cleat beady
+entropy-cand,beard,True,3,3,raise alert beard
+entropy-cand,beast,True,2,2,raise beast
+entropy-cand,beech,True,3,3,raise betel beech
+entropy-cand,beefy,True,4,4,raise betel beech beefy
+entropy-cand,befit,True,4,4,raise linen fetid befit
+entropy-cand,began,True,3,3,raise cleat began
+entropy-cand,begat,True,3,3,raise cleat begat
+entropy-cand,beget,True,3,3,raise betel beget
+entropy-cand,begin,True,3,3,raise linen begin
+entropy-cand,begun,True,3,3,raise betel begun
+entropy-cand,being,True,4,4,raise edict feign being
+entropy-cand,belch,True,3,3,raise betel belch
+entropy-cand,belie,True,3,3,raise binge belie
+entropy-cand,belle,True,3,3,raise lunge belle
+entropy-cand,belly,True,4,4,raise betel belch belly
+entropy-cand,below,True,5,5,raise betel belch belly below
+entropy-cand,bench,True,4,4,raise betel begun bench
+entropy-cand,beret,True,3,3,raise deter beret
+entropy-cand,berry,True,4,4,raise deter merry berry
+entropy-cand,berth,True,3,3,raise deter berth
+entropy-cand,beset,True,4,4,raise spelt onset beset
+entropy-cand,betel,True,2,2,raise betel
+entropy-cand,bevel,True,3,3,raise betel bevel
+entropy-cand,bezel,True,4,4,raise betel bevel bezel
+entropy-cand,bible,True,3,3,raise binge bible
+entropy-cand,bicep,True,3,3,raise linen bicep
+entropy-cand,biddy,True,4,4,raise pilot windy biddy
+entropy-cand,bigot,True,3,3,raise pilot bigot
+entropy-cand,bilge,True,3,3,raise binge bilge
+entropy-cand,billy,True,4,4,raise pilot filly billy
+entropy-cand,binge,True,2,2,raise binge
+entropy-cand,bingo,True,3,3,raise pilot bingo
+entropy-cand,biome,True,4,4,raise binge bible biome
+entropy-cand,birch,True,3,3,raise droit birch
+entropy-cand,birth,True,3,3,raise droit birth
+entropy-cand,bison,True,3,3,raise stoic bison
+entropy-cand,bitty,True,4,4,raise pilot width bitty
+entropy-cand,black,True,3,3,raise float black
+entropy-cand,blade,True,2,2,raise blade
+entropy-cand,blame,True,3,3,raise blade blame
+entropy-cand,bland,True,4,4,raise float black bland
+entropy-cand,blank,True,4,4,raise float black blank
+entropy-cand,blare,True,3,3,raise grace blare
+entropy-cand,blast,True,3,3,raise slash blast
+entropy-cand,blaze,True,4,4,raise blade blame blaze
+entropy-cand,bleak,True,4,4,raise cleat gleam bleak
+entropy-cand,bleat,True,3,3,raise cleat bleat
+entropy-cand,bleed,True,3,3,raise betel bleed
+entropy-cand,bleep,True,4,4,raise betel bleed bleep
+entropy-cand,blend,True,3,3,raise betel blend
+entropy-cand,bless,True,3,3,raise chess bless
+entropy-cand,blimp,True,4,4,raise glint flick blimp
+entropy-cand,blind,True,3,3,raise glint blind
+entropy-cand,blink,True,4,4,raise glint blind blink
+entropy-cand,bliss,True,3,3,raise hoist bliss
+entropy-cand,blitz,True,3,3,raise glint blitz
+entropy-cand,bloat,True,3,3,raise float bloat
+entropy-cand,block,True,3,3,raise mulch block
+entropy-cand,bloke,True,4,4,raise lunge belle bloke
+entropy-cand,blond,True,4,4,raise mulch blown blond
+entropy-cand,blood,True,4,4,raise mulch blown blood
+entropy-cand,bloom,True,3,3,raise mulch bloom
+entropy-cand,blown,True,3,3,raise mulch blown
+entropy-cand,bluer,True,5,5,raise deter cower buyer bluer
+entropy-cand,bluff,True,4,4,raise mulch flunk bluff
+entropy-cand,blunt,True,4,4,raise mulch flunk blunt
+entropy-cand,blurb,True,3,3,raise court blurb
+entropy-cand,blurt,True,3,3,raise court blurt
+entropy-cand,blush,True,3,3,raise floss blush
+entropy-cand,board,True,3,3,raise adorn board
+entropy-cand,boast,True,3,3,raise slash boast
+entropy-cand,bobby,True,4,4,raise mulch goody bobby
+entropy-cand,boney,True,3,3,raise betel boney
+entropy-cand,bongo,True,4,4,raise mulch goody bongo
+entropy-cand,bonus,True,3,3,raise stunk bonus
+entropy-cand,booby,True,4,4,raise mulch goody booby
+entropy-cand,boost,True,3,3,raise floss boost
+entropy-cand,booth,True,3,3,raise mulch booth
+entropy-cand,booty,True,5,5,raise mulch goody booby booty
+entropy-cand,booze,True,4,4,raise lunge theme booze
+entropy-cand,boozy,True,6,6,raise mulch goody booby booty boozy
+entropy-cand,borax,True,4,4,raise adorn molar borax
+entropy-cand,borne,True,4,4,raise trope forge borne
+entropy-cand,bosom,True,3,3,raise stunk bosom
+entropy-cand,bossy,True,3,3,raise floss bossy
+entropy-cand,botch,True,4,4,raise mulch notch botch
+entropy-cand,bough,True,3,3,raise mulch bough
+entropy-cand,boule,True,4,4,raise lunge flume boule
+entropy-cand,bound,True,3,3,raise mulch bound
+entropy-cand,bowel,True,3,3,raise betel bowel
+entropy-cand,boxer,True,6,6,raise deter cower hover joker boxer
+entropy-cand,brace,True,3,3,raise grace brace
+entropy-cand,braid,True,3,3,raise trail braid
+entropy-cand,brain,True,4,4,raise trail braid brain
+entropy-cand,brake,True,4,4,raise grace drake brake
+entropy-cand,brand,True,3,3,raise adorn brand
+entropy-cand,brash,True,2,2,raise brash
+entropy-cand,brass,True,3,3,raise brash brass
+entropy-cand,brave,True,4,4,raise grace drake brave
+entropy-cand,bravo,True,4,4,raise adorn molar bravo
+entropy-cand,brawl,True,5,5,raise adorn tract graph brawl
+entropy-cand,brawn,True,3,3,raise adorn brawn
+entropy-cand,bread,True,3,3,raise alert bread
+entropy-cand,break,True,4,4,raise alert bread break
+entropy-cand,breed,True,3,3,raise deter breed
+entropy-cand,briar,True,2,2,raise briar
+entropy-cand,bribe,True,4,4,raise tripe bride bribe
+entropy-cand,brick,True,4,4,raise print grill brick
+entropy-cand,bride,True,3,3,raise tripe bride
+entropy-cand,brief,True,3,3,raise fried brief
+entropy-cand,brine,True,5,5,raise tripe bride bribe brine
+entropy-cand,bring,True,3,3,raise print bring
+entropy-cand,brink,True,4,4,raise print bring brink
+entropy-cand,briny,True,5,5,raise print bring brink briny
+entropy-cand,brisk,True,2,2,raise brisk
+entropy-cand,broad,True,3,3,raise adorn broad
+entropy-cand,broil,True,3,3,raise droit broil
+entropy-cand,broke,True,4,4,raise trope drone broke
+entropy-cand,brood,True,4,4,raise court droop brood
+entropy-cand,brook,True,4,4,raise court droop brook
+entropy-cand,broom,True,5,5,raise court droop brook broom
+entropy-cand,broth,True,4,4,raise court throb broth
+entropy-cand,brown,True,4,4,raise court droop brown
+entropy-cand,brunt,True,3,3,raise court brunt
+entropy-cand,brush,True,3,3,raise crust brush
+entropy-cand,brute,True,3,3,raise trope brute
+entropy-cand,buddy,True,4,4,raise mulch pudgy buddy
+entropy-cand,budge,True,3,3,raise lunge budge
+entropy-cand,buggy,True,4,4,raise mulch pudgy buggy
+entropy-cand,bugle,True,3,3,raise lunge bugle
+entropy-cand,build,True,4,4,raise glint child build
+entropy-cand,built,True,3,3,raise glint built
+entropy-cand,bulge,True,3,3,raise lunge bulge
+entropy-cand,bulky,True,4,4,raise mulch bully bulky
+entropy-cand,bully,True,3,3,raise mulch bully
+entropy-cand,bunch,True,3,3,raise mulch bunch
+entropy-cand,bunny,True,4,4,raise mulch pudgy bunny
+entropy-cand,burly,True,3,3,raise court burly
+entropy-cand,burnt,True,3,3,raise court burnt
+entropy-cand,burst,True,3,3,raise crust burst
+entropy-cand,bused,True,3,3,raise spelt bused
+entropy-cand,bushy,True,4,4,raise stunk humus bushy
+entropy-cand,butch,True,4,4,raise mulch bunch butch
+entropy-cand,butte,True,3,3,raise lunge butte
+entropy-cand,buxom,True,4,4,raise mulch gummy buxom
+entropy-cand,buyer,True,4,4,raise deter cower buyer
+entropy-cand,bylaw,True,3,3,raise float bylaw
+entropy-cand,cabal,True,4,4,raise tangy macaw cabal
+entropy-cand,cabby,True,4,4,raise tangy bawdy cabby
+entropy-cand,cabin,True,3,3,raise panic cabin
+entropy-cand,cable,True,2,2,raise cable
+entropy-cand,cacao,True,4,4,raise tangy macaw cacao
+entropy-cand,cache,True,3,3,raise cable cache
+entropy-cand,cacti,True,3,3,raise panic cacti
+entropy-cand,caddy,True,4,4,raise tangy bawdy caddy
+entropy-cand,cadet,True,3,3,raise navel cadet
+entropy-cand,cagey,True,4,4,raise navel cadet cagey
+entropy-cand,cairn,True,3,3,raise dairy cairn
+entropy-cand,camel,True,4,4,raise navel label camel
+entropy-cand,cameo,True,5,5,raise navel cadet cagey cameo
+entropy-cand,canal,True,4,4,raise tangy banal canal
+entropy-cand,candy,True,3,3,raise tangy candy
+entropy-cand,canny,True,4,4,raise tangy candy canny
+entropy-cand,canoe,True,4,4,raise cable cache canoe
+entropy-cand,canon,True,4,4,raise tangy banal canon
+entropy-cand,caper,True,3,3,raise taper caper
+entropy-cand,caput,True,3,3,raise tangy caput
+entropy-cand,carat,True,3,3,raise party carat
+entropy-cand,cargo,True,4,4,raise party carol cargo
+entropy-cand,carol,True,3,3,raise party carol
+entropy-cand,carry,True,3,3,raise party carry
+entropy-cand,carve,True,3,3,raise barge carve
+entropy-cand,caste,True,2,2,raise caste
+entropy-cand,catch,True,4,4,raise tangy caput catch
+entropy-cand,cater,True,3,3,raise taper cater
+entropy-cand,catty,True,4,4,raise tangy batty catty
+entropy-cand,caulk,True,4,4,raise tangy macaw caulk
+entropy-cand,cause,True,3,3,raise lapse cause
+entropy-cand,cavil,True,3,3,raise panic cavil
+entropy-cand,cease,True,2,2,raise cease
+entropy-cand,cedar,True,3,3,raise alert cedar
+entropy-cand,cello,True,3,3,raise betel cello
+entropy-cand,chafe,True,4,4,raise blade heave chafe
+entropy-cand,chaff,True,3,3,raise float chaff
+entropy-cand,chain,True,4,4,raise tidal affix chain
+entropy-cand,chair,True,3,3,raise trail chair
+entropy-cand,chalk,True,4,4,raise float amply chalk
+entropy-cand,champ,True,4,4,raise float aback champ
+entropy-cand,chant,True,4,4,raise float adapt chant
+entropy-cand,chaos,True,3,3,raise stalk chaos
+entropy-cand,chard,True,3,3,raise adorn chard
+entropy-cand,charm,True,4,4,raise adorn chart charm
+entropy-cand,chart,True,3,3,raise adorn chart
+entropy-cand,chase,True,3,3,raise cease chase
+entropy-cand,chasm,True,3,3,raise slash chasm
+entropy-cand,cheap,True,3,3,raise cleat cheap
+entropy-cand,cheat,True,3,3,raise cleat cheat
+entropy-cand,check,True,4,4,raise betel enjoy check
+entropy-cand,cheek,True,3,3,raise betel cheek
+entropy-cand,cheer,True,3,3,raise deter cheer
+entropy-cand,chess,True,2,2,raise chess
+entropy-cand,chest,True,3,3,raise chess chest
+entropy-cand,chick,True,3,3,raise glint chick
+entropy-cand,chide,True,4,4,raise utile opine chide
+entropy-cand,chief,True,3,3,raise edict chief
+entropy-cand,child,True,3,3,raise glint child
+entropy-cand,chili,True,4,4,raise glint child chili
+entropy-cand,chill,True,5,5,raise glint child chili chill
+entropy-cand,chime,True,5,5,raise utile opine chide chime
+entropy-cand,china,True,3,3,raise align china
+entropy-cand,chirp,True,3,3,raise print chirp
+entropy-cand,chock,True,3,3,raise mulch chock
+entropy-cand,choir,True,3,3,raise droit choir
+entropy-cand,choke,True,4,4,raise lunge theme choke
+entropy-cand,chord,True,3,3,raise court chord
+entropy-cand,chore,True,3,3,raise trope chore
+entropy-cand,chose,True,3,3,raise loose chose
+entropy-cand,chuck,True,3,3,raise mulch chuck
+entropy-cand,chump,True,3,3,raise mulch chump
+entropy-cand,chunk,True,3,3,raise mulch chunk
+entropy-cand,churn,True,3,3,raise court churn
+entropy-cand,chute,True,3,3,raise lunge chute
+entropy-cand,cider,True,3,3,raise diner cider
+entropy-cand,cigar,True,3,3,raise trail cigar
+entropy-cand,cinch,True,4,4,raise pilot windy cinch
+entropy-cand,circa,True,4,4,raise trail cigar circa
+entropy-cand,civic,True,4,4,raise pilot windy civic
+entropy-cand,civil,True,3,3,raise pilot civil
+entropy-cand,clack,True,4,4,raise float black clack
+entropy-cand,claim,True,3,3,raise tidal claim
+entropy-cand,clamp,True,4,4,raise float black clamp
+entropy-cand,clang,True,5,5,raise float black clamp clang
+entropy-cand,clank,True,4,4,raise float black clank
+entropy-cand,clash,True,3,3,raise slash clash
+entropy-cand,clasp,True,4,4,raise slash blast clasp
+entropy-cand,class,True,3,3,raise slash class
+entropy-cand,clean,True,3,3,raise cleat clean
+entropy-cand,clear,True,3,3,raise alert clear
+entropy-cand,cleat,True,2,2,raise cleat
+entropy-cand,cleft,True,4,4,raise betel dwelt cleft
+entropy-cand,clerk,True,3,3,raise deter clerk
+entropy-cand,click,True,4,4,raise glint flick click
+entropy-cand,cliff,True,4,4,raise glint flick cliff
+entropy-cand,climb,True,4,4,raise glint flick climb
+entropy-cand,cling,True,3,3,raise glint cling
+entropy-cand,clink,True,4,4,raise glint blind clink
+entropy-cand,cloak,True,3,3,raise float cloak
+entropy-cand,clock,True,4,4,raise mulch block clock
+entropy-cand,clone,True,3,3,raise lunge clone
+entropy-cand,close,True,3,3,raise loose close
+entropy-cand,cloth,True,3,3,raise mulch cloth
+entropy-cand,cloud,True,3,3,raise mulch cloud
+entropy-cand,clout,True,4,4,raise mulch cloud clout
+entropy-cand,clove,True,4,4,raise lunge belle clove
+entropy-cand,clown,True,3,3,raise mulch clown
+entropy-cand,cluck,True,3,3,raise mulch cluck
+entropy-cand,clued,True,3,3,raise betel clued
+entropy-cand,clump,True,3,3,raise mulch clump
+entropy-cand,clung,True,4,4,raise mulch cloud clung
+entropy-cand,coach,True,4,4,raise float comma coach
+entropy-cand,coast,True,4,4,raise slash boast coast
+entropy-cand,cobra,True,3,3,raise adorn cobra
+entropy-cand,cocoa,True,4,4,raise float comma cocoa
+entropy-cand,colon,True,3,3,raise mulch colon
+entropy-cand,color,True,3,3,raise court color
+entropy-cand,comet,True,3,3,raise betel comet
+entropy-cand,comfy,True,3,3,raise mulch comfy
+entropy-cand,comic,True,3,3,raise pilot comic
+entropy-cand,comma,True,3,3,raise float comma
+entropy-cand,conch,True,4,4,raise mulch notch conch
+entropy-cand,condo,True,3,3,raise mulch condo
+entropy-cand,conic,True,4,4,raise pilot comic conic
+entropy-cand,copse,True,3,3,raise loose copse
+entropy-cand,coral,True,4,4,raise adorn molar coral
+entropy-cand,corer,True,4,4,raise deter cower corer
+entropy-cand,corny,True,4,4,raise court color corny
+entropy-cand,couch,True,3,3,raise mulch couch
+entropy-cand,cough,True,3,3,raise mulch cough
+entropy-cand,could,True,4,4,raise mulch cloud could
+entropy-cand,count,True,3,3,raise mulch count
+entropy-cand,coupe,True,4,4,raise lunge chute coupe
+entropy-cand,court,True,2,2,raise court
+entropy-cand,coven,True,4,4,raise betel women coven
+entropy-cand,cover,True,5,5,raise deter cower corer cover
+entropy-cand,covet,True,4,4,raise betel comet covet
+entropy-cand,covey,True,4,4,raise betel women covey
+entropy-cand,cower,True,3,3,raise deter cower
+entropy-cand,coyly,True,4,4,raise mulch clown coyly
+entropy-cand,crack,True,4,4,raise adorn tract crack
+entropy-cand,craft,True,4,4,raise adorn tract craft
+entropy-cand,cramp,True,4,4,raise adorn tract cramp
+entropy-cand,crane,True,3,3,raise grace crane
+entropy-cand,crank,True,3,3,raise adorn crank
+entropy-cand,crash,True,3,3,raise brash crash
+entropy-cand,crass,True,3,3,raise brash crass
+entropy-cand,crate,True,4,4,raise grace crane crate
+entropy-cand,crave,True,5,5,raise grace crane crate crave
+entropy-cand,crawl,True,5,5,raise adorn tract cramp crawl
+entropy-cand,craze,True,6,6,raise grace crane crate crave craze
+entropy-cand,crazy,True,6,6,raise adorn tract cramp crawl crazy
+entropy-cand,creak,True,4,4,raise alert bread creak
+entropy-cand,cream,True,5,5,raise alert bread creak cream
+entropy-cand,credo,True,3,3,raise deter credo
+entropy-cand,creed,True,4,4,raise deter breed creed
+entropy-cand,creek,True,4,4,raise deter creep creek
+entropy-cand,creep,True,3,3,raise deter creep
+entropy-cand,creme,True,3,3,raise trope creme
+entropy-cand,crepe,True,3,3,raise trope crepe
+entropy-cand,crept,True,3,3,raise deter crept
+entropy-cand,cress,True,2,2,raise cress
+entropy-cand,crest,True,3,3,raise cress crest
+entropy-cand,crick,True,5,5,raise print grill brick crick
+entropy-cand,cried,True,3,3,raise fried cried
+entropy-cand,crier,True,3,3,raise fried crier
+entropy-cand,crime,True,4,4,raise tripe bride crime
+entropy-cand,crimp,True,3,3,raise print crimp
+entropy-cand,crisp,True,3,3,raise brisk crisp
+entropy-cand,croak,True,3,3,raise adorn croak
+entropy-cand,crock,True,4,4,raise court crown crock
+entropy-cand,crone,True,4,4,raise trope drone crone
+entropy-cand,crony,True,4,4,raise court crown crony
+entropy-cand,crook,True,5,5,raise court crown crock crook
+entropy-cand,cross,True,3,3,raise crust cross
+entropy-cand,croup,True,3,3,raise court croup
+entropy-cand,crowd,True,4,4,raise court crown crowd
+entropy-cand,crown,True,3,3,raise court crown
+entropy-cand,crude,True,4,4,raise trope creme crude
+entropy-cand,cruel,True,3,3,raise deter cruel
+entropy-cand,crumb,True,3,3,raise court crumb
+entropy-cand,crump,True,4,4,raise court crumb crump
+entropy-cand,crush,True,3,3,raise crust crush
+entropy-cand,crust,True,2,2,raise crust
+entropy-cand,crypt,True,3,3,raise court crypt
+entropy-cand,cubic,True,3,3,raise pilot cubic
+entropy-cand,cumin,True,4,4,raise pilot cubic cumin
+entropy-cand,curio,True,3,3,raise droit curio
+entropy-cand,curly,True,3,3,raise court curly
+entropy-cand,curry,True,3,3,raise court curry
+entropy-cand,curse,True,2,2,raise curse
+entropy-cand,curve,True,4,4,raise trope nerve curve
+entropy-cand,curvy,True,4,4,raise court curly curvy
+entropy-cand,cutie,True,3,3,raise binge cutie
+entropy-cand,cyber,True,4,4,raise deter cower cyber
+entropy-cand,cycle,True,4,4,raise lunge belle cycle
+entropy-cand,cynic,True,4,4,raise pilot cubic cynic
+entropy-cand,daddy,True,5,5,raise tangy bawdy caddy daddy
+entropy-cand,daily,True,3,3,raise faint daily
+entropy-cand,dairy,True,2,2,raise dairy
+entropy-cand,daisy,True,2,2,raise daisy
+entropy-cand,dally,True,4,4,raise tangy bawdy dally
+entropy-cand,dance,True,3,3,raise cable dance
+entropy-cand,dandy,True,4,4,raise tangy candy dandy
+entropy-cand,datum,True,4,4,raise tangy caput datum
+entropy-cand,daunt,True,3,3,raise tangy daunt
+entropy-cand,dealt,True,4,4,raise cleat leant dealt
+entropy-cand,death,True,3,3,raise cleat death
+entropy-cand,debar,True,4,4,raise alert cedar debar
+entropy-cand,debit,True,4,4,raise linen fetid debit
+entropy-cand,debug,True,3,3,raise betel debug
+entropy-cand,debut,True,3,3,raise betel debut
+entropy-cand,decal,True,3,3,raise cleat decal
+entropy-cand,decay,True,3,3,raise cleat decay
+entropy-cand,decor,True,3,3,raise deter decor
+entropy-cand,decoy,True,3,3,raise betel decoy
+entropy-cand,decry,True,3,3,raise deter decry
+entropy-cand,defer,True,3,3,raise deter defer
+entropy-cand,deign,True,3,3,raise edict deign
+entropy-cand,deity,True,3,3,raise edict deity
+entropy-cand,delay,True,4,4,raise cleat pedal delay
+entropy-cand,delta,True,3,3,raise cleat delta
+entropy-cand,delve,True,4,4,raise lunge belle delve
+entropy-cand,demon,True,4,4,raise betel decoy demon
+entropy-cand,demur,True,4,4,raise deter decor demur
+entropy-cand,denim,True,3,3,raise linen denim
+entropy-cand,dense,True,3,3,raise loose dense
+entropy-cand,depot,True,4,4,raise betel depth depot
+entropy-cand,depth,True,3,3,raise betel depth
+entropy-cand,derby,True,4,4,raise deter decry derby
+entropy-cand,deter,True,2,2,raise deter
+entropy-cand,detox,True,4,4,raise betel jetty detox
+entropy-cand,deuce,True,4,4,raise lunge chute deuce
+entropy-cand,devil,True,3,3,raise linen devil
+entropy-cand,diary,True,3,3,raise trail diary
+entropy-cand,dicey,True,4,4,raise linen bicep dicey
+entropy-cand,digit,True,4,4,raise pilot fight digit
+entropy-cand,dilly,True,5,5,raise pilot filly billy dilly
+entropy-cand,dimly,True,4,4,raise pilot civil dimly
+entropy-cand,diner,True,2,2,raise diner
+entropy-cand,dingo,True,4,4,raise pilot bingo dingo
+entropy-cand,dingy,True,4,4,raise pilot windy dingy
+entropy-cand,diode,True,4,4,raise binge tilde diode
+entropy-cand,dirge,True,2,2,raise dirge
+entropy-cand,dirty,True,3,3,raise droit dirty
+entropy-cand,disco,True,3,3,raise stoic disco
+entropy-cand,ditch,True,4,4,raise pilot width ditch
+entropy-cand,ditto,True,3,3,raise pilot ditto
+entropy-cand,ditty,True,4,4,raise pilot width ditty
+entropy-cand,diver,True,3,3,raise diner diver
+entropy-cand,dizzy,True,4,4,raise pilot windy dizzy
+entropy-cand,dodge,True,4,4,raise lunge hedge dodge
+entropy-cand,dodgy,True,4,4,raise mulch goody dodgy
+entropy-cand,dogma,True,4,4,raise float comma dogma
+entropy-cand,doing,True,3,3,raise glint doing
+entropy-cand,dolly,True,3,3,raise mulch dolly
+entropy-cand,donor,True,3,3,raise court donor
+entropy-cand,donut,True,4,4,raise mulch bound donut
+entropy-cand,dopey,True,5,5,raise betel women covey dopey
+entropy-cand,doubt,True,4,4,raise mulch bound doubt
+entropy-cand,dough,True,4,4,raise mulch bough dough
+entropy-cand,dowdy,True,4,4,raise mulch goody dowdy
+entropy-cand,dowel,True,3,3,raise betel dowel
+entropy-cand,downy,True,4,4,raise mulch goody downy
+entropy-cand,dowry,True,3,3,raise court dowry
+entropy-cand,dozen,True,5,5,raise betel women coven dozen
+entropy-cand,draft,True,3,3,raise adorn draft
+entropy-cand,drain,True,4,4,raise trail braid drain
+entropy-cand,drake,True,3,3,raise grace drake
+entropy-cand,drama,True,4,4,raise adorn draft drama
+entropy-cand,drank,True,4,4,raise adorn brand drank
+entropy-cand,drape,True,4,4,raise grace drake drape
+entropy-cand,drawl,True,5,5,raise adorn draft drama drawl
+entropy-cand,drawn,True,3,3,raise adorn drawn
+entropy-cand,dread,True,4,4,raise alert bread dread
+entropy-cand,dream,True,4,4,raise alert bread dream
+entropy-cand,dress,True,3,3,raise cress dress
+entropy-cand,dried,True,4,4,raise fried cried dried
+entropy-cand,drier,True,3,3,raise fried drier
+entropy-cand,drift,True,3,3,raise print drift
+entropy-cand,drill,True,4,4,raise print grill drill
+entropy-cand,drink,True,4,4,raise print bring drink
+entropy-cand,drive,True,4,4,raise tripe bride drive
+entropy-cand,droit,True,2,2,raise droit
+entropy-cand,droll,True,4,4,raise court droop droll
+entropy-cand,drone,True,3,3,raise trope drone
+entropy-cand,drool,True,4,4,raise court droop drool
+entropy-cand,droop,True,3,3,raise court droop
+entropy-cand,dross,True,3,3,raise crust dross
+entropy-cand,drove,True,4,4,raise trope drone drove
+entropy-cand,drown,True,5,5,raise court droop droll drown
+entropy-cand,druid,True,3,3,raise droit druid
+entropy-cand,drunk,True,3,3,raise court drunk
+entropy-cand,dryer,True,3,3,raise deter dryer
+entropy-cand,dryly,True,3,3,raise court dryly
+entropy-cand,duchy,True,3,3,raise mulch duchy
+entropy-cand,dully,True,4,4,raise mulch bully dully
+entropy-cand,dummy,True,4,4,raise mulch gummy dummy
+entropy-cand,dumpy,True,4,4,raise mulch gummy dumpy
+entropy-cand,dunce,True,3,3,raise lunge dunce
+entropy-cand,dusky,True,3,3,raise stunk dusky
+entropy-cand,dusty,True,3,3,raise stunk dusty
+entropy-cand,dutch,True,4,4,raise mulch bunch dutch
+entropy-cand,duvet,True,4,4,raise betel comet duvet
+entropy-cand,dwarf,True,4,4,raise adorn chard dwarf
+entropy-cand,dwell,True,3,3,raise betel dwell
+entropy-cand,dwelt,True,3,3,raise betel dwelt
+entropy-cand,dying,True,4,4,raise glint doing dying
+entropy-cand,eager,True,4,4,raise taper lager eager
+entropy-cand,eagle,True,3,3,raise cable eagle
+entropy-cand,early,True,3,3,raise taper early
+entropy-cand,earth,True,3,3,raise taper earth
+entropy-cand,easel,True,2,2,raise easel
+entropy-cand,eaten,True,4,4,raise navel taken eaten
+entropy-cand,eater,True,4,4,raise taper cater eater
+entropy-cand,ebony,True,3,3,raise betel ebony
+entropy-cand,eclat,True,3,3,raise cleat eclat
+entropy-cand,edict,True,2,2,raise edict
+entropy-cand,edify,True,3,3,raise edict edify
+entropy-cand,eerie,True,3,3,raise dirge eerie
+entropy-cand,egret,True,3,3,raise deter egret
+entropy-cand,eight,True,3,3,raise linen eight
+entropy-cand,eject,True,3,3,raise betel eject
+entropy-cand,eking,True,3,3,raise edict eking
+entropy-cand,elate,True,4,4,raise blade plate elate
+entropy-cand,elbow,True,3,3,raise betel elbow
+entropy-cand,elder,True,3,3,raise deter elder
+entropy-cand,elect,True,3,3,raise betel elect
+entropy-cand,elegy,True,3,3,raise betel elegy
+entropy-cand,elfin,True,3,3,raise linen elfin
+entropy-cand,elide,True,3,3,raise utile elide
+entropy-cand,elite,True,3,3,raise utile elite
+entropy-cand,elope,True,4,4,raise lunge belle elope
+entropy-cand,elude,True,4,4,raise lunge flume elude
+entropy-cand,email,True,2,2,raise email
+entropy-cand,embed,True,3,3,raise betel embed
+entropy-cand,ember,True,4,4,raise deter cheer ember
+entropy-cand,emcee,True,4,4,raise lunge theme emcee
+entropy-cand,empty,True,3,3,raise betel empty
+entropy-cand,enact,True,3,3,raise cleat enact
+entropy-cand,endow,True,4,4,raise betel enjoy endow
+entropy-cand,enema,True,4,4,raise cleat amend enema
+entropy-cand,enemy,True,3,3,raise betel enemy
+entropy-cand,enjoy,True,3,3,raise betel enjoy
+entropy-cand,ennui,True,3,3,raise linen ennui
+entropy-cand,ensue,True,3,3,raise stone ensue
+entropy-cand,enter,True,3,3,raise deter enter
+entropy-cand,entry,True,3,3,raise deter entry
+entropy-cand,envoy,True,4,4,raise betel enjoy envoy
+entropy-cand,epoch,True,4,4,raise betel enjoy epoch
+entropy-cand,epoxy,True,4,4,raise betel enjoy epoxy
+entropy-cand,equal,True,4,4,raise cleat pedal equal
+entropy-cand,equip,True,4,4,raise linen fetid equip
+entropy-cand,erase,True,3,3,raise arose erase
+entropy-cand,erect,True,3,3,raise deter erect
+entropy-cand,erode,True,4,4,raise trope drone erode
+entropy-cand,error,True,3,3,raise deter error
+entropy-cand,erupt,True,4,4,raise deter crept erupt
+entropy-cand,essay,True,3,3,raise steak essay
+entropy-cand,ester,True,3,3,raise sheer ester
+entropy-cand,ether,True,3,3,raise deter ether
+entropy-cand,ethic,True,4,4,raise linen fetid ethic
+entropy-cand,ethos,True,4,4,raise spelt testy ethos
+entropy-cand,etude,True,4,4,raise lunge chute etude
+entropy-cand,evade,True,3,3,raise blade evade
+entropy-cand,event,True,4,4,raise betel eject event
+entropy-cand,every,True,3,3,raise deter every
+entropy-cand,evict,True,3,3,raise edict evict
+entropy-cand,evoke,True,4,4,raise lunge theme evoke
+entropy-cand,exact,True,4,4,raise cleat enact exact
+entropy-cand,exalt,True,4,4,raise cleat leant exalt
+entropy-cand,excel,True,3,3,raise betel excel
+entropy-cand,exert,True,4,4,raise deter erect exert
+entropy-cand,exile,True,3,3,raise utile exile
+entropy-cand,exist,True,2,2,raise exist
+entropy-cand,expel,True,4,4,raise betel excel expel
+entropy-cand,extol,True,3,3,raise betel extol
+entropy-cand,extra,True,3,3,raise alert extra
+entropy-cand,exult,True,4,4,raise betel dwelt exult
+entropy-cand,eying,True,4,4,raise edict eking eying
+entropy-cand,fable,True,3,3,raise cable fable
+entropy-cand,facet,True,4,4,raise navel cadet facet
+entropy-cand,faint,True,2,2,raise faint
+entropy-cand,fairy,True,3,3,raise dairy fairy
+entropy-cand,faith,True,3,3,raise faint faith
+entropy-cand,false,True,3,3,raise lapse false
+entropy-cand,fancy,True,4,4,raise tangy candy fancy
+entropy-cand,fanny,True,4,4,raise tangy candy fanny
+entropy-cand,farce,True,4,4,raise barge carve farce
+entropy-cand,fatal,True,4,4,raise tangy caput fatal
+entropy-cand,fatty,True,5,5,raise tangy batty catty fatty
+entropy-cand,fault,True,4,4,raise tangy caput fault
+entropy-cand,fauna,True,3,3,raise tangy fauna
+entropy-cand,favor,True,4,4,raise party valor favor
+entropy-cand,feast,True,3,3,raise beast feast
+entropy-cand,fecal,True,4,4,raise cleat decal fecal
+entropy-cand,feign,True,3,3,raise edict feign
+entropy-cand,fella,True,3,3,raise cleat fella
+entropy-cand,felon,True,4,4,raise betel cello felon
+entropy-cand,femme,True,4,4,raise lunge theme femme
+entropy-cand,femur,True,3,3,raise deter femur
+entropy-cand,fence,True,3,3,raise lunge fence
+entropy-cand,feral,True,3,3,raise alert feral
+entropy-cand,ferry,True,5,5,raise deter merry berry ferry
+entropy-cand,fetal,True,3,3,raise cleat fetal
+entropy-cand,fetch,True,5,5,raise betel jetty detox fetch
+entropy-cand,fetid,True,3,3,raise linen fetid
+entropy-cand,fetus,True,4,4,raise spelt testy fetus
+entropy-cand,fever,True,3,3,raise deter fever
+entropy-cand,fewer,True,4,4,raise deter fever fewer
+entropy-cand,fiber,True,4,4,raise diner giver fiber
+entropy-cand,ficus,True,3,3,raise stoic ficus
+entropy-cand,field,True,3,3,raise linen field
+entropy-cand,fiend,True,3,3,raise linen fiend
+entropy-cand,fiery,True,3,3,raise diner fiery
+entropy-cand,fifth,True,4,4,raise pilot width fifth
+entropy-cand,fifty,True,5,5,raise pilot width bitty fifty
+entropy-cand,fight,True,3,3,raise pilot fight
+entropy-cand,filer,True,5,5,raise diner giver fiber filer
+entropy-cand,filet,True,3,3,raise linen filet
+entropy-cand,filly,True,3,3,raise pilot filly
+entropy-cand,filmy,True,4,4,raise pilot filly filmy
+entropy-cand,filth,True,3,3,raise pilot filth
+entropy-cand,final,True,3,3,raise tidal final
+entropy-cand,finch,True,5,5,raise pilot windy cinch finch
+entropy-cand,finer,True,3,3,raise diner finer
+entropy-cand,first,True,2,2,raise first
+entropy-cand,fishy,True,3,3,raise stoic fishy
+entropy-cand,fixer,True,6,6,raise diner giver fiber filer fixer
+entropy-cand,fizzy,True,4,4,raise pilot windy fizzy
+entropy-cand,fjord,True,3,3,raise court fjord
+entropy-cand,flack,True,3,3,raise float flack
+entropy-cand,flail,True,4,4,raise tidal anvil flail
+entropy-cand,flair,True,3,3,raise trail flair
+entropy-cand,flake,True,4,4,raise blade plate flake
+entropy-cand,flaky,True,4,4,raise float flack flaky
+entropy-cand,flame,True,5,5,raise blade plate flake flame
+entropy-cand,flank,True,4,4,raise float flack flank
+entropy-cand,flare,True,4,4,raise grace blare flare
+entropy-cand,flash,True,4,4,raise slash clash flash
+entropy-cand,flask,True,5,5,raise slash blast clasp flask
+entropy-cand,fleck,True,3,3,raise betel fleck
+entropy-cand,fleet,True,3,3,raise betel fleet
+entropy-cand,flesh,True,3,3,raise chess flesh
+entropy-cand,flick,True,3,3,raise glint flick
+entropy-cand,flier,True,3,3,raise fried flier
+entropy-cand,fling,True,4,4,raise glint cling fling
+entropy-cand,flint,True,3,3,raise glint flint
+entropy-cand,flirt,True,3,3,raise print flirt
+entropy-cand,float,True,2,2,raise float
+entropy-cand,flock,True,5,5,raise mulch block clock flock
+entropy-cand,flood,True,4,4,raise mulch blown flood
+entropy-cand,floor,True,4,4,raise court droop floor
+entropy-cand,flora,True,3,3,raise adorn flora
+entropy-cand,floss,True,2,2,raise floss
+entropy-cand,flour,True,4,4,raise court furor flour
+entropy-cand,flout,True,4,4,raise mulch flunk flout
+entropy-cand,flown,True,4,4,raise mulch blown flown
+entropy-cand,fluff,True,4,4,raise mulch flunk fluff
+entropy-cand,fluid,True,3,3,raise pilot fluid
+entropy-cand,fluke,True,4,4,raise lunge flume fluke
+entropy-cand,flume,True,3,3,raise lunge flume
+entropy-cand,flung,True,4,4,raise mulch flunk flung
+entropy-cand,flunk,True,3,3,raise mulch flunk
+entropy-cand,flush,True,3,3,raise floss flush
+entropy-cand,flute,True,5,5,raise lunge flume fluke flute
+entropy-cand,flyer,True,5,5,raise deter cower buyer flyer
+entropy-cand,foamy,True,3,3,raise float foamy
+entropy-cand,focal,True,3,3,raise float focal
+entropy-cand,focus,True,4,4,raise stunk humus focus
+entropy-cand,foggy,True,4,4,raise mulch goody foggy
+entropy-cand,foist,True,3,3,raise hoist foist
+entropy-cand,folio,True,3,3,raise pilot folio
+entropy-cand,folly,True,4,4,raise mulch dolly folly
+entropy-cand,foray,True,5,5,raise adorn molar borax foray
+entropy-cand,force,True,4,4,raise trope forge force
+entropy-cand,forge,True,3,3,raise trope forge
+entropy-cand,forgo,True,4,4,raise court donor forgo
+entropy-cand,forte,True,3,3,raise trope forte
+entropy-cand,forth,True,3,3,raise court forth
+entropy-cand,forty,True,4,4,raise court forth forty
+entropy-cand,forum,True,3,3,raise court forum
+entropy-cand,found,True,4,4,raise mulch bound found
+entropy-cand,foyer,False,6,7,raise deter cower hover joker boxer
+entropy-cand,frail,True,3,3,raise trail frail
+entropy-cand,frame,True,5,5,raise grace drake brave frame
+entropy-cand,frank,True,4,4,raise adorn crank frank
+entropy-cand,fraud,True,4,4,raise adorn draft fraud
+entropy-cand,freak,True,5,5,raise alert bread creak freak
+entropy-cand,freed,True,5,5,raise deter breed creed freed
+entropy-cand,freer,True,4,4,raise deter cheer freer
+entropy-cand,fresh,True,3,3,raise cress fresh
+entropy-cand,friar,True,3,3,raise briar friar
+entropy-cand,fried,True,2,2,raise fried
+entropy-cand,frill,True,5,5,raise print grill drill frill
+entropy-cand,frisk,True,3,3,raise brisk frisk
+entropy-cand,fritz,True,3,3,raise print fritz
+entropy-cand,frock,True,3,3,raise court frock
+entropy-cand,frond,True,4,4,raise court droop frond
+entropy-cand,front,True,3,3,raise court front
+entropy-cand,frost,True,3,3,raise crust frost
+entropy-cand,froth,True,4,4,raise court throb froth
+entropy-cand,frown,True,5,5,raise court droop brown frown
+entropy-cand,froze,True,5,5,raise trope drone broke froze
+entropy-cand,fruit,True,3,3,raise droit fruit
+entropy-cand,fudge,True,4,4,raise lunge budge fudge
+entropy-cand,fugue,True,3,3,raise lunge fugue
+entropy-cand,fully,True,5,5,raise mulch bully dully fully
+entropy-cand,fungi,True,4,4,raise pilot cubic fungi
+entropy-cand,funky,True,5,5,raise mulch pudgy bunny funky
+entropy-cand,funny,True,5,5,raise mulch pudgy bunny funny
+entropy-cand,furor,True,3,3,raise court furor
+entropy-cand,furry,True,3,3,raise court furry
+entropy-cand,fussy,True,3,3,raise floss fussy
+entropy-cand,fuzzy,True,5,5,raise mulch pudgy bunny fuzzy
+entropy-cand,gaffe,True,4,4,raise cable gauge gaffe
+entropy-cand,gaily,True,4,4,raise faint daily gaily
+entropy-cand,gamer,True,4,4,raise taper lager gamer
+entropy-cand,gamma,True,3,3,raise tangy gamma
+entropy-cand,gamut,True,3,3,raise tangy gamut
+entropy-cand,gassy,True,3,3,raise salsa gassy
+entropy-cand,gaudy,True,3,3,raise tangy gaudy
+entropy-cand,gauge,True,3,3,raise cable gauge
+entropy-cand,gaunt,True,3,3,raise tangy gaunt
+entropy-cand,gauze,True,4,4,raise cable gauge gauze
+entropy-cand,gavel,True,3,3,raise navel gavel
+entropy-cand,gawky,True,4,4,raise tangy gaudy gawky
+entropy-cand,gayer,True,5,5,raise taper lager gamer gayer
+entropy-cand,gayly,True,5,5,raise tangy gaudy gawky gayly
+entropy-cand,gazer,True,6,6,raise taper lager gamer gayer gazer
+entropy-cand,gecko,True,4,4,raise betel decoy gecko
+entropy-cand,geeky,True,4,4,raise betel needy geeky
+entropy-cand,geese,True,4,4,raise loose dense geese
+entropy-cand,genie,True,3,3,raise binge genie
+entropy-cand,genre,True,4,4,raise trope nerve genre
+entropy-cand,ghost,True,4,4,raise floss boost ghost
+entropy-cand,ghoul,True,3,3,raise mulch ghoul
+entropy-cand,giant,True,3,3,raise tidal giant
+entropy-cand,giddy,True,5,5,raise pilot windy biddy giddy
+entropy-cand,gipsy,True,3,3,raise missy gipsy
+entropy-cand,girly,True,4,4,raise droit birch girly
+entropy-cand,girth,True,4,4,raise droit birth girth
+entropy-cand,given,True,3,3,raise linen given
+entropy-cand,giver,True,3,3,raise diner giver
+entropy-cand,glade,True,3,3,raise blade glade
+entropy-cand,gland,True,5,5,raise float black llama gland
+entropy-cand,glare,True,3,3,raise grace glare
+entropy-cand,glass,True,4,4,raise slash class glass
+entropy-cand,glaze,True,5,5,raise blade plate flake glaze
+entropy-cand,gleam,True,3,3,raise cleat gleam
+entropy-cand,glean,True,4,4,raise cleat gleam glean
+entropy-cand,glide,True,4,4,raise utile elide glide
+entropy-cand,glint,True,2,2,raise glint
+entropy-cand,gloat,True,4,4,raise float bloat gloat
+entropy-cand,globe,True,3,3,raise lunge globe
+entropy-cand,gloom,True,4,4,raise mulch bloom gloom
+entropy-cand,glory,True,4,4,raise court fjord glory
+entropy-cand,gloss,True,3,3,raise floss gloss
+entropy-cand,glove,True,4,4,raise lunge globe glove
+entropy-cand,glyph,True,3,3,raise mulch glyph
+entropy-cand,gnash,True,4,4,raise slash awash gnash
+entropy-cand,gnome,True,3,3,raise lunge gnome
+entropy-cand,godly,True,4,4,raise mulch blown godly
+entropy-cand,going,True,3,3,raise glint going
+entropy-cand,golem,True,4,4,raise betel clued golem
+entropy-cand,golly,True,5,5,raise mulch dolly folly golly
+entropy-cand,gonad,True,3,3,raise float gonad
+entropy-cand,goner,False,6,7,raise deter cower hover joker boxer
+entropy-cand,goody,True,3,3,raise mulch goody
+entropy-cand,gooey,True,6,6,raise betel women covey dopey gooey
+entropy-cand,goofy,True,4,4,raise mulch goody goofy
+entropy-cand,goose,True,3,3,raise loose goose
+entropy-cand,gorge,True,4,4,raise trope forge gorge
+entropy-cand,gouge,True,3,3,raise lunge gouge
+entropy-cand,gourd,True,3,3,raise court gourd
+entropy-cand,grace,True,2,2,raise grace
+entropy-cand,grade,True,3,3,raise grace grade
+entropy-cand,graft,True,4,4,raise adorn tract graft
+entropy-cand,grail,True,4,4,raise trail frail grail
+entropy-cand,grain,True,4,4,raise trail braid grain
+entropy-cand,grand,True,4,4,raise adorn brand grand
+entropy-cand,grant,True,4,4,raise adorn crank grant
+entropy-cand,grape,True,4,4,raise grace grade grape
+entropy-cand,graph,True,4,4,raise adorn tract graph
+entropy-cand,grasp,True,4,4,raise brash crass grasp
+entropy-cand,grass,True,4,4,raise brash crass grass
+entropy-cand,grate,True,5,5,raise grace grade grape grate
+entropy-cand,grave,True,6,6,raise grace grade grape grate grave
+entropy-cand,gravy,True,5,5,raise adorn tract graph gravy
+entropy-cand,graze,False,6,7,raise grace grade grape grate grave
+entropy-cand,great,True,3,3,raise alert great
+entropy-cand,greed,True,6,6,raise deter breed creed freed greed
+entropy-cand,green,True,4,4,raise deter creep green
+entropy-cand,greet,True,4,4,raise deter egret greet
+entropy-cand,grief,True,4,4,raise fried brief grief
+entropy-cand,grill,True,3,3,raise print grill
+entropy-cand,grime,True,5,5,raise tripe bride crime grime
+entropy-cand,grimy,True,4,4,raise print grill grimy
+entropy-cand,grind,True,4,4,raise print bring grind
+entropy-cand,gripe,True,3,3,raise tripe gripe
+entropy-cand,groan,True,3,3,raise adorn groan
+entropy-cand,groin,True,4,4,raise droit broil groin
+entropy-cand,groom,True,5,5,raise court droop brook groom
+entropy-cand,grope,True,3,3,raise trope grope
+entropy-cand,gross,True,4,4,raise crust dross gross
+entropy-cand,group,True,4,4,raise court furor group
+entropy-cand,grout,True,3,3,raise court grout
+entropy-cand,grove,True,6,6,raise trope drone broke froze grove
+entropy-cand,growl,True,5,5,raise court droop brown growl
+entropy-cand,grown,True,6,6,raise court droop brown frown grown
+entropy-cand,gruel,True,4,4,raise deter cruel gruel
+entropy-cand,gruff,True,4,4,raise court drunk gruff
+entropy-cand,grunt,True,4,4,raise court brunt grunt
+entropy-cand,guard,True,4,4,raise adorn chard guard
+entropy-cand,guava,True,4,4,raise float aback guava
+entropy-cand,guess,True,4,4,raise chess bless guess
+entropy-cand,guest,True,3,3,raise chess guest
+entropy-cand,guide,True,3,3,raise utile guide
+entropy-cand,guild,True,3,3,raise glint guild
+entropy-cand,guile,True,3,3,raise utile guile
+entropy-cand,guilt,True,3,3,raise glint guilt
+entropy-cand,guise,True,3,3,raise noise guise
+entropy-cand,gulch,True,3,3,raise mulch gulch
+entropy-cand,gully,True,6,6,raise mulch bully dully fully gully
+entropy-cand,gumbo,True,4,4,raise mulch gummy gumbo
+entropy-cand,gummy,True,3,3,raise mulch gummy
+entropy-cand,guppy,True,4,4,raise mulch pudgy guppy
+entropy-cand,gusto,True,4,4,raise stunk dusty gusto
+entropy-cand,gusty,True,4,4,raise stunk dusty gusty
+entropy-cand,gypsy,True,3,3,raise floss gypsy
+entropy-cand,habit,True,4,4,raise panic mafia habit
+entropy-cand,hairy,True,4,4,raise dairy fairy hairy
+entropy-cand,halve,True,3,3,raise cable halve
+entropy-cand,handy,True,5,5,raise tangy candy dandy handy
+entropy-cand,happy,True,4,4,raise tangy bawdy happy
+entropy-cand,hardy,True,4,4,raise party carry hardy
+entropy-cand,harem,True,3,3,raise taper harem
+entropy-cand,harpy,True,3,3,raise party harpy
+entropy-cand,harry,True,4,4,raise party carry harry
+entropy-cand,harsh,True,2,2,raise harsh
+entropy-cand,haste,True,4,4,raise caste baste haste
+entropy-cand,hasty,True,3,3,raise salon hasty
+entropy-cand,hatch,True,5,5,raise tangy caput batch hatch
+entropy-cand,hater,True,5,5,raise taper cater eater hater
+entropy-cand,haunt,True,4,4,raise tangy daunt haunt
+entropy-cand,haute,True,4,4,raise cable gauge haute
+entropy-cand,haven,True,3,3,raise navel haven
+entropy-cand,havoc,True,5,5,raise tangy macaw caulk havoc
+entropy-cand,hazel,True,5,5,raise navel label camel hazel
+entropy-cand,heady,True,4,4,raise cleat beady heady
+entropy-cand,heard,True,4,4,raise alert beard heard
+entropy-cand,heart,True,3,3,raise alert heart
+entropy-cand,heath,True,4,4,raise cleat death heath
+entropy-cand,heave,True,3,3,raise blade heave
+entropy-cand,heavy,True,4,4,raise cleat beady heavy
+entropy-cand,hedge,True,3,3,raise lunge hedge
+entropy-cand,hefty,True,4,4,raise betel depth hefty
+entropy-cand,heist,True,3,3,raise exist heist
+entropy-cand,helix,True,4,4,raise linen devil helix
+entropy-cand,hello,True,4,4,raise betel cello hello
+entropy-cand,hence,True,4,4,raise lunge fence hence
+entropy-cand,heron,True,4,4,raise deter merry heron
+entropy-cand,hilly,True,6,6,raise pilot filly billy dilly hilly
+entropy-cand,hinge,True,3,3,raise binge hinge
+entropy-cand,hippo,True,3,3,raise pilot hippo
+entropy-cand,hippy,True,3,3,raise pilot hippy
+entropy-cand,hitch,True,4,4,raise pilot width hitch
+entropy-cand,hoard,True,4,4,raise adorn board hoard
+entropy-cand,hobby,True,4,4,raise mulch whoop hobby
+entropy-cand,hoist,True,2,2,raise hoist
+entropy-cand,holly,True,3,3,raise mulch holly
+entropy-cand,homer,True,5,5,raise deter cower hover homer
+entropy-cand,honey,True,4,4,raise betel women honey
+entropy-cand,honor,True,4,4,raise court donor honor
+entropy-cand,horde,True,5,5,raise trope forge borne horde
+entropy-cand,horny,True,4,4,raise court donor horny
+entropy-cand,horse,True,3,3,raise curse horse
+entropy-cand,hotel,True,3,3,raise betel hotel
+entropy-cand,hotly,True,3,3,raise mulch hotly
+entropy-cand,hound,True,3,3,raise mulch hound
+entropy-cand,house,True,4,4,raise loose copse house
+entropy-cand,hovel,True,4,4,raise betel dowel hovel
+entropy-cand,hover,True,4,4,raise deter cower hover
+entropy-cand,howdy,True,4,4,raise mulch whoop howdy
+entropy-cand,human,True,3,3,raise float human
+entropy-cand,humid,True,4,4,raise pilot cubic humid
+entropy-cand,humor,True,4,4,raise court furor humor
+entropy-cand,humph,True,3,3,raise mulch humph
+entropy-cand,humus,True,3,3,raise stunk humus
+entropy-cand,hunch,True,4,4,raise mulch bunch hunch
+entropy-cand,hunky,True,3,3,raise mulch hunky
+entropy-cand,hurry,True,4,4,raise court furry hurry
+entropy-cand,husky,True,4,4,raise stunk dusky husky
+entropy-cand,hussy,True,3,3,raise floss hussy
+entropy-cand,hutch,True,5,5,raise mulch bunch dutch hutch
+entropy-cand,hydro,True,4,4,raise court fjord hydro
+entropy-cand,hyena,True,4,4,raise cleat amend hyena
+entropy-cand,hymen,True,4,4,raise betel women hymen
+entropy-cand,hyper,True,5,5,raise deter cower buyer hyper
+entropy-cand,icily,True,4,4,raise glint child icily
+entropy-cand,icing,True,4,4,raise glint doing icing
+entropy-cand,ideal,True,3,3,raise email ideal
+entropy-cand,idiom,True,4,4,raise glint chick idiom
+entropy-cand,idiot,True,3,3,raise glint idiot
+entropy-cand,idler,True,3,3,raise diner idler
+entropy-cand,idyll,True,4,4,raise pilot fluid idyll
+entropy-cand,igloo,True,3,3,raise pilot igloo
+entropy-cand,iliac,True,3,3,raise align iliac
+entropy-cand,image,True,2,2,raise image
+entropy-cand,imbue,True,3,3,raise binge imbue
+entropy-cand,impel,True,3,3,raise linen impel
+entropy-cand,imply,True,3,3,raise pilot imply
+entropy-cand,inane,True,3,3,raise image inane
+entropy-cand,inbox,True,3,3,raise pilot inbox
+entropy-cand,incur,True,4,4,raise droit birch incur
+entropy-cand,index,True,3,3,raise linen index
+entropy-cand,inept,True,3,3,raise linen inept
+entropy-cand,inert,True,3,3,raise diner inert
+entropy-cand,infer,True,3,3,raise diner infer
+entropy-cand,ingot,True,3,3,raise pilot ingot
+entropy-cand,inlay,True,3,3,raise tidal inlay
+entropy-cand,inlet,True,3,3,raise linen inlet
+entropy-cand,inner,True,3,3,raise diner inner
+entropy-cand,input,True,3,3,raise pilot input
+entropy-cand,inter,True,4,4,raise diner infer inter
+entropy-cand,intro,True,3,3,raise droit intro
+entropy-cand,ionic,True,4,4,raise pilot comic ionic
+entropy-cand,irate,True,2,2,raise irate
+entropy-cand,irony,True,3,3,raise droit irony
+entropy-cand,islet,True,2,2,raise islet
+entropy-cand,issue,True,3,3,raise siege issue
+entropy-cand,itchy,True,3,3,raise pilot itchy
+entropy-cand,ivory,True,3,3,raise droit ivory
+entropy-cand,jaunt,True,5,5,raise tangy daunt haunt jaunt
+entropy-cand,jazzy,True,5,5,raise tangy bawdy happy jazzy
+entropy-cand,jelly,True,4,4,raise betel cello jelly
+entropy-cand,jerky,True,4,4,raise deter merry jerky
+entropy-cand,jetty,True,3,3,raise betel jetty
+entropy-cand,jewel,True,3,3,raise betel jewel
+entropy-cand,jiffy,True,5,5,raise pilot windy fizzy jiffy
+entropy-cand,joint,True,3,3,raise glint joint
+entropy-cand,joist,True,4,4,raise hoist foist joist
+entropy-cand,joker,True,5,5,raise deter cower hover joker
+entropy-cand,jolly,True,6,6,raise mulch dolly folly golly jolly
+entropy-cand,joust,True,3,3,raise floss joust
+entropy-cand,judge,True,5,5,raise lunge budge fudge judge
+entropy-cand,juice,True,4,4,raise utile guide juice
+entropy-cand,juicy,True,4,4,raise glint chick juicy
+entropy-cand,jumbo,True,4,4,raise mulch gummy jumbo
+entropy-cand,jumpy,True,5,5,raise mulch gummy dumpy jumpy
+entropy-cand,junta,True,4,4,raise float aunty junta
+entropy-cand,junto,True,4,4,raise mulch pudgy junto
+entropy-cand,juror,True,4,4,raise court furor juror
+entropy-cand,kappa,True,4,4,raise tangy macaw kappa
+entropy-cand,karma,True,4,4,raise party carol karma
+entropy-cand,kayak,True,4,4,raise tangy bayou kayak
+entropy-cand,kebab,True,4,4,raise cleat began kebab
+entropy-cand,khaki,True,4,4,raise tidal affix khaki
+entropy-cand,kinky,True,4,4,raise pilot windy kinky
+entropy-cand,kiosk,True,3,3,raise missy kiosk
+entropy-cand,kitty,True,5,5,raise pilot width bitty kitty
+entropy-cand,knack,True,4,4,raise float aback knack
+entropy-cand,knave,True,4,4,raise blade heave knave
+entropy-cand,knead,True,4,4,raise cleat ahead knead
+entropy-cand,kneed,True,4,4,raise betel cheek kneed
+entropy-cand,kneel,True,4,4,raise betel excel kneel
+entropy-cand,knelt,True,4,4,raise betel dwelt knelt
+entropy-cand,knife,True,4,4,raise utile opine knife
+entropy-cand,knock,True,3,3,raise mulch knock
+entropy-cand,knoll,True,4,4,raise mulch blown knoll
+entropy-cand,known,True,4,4,raise mulch goody known
+entropy-cand,koala,True,3,3,raise float koala
+entropy-cand,krill,True,6,6,raise print grill drill frill krill
+entropy-cand,label,True,3,3,raise navel label
+entropy-cand,labor,True,4,4,raise party valor labor
+entropy-cand,laden,True,3,3,raise navel laden
+entropy-cand,ladle,True,4,4,raise cable eagle ladle
+entropy-cand,lager,True,3,3,raise taper lager
+entropy-cand,lance,True,3,3,raise cable lance
+entropy-cand,lanky,True,5,5,raise tangy candy fanny lanky
+entropy-cand,lapel,True,4,4,raise navel label lapel
+entropy-cand,lapse,True,2,2,raise lapse
+entropy-cand,large,True,3,3,raise barge large
+entropy-cand,larva,True,4,4,raise party carol larva
+entropy-cand,lasso,True,3,3,raise salsa lasso
+entropy-cand,latch,True,6,6,raise tangy caput batch hatch latch
+entropy-cand,later,True,6,6,raise taper cater eater hater later
+entropy-cand,lathe,True,4,4,raise cable halve lathe
+entropy-cand,latte,True,4,4,raise cable halve latte
+entropy-cand,laugh,True,3,3,raise tangy laugh
+entropy-cand,layer,True,4,4,raise taper lager layer
+entropy-cand,leach,True,3,3,raise cleat leach
+entropy-cand,leafy,True,4,4,raise cleat fella leafy
+entropy-cand,leaky,True,4,4,raise cleat fella leaky
+entropy-cand,leant,True,3,3,raise cleat leant
+entropy-cand,leapt,True,4,4,raise cleat leant leapt
+entropy-cand,learn,True,3,3,raise alert learn
+entropy-cand,lease,True,3,3,raise cease lease
+entropy-cand,leash,True,3,3,raise beast leash
+entropy-cand,least,True,4,4,raise beast feast least
+entropy-cand,leave,True,3,3,raise blade leave
+entropy-cand,ledge,True,3,3,raise lunge ledge
+entropy-cand,leech,True,3,3,raise betel leech
+entropy-cand,leery,True,3,3,raise deter leery
+entropy-cand,lefty,True,3,3,raise betel lefty
+entropy-cand,legal,True,4,4,raise cleat pedal legal
+entropy-cand,leggy,True,4,4,raise betel cello leggy
+entropy-cand,lemon,True,4,4,raise betel cello lemon
+entropy-cand,lemur,True,4,4,raise deter femur lemur
+entropy-cand,leper,True,4,4,raise deter fever leper
+entropy-cand,level,True,4,4,raise betel jewel level
+entropy-cand,lever,True,4,4,raise deter fever lever
+entropy-cand,libel,True,3,3,raise linen libel
+entropy-cand,liege,True,3,3,raise binge liege
+entropy-cand,light,True,3,3,raise pilot light
+entropy-cand,liken,True,3,3,raise linen liken
+entropy-cand,lilac,True,3,3,raise tidal lilac
+entropy-cand,limbo,True,3,3,raise pilot limbo
+entropy-cand,limit,True,4,4,raise pilot light limit
+entropy-cand,linen,True,2,2,raise linen
+entropy-cand,liner,True,4,4,raise diner finer liner
+entropy-cand,lingo,True,4,4,raise pilot limbo lingo
+entropy-cand,lipid,True,3,3,raise pilot lipid
+entropy-cand,lithe,True,4,4,raise binge tilde lithe
+entropy-cand,liver,True,4,4,raise diner giver liver
+entropy-cand,livid,True,4,4,raise pilot civil livid
+entropy-cand,llama,True,4,4,raise float black llama
+entropy-cand,loamy,True,4,4,raise float koala loamy
+entropy-cand,loath,True,3,3,raise float loath
+entropy-cand,lobby,True,4,4,raise mulch blown lobby
+entropy-cand,local,True,3,3,raise float local
+entropy-cand,locus,True,5,5,raise stunk humus focus locus
+entropy-cand,lodge,True,4,4,raise lunge ledge lodge
+entropy-cand,lofty,True,5,5,raise mulch blown godly lofty
+entropy-cand,logic,True,3,3,raise pilot logic
+entropy-cand,login,True,4,4,raise pilot logic login
+entropy-cand,loopy,True,4,4,raise mulch blown loopy
+entropy-cand,loose,True,2,2,raise loose
+entropy-cand,lorry,True,4,4,raise court dowry lorry
+entropy-cand,loser,True,3,3,raise sheer loser
+entropy-cand,louse,True,3,3,raise loose louse
+entropy-cand,lousy,True,3,3,raise floss lousy
+entropy-cand,lover,True,5,5,raise deter cower hover lover
+entropy-cand,lower,True,4,4,raise deter cower lower
+entropy-cand,lowly,True,4,4,raise mulch blown lowly
+entropy-cand,loyal,True,4,4,raise float local loyal
+entropy-cand,lucid,True,4,4,raise pilot fluid lucid
+entropy-cand,lucky,True,3,3,raise mulch lucky
+entropy-cand,lumen,True,4,4,raise betel clued lumen
+entropy-cand,lumpy,True,3,3,raise mulch lumpy
+entropy-cand,lunar,True,4,4,raise adorn crank lunar
+entropy-cand,lunch,True,3,3,raise mulch lunch
+entropy-cand,lunge,True,2,2,raise lunge
+entropy-cand,lupus,True,4,4,raise stunk humus lupus
+entropy-cand,lurch,True,3,3,raise court lurch
+entropy-cand,lurid,True,3,3,raise droit lurid
+entropy-cand,lusty,True,5,5,raise stunk dusty gusty lusty
+entropy-cand,lying,True,3,3,raise glint lying
+entropy-cand,lymph,True,3,3,raise mulch lymph
+entropy-cand,lyric,True,3,3,raise droit lyric
+entropy-cand,macaw,True,3,3,raise tangy macaw
+entropy-cand,macho,True,4,4,raise tangy macaw macho
+entropy-cand,macro,True,4,4,raise party valor macro
+entropy-cand,madam,True,4,4,raise tangy macaw madam
+entropy-cand,madly,True,5,5,raise tangy bawdy dally madly
+entropy-cand,mafia,True,3,3,raise panic mafia
+entropy-cand,magic,True,3,3,raise panic magic
+entropy-cand,magma,True,4,4,raise tangy gamma magma
+entropy-cand,maize,True,3,3,raise naive maize
+entropy-cand,major,True,4,4,raise party valor major
+entropy-cand,maker,True,5,5,raise taper lager baker maker
+entropy-cand,mambo,True,4,4,raise tangy macaw mambo
+entropy-cand,mamma,True,4,4,raise tangy macaw mamma
+entropy-cand,mammy,True,6,6,raise tangy bawdy happy jazzy mammy
+entropy-cand,manga,True,3,3,raise tangy manga
+entropy-cand,mange,True,4,4,raise cable gauge mange
+entropy-cand,mango,True,4,4,raise tangy manga mango
+entropy-cand,mangy,True,3,3,raise tangy mangy
+entropy-cand,mania,True,3,3,raise panic mania
+entropy-cand,manic,True,3,3,raise panic manic
+entropy-cand,manly,True,6,6,raise tangy candy fanny lanky manly
+entropy-cand,manor,True,5,5,raise party valor major manor
+entropy-cand,maple,True,5,5,raise cable eagle ladle maple
+entropy-cand,march,True,4,4,raise party carol march
+entropy-cand,marry,True,5,5,raise party carry harry marry
+entropy-cand,marsh,True,3,3,raise harsh marsh
+entropy-cand,mason,True,3,3,raise salon mason
+entropy-cand,masse,True,4,4,raise lapse cause masse
+entropy-cand,match,False,6,7,raise tangy caput batch hatch latch
+entropy-cand,matey,True,4,4,raise navel cadet matey
+entropy-cand,mauve,True,5,5,raise cable gauge haute mauve
+entropy-cand,maxim,True,4,4,raise panic mafia maxim
+entropy-cand,maybe,True,4,4,raise cable badge maybe
+entropy-cand,mayor,True,3,3,raise party mayor
+entropy-cand,mealy,True,4,4,raise cleat fella mealy
+entropy-cand,meant,True,3,3,raise cleat meant
+entropy-cand,meaty,True,4,4,raise cleat death meaty
+entropy-cand,mecca,True,4,4,raise cleat beach mecca
+entropy-cand,medal,True,4,4,raise cleat pedal medal
+entropy-cand,media,True,3,3,raise email media
+entropy-cand,medic,True,4,4,raise linen fetid medic
+entropy-cand,melee,True,5,5,raise lunge belle delve melee
+entropy-cand,melon,True,5,5,raise betel cello felon melon
+entropy-cand,mercy,True,4,4,raise deter merry mercy
+entropy-cand,merge,True,4,4,raise trope nerve merge
+entropy-cand,merit,True,3,3,raise diner merit
+entropy-cand,merry,True,3,3,raise deter merry
+entropy-cand,metal,True,4,4,raise cleat fetal metal
+entropy-cand,meter,True,3,3,raise deter meter
+entropy-cand,metro,True,3,3,raise deter metro
+entropy-cand,micro,True,3,3,raise droit micro
+entropy-cand,midge,True,4,4,raise binge liege midge
+entropy-cand,midst,True,3,3,raise missy midst
+entropy-cand,might,True,4,4,raise pilot fight might
+entropy-cand,milky,True,4,4,raise pilot filly milky
+entropy-cand,mimic,True,5,5,raise pilot windy civic mimic
+entropy-cand,mince,True,3,3,raise binge mince
+entropy-cand,miner,True,5,5,raise diner finer liner miner
+entropy-cand,minim,True,5,5,raise pilot windy cinch minim
+entropy-cand,minor,True,4,4,raise droit micro minor
+entropy-cand,minty,True,6,6,raise pilot width bitty fifty minty
+entropy-cand,minus,True,4,4,raise stoic fishy minus
+entropy-cand,mirth,True,5,5,raise droit birth girth mirth
+entropy-cand,miser,True,2,2,raise miser
+entropy-cand,missy,True,2,2,raise missy
+entropy-cand,mocha,True,4,4,raise float comma mocha
+entropy-cand,modal,True,4,4,raise float local modal
+entropy-cand,model,True,4,4,raise betel dowel model
+entropy-cand,modem,True,4,4,raise betel women modem
+entropy-cand,mogul,True,3,3,raise mulch mogul
+entropy-cand,moist,True,5,5,raise hoist foist joist moist
+entropy-cand,molar,True,3,3,raise adorn molar
+entropy-cand,moldy,True,3,3,raise mulch moldy
+entropy-cand,money,True,4,4,raise betel women money
+entropy-cand,month,True,3,3,raise mulch month
+entropy-cand,moody,True,3,3,raise mulch moody
+entropy-cand,moose,True,4,4,raise loose goose moose
+entropy-cand,moral,True,4,4,raise adorn molar moral
+entropy-cand,moron,True,4,4,raise court donor moron
+entropy-cand,morph,True,4,4,raise court donor morph
+entropy-cand,mossy,True,4,4,raise floss bossy mossy
+entropy-cand,motel,True,4,4,raise betel hotel motel
+entropy-cand,motif,True,4,4,raise pilot tonic motif
+entropy-cand,motor,True,4,4,raise court forth motor
+entropy-cand,motto,True,4,4,raise mulch moody motto
+entropy-cand,moult,True,4,4,raise mulch mogul moult
+entropy-cand,mound,True,3,3,raise mulch mound
+entropy-cand,mount,True,4,4,raise mulch mound mount
+entropy-cand,mourn,True,4,4,raise court gourd mourn
+entropy-cand,mouse,True,5,5,raise loose copse house mouse
+entropy-cand,mouth,True,3,3,raise mulch mouth
+entropy-cand,mover,True,6,6,raise deter cower hover lover mover
+entropy-cand,movie,True,4,4,raise binge cutie movie
+entropy-cand,mower,True,5,5,raise deter cower lower mower
+entropy-cand,mucky,True,3,3,raise mulch mucky
+entropy-cand,mucus,True,4,4,raise stunk humus mucus
+entropy-cand,muddy,True,3,3,raise mulch muddy
+entropy-cand,mulch,True,2,2,raise mulch
+entropy-cand,mummy,True,4,4,raise mulch muddy mummy
+entropy-cand,munch,True,3,3,raise mulch munch
+entropy-cand,mural,True,4,4,raise adorn tract mural
+entropy-cand,murky,True,4,4,raise court burly murky
+entropy-cand,mushy,True,4,4,raise stunk humus mushy
+entropy-cand,music,True,3,3,raise stoic music
+entropy-cand,musky,True,5,5,raise stunk dusky husky musky
+entropy-cand,musty,True,6,6,raise stunk dusty gusty lusty musty
+entropy-cand,myrrh,True,3,3,raise court myrrh
+entropy-cand,nadir,True,2,2,raise nadir
+entropy-cand,naive,True,2,2,raise naive
+entropy-cand,nanny,True,5,5,raise tangy candy fanny nanny
+entropy-cand,nasal,True,3,3,raise salon nasal
+entropy-cand,nasty,True,3,3,raise salon nasty
+entropy-cand,natal,True,5,5,raise tangy daunt baton natal
+entropy-cand,naval,True,4,4,raise tangy fauna naval
+entropy-cand,navel,True,2,2,raise navel
+entropy-cand,needy,True,3,3,raise betel needy
+entropy-cand,neigh,True,4,4,raise edict feign neigh
+entropy-cand,nerdy,True,3,3,raise deter nerdy
+entropy-cand,nerve,True,3,3,raise trope nerve
+entropy-cand,never,True,5,5,raise deter fever lever never
+entropy-cand,newer,True,5,5,raise deter fever leper newer
+entropy-cand,newly,True,4,4,raise betel cello newly
+entropy-cand,nicer,True,3,3,raise diner nicer
+entropy-cand,niche,True,3,3,raise binge niche
+entropy-cand,niece,True,4,4,raise binge niche niece
+entropy-cand,night,True,5,5,raise pilot fight might night
+entropy-cand,ninja,True,3,3,raise tidal ninja
+entropy-cand,ninny,True,5,5,raise pilot windy kinky ninny
+entropy-cand,ninth,True,5,5,raise pilot width fifth ninth
+entropy-cand,noble,True,4,4,raise lunge clone noble
+entropy-cand,nobly,True,4,4,raise mulch blown nobly
+entropy-cand,noise,True,2,2,raise noise
+entropy-cand,noisy,True,3,3,raise hoist noisy
+entropy-cand,nomad,True,4,4,raise float gonad nomad
+entropy-cand,noose,True,5,5,raise loose goose moose noose
+entropy-cand,north,True,4,4,raise court forth north
+entropy-cand,nosey,True,4,4,raise spelt bused nosey
+entropy-cand,notch,True,3,3,raise mulch notch
+entropy-cand,novel,True,5,5,raise betel dowel hovel novel
+entropy-cand,nudge,True,3,3,raise lunge nudge
+entropy-cand,nurse,True,3,3,raise curse nurse
+entropy-cand,nutty,True,5,5,raise mulch pudgy bunny nutty
+entropy-cand,nylon,True,4,4,raise mulch dolly nylon
+entropy-cand,nymph,True,3,3,raise mulch nymph
+entropy-cand,oaken,True,4,4,raise navel taken oaken
+entropy-cand,obese,True,3,3,raise loose obese
+entropy-cand,occur,True,3,3,raise court occur
+entropy-cand,ocean,True,3,3,raise cleat ocean
+entropy-cand,octal,True,3,3,raise float octal
+entropy-cand,octet,True,3,3,raise betel octet
+entropy-cand,odder,True,3,3,raise deter odder
+entropy-cand,oddly,True,5,5,raise mulch blown godly oddly
+entropy-cand,offal,True,3,3,raise float offal
+entropy-cand,offer,True,4,4,raise deter cower offer
+entropy-cand,often,True,4,4,raise betel octet often
+entropy-cand,olden,True,4,4,raise betel clued olden
+entropy-cand,older,True,4,4,raise deter odder older
+entropy-cand,olive,True,4,4,raise utile elide olive
+entropy-cand,ombre,True,4,4,raise trope forge ombre
+entropy-cand,omega,True,4,4,raise cleat amend omega
+entropy-cand,onion,True,3,3,raise glint onion
+entropy-cand,onset,True,3,3,raise spelt onset
+entropy-cand,opera,True,3,3,raise alert opera
+entropy-cand,opine,True,3,3,raise utile opine
+entropy-cand,opium,True,5,5,raise glint chick idiom opium
+entropy-cand,optic,True,3,3,raise pilot optic
+entropy-cand,orbit,True,3,3,raise droit orbit
+entropy-cand,order,True,5,5,raise deter odder older order
+entropy-cand,organ,True,3,3,raise adorn organ
+entropy-cand,other,True,4,4,raise deter truer other
+entropy-cand,otter,True,3,3,raise deter otter
+entropy-cand,ought,True,4,4,raise mulch hunky ought
+entropy-cand,ounce,True,4,4,raise lunge dunce ounce
+entropy-cand,outdo,True,4,4,raise mulch pudgy outdo
+entropy-cand,outer,True,4,4,raise deter otter outer
+entropy-cand,outgo,True,4,4,raise mulch pudgy outgo
+entropy-cand,ovary,True,4,4,raise adorn cobra ovary
+entropy-cand,ovate,True,4,4,raise blade heave ovate
+entropy-cand,overt,True,4,4,raise deter crept overt
+entropy-cand,ovine,True,4,4,raise utile opine ovine
+entropy-cand,ovoid,True,4,4,raise pilot comic ovoid
+entropy-cand,owing,True,4,4,raise glint doing owing
+entropy-cand,owner,True,4,4,raise deter cower owner
+entropy-cand,oxide,True,4,4,raise utile opine oxide
+entropy-cand,ozone,True,3,3,raise lunge ozone
+entropy-cand,paddy,True,6,6,raise tangy bawdy caddy daddy paddy
+entropy-cand,pagan,True,3,3,raise tangy pagan
+entropy-cand,paint,True,3,3,raise faint paint
+entropy-cand,paler,True,3,3,raise taper paler
+entropy-cand,palsy,True,3,3,raise salsa palsy
+entropy-cand,panel,True,3,3,raise navel panel
+entropy-cand,panic,True,2,2,raise panic
+entropy-cand,pansy,True,3,3,raise salsa pansy
+entropy-cand,papal,True,4,4,raise tangy macaw papal
+entropy-cand,paper,True,4,4,raise taper caper paper
+entropy-cand,parer,True,4,4,raise taper paler parer
+entropy-cand,parka,True,3,3,raise party parka
+entropy-cand,parry,True,3,3,raise party parry
+entropy-cand,parse,True,2,2,raise parse
+entropy-cand,party,True,2,2,raise party
+entropy-cand,pasta,True,4,4,raise salon hasty pasta
+entropy-cand,paste,True,5,5,raise caste baste haste paste
+entropy-cand,pasty,True,4,4,raise salon hasty pasty
+entropy-cand,patch,True,4,4,raise tangy caput patch
+entropy-cand,patio,True,3,3,raise panic patio
+entropy-cand,patsy,True,4,4,raise salsa pansy patsy
+entropy-cand,patty,True,6,6,raise tangy batty catty fatty patty
+entropy-cand,pause,True,3,3,raise lapse pause
+entropy-cand,payee,True,4,4,raise cable gauge payee
+entropy-cand,payer,True,5,5,raise taper paler parer payer
+entropy-cand,peace,True,4,4,raise blade heave peace
+entropy-cand,peach,True,4,4,raise cleat beach peach
+entropy-cand,pearl,True,4,4,raise alert learn pearl
+entropy-cand,pecan,True,4,4,raise cleat decay pecan
+entropy-cand,pedal,True,3,3,raise cleat pedal
+entropy-cand,penal,True,4,4,raise cleat pedal penal
+entropy-cand,pence,True,5,5,raise lunge fence hence pence
+entropy-cand,penne,True,4,4,raise lunge fence penne
+entropy-cand,penny,True,4,4,raise betel decoy penny
+entropy-cand,perch,True,5,5,raise deter merry heron perch
+entropy-cand,peril,True,4,4,raise diner merit peril
+entropy-cand,perky,True,5,5,raise deter merry jerky perky
+entropy-cand,pesky,True,3,3,raise spelt pesky
+entropy-cand,pesto,True,3,3,raise spelt pesto
+entropy-cand,petal,True,5,5,raise cleat fetal metal petal
+entropy-cand,petty,True,4,4,raise betel jetty petty
+entropy-cand,phase,True,4,4,raise cease abase phase
+entropy-cand,phone,True,4,4,raise lunge ozone phone
+entropy-cand,phony,True,4,4,raise mulch whoop phony
+entropy-cand,photo,True,4,4,raise mulch whoop photo
+entropy-cand,piano,True,4,4,raise tidal ninja piano
+entropy-cand,picky,True,3,3,raise pilot picky
+entropy-cand,piece,True,4,4,raise binge tilde piece
+entropy-cand,piety,True,4,4,raise linen eight piety
+entropy-cand,piggy,True,4,4,raise pilot picky piggy
+entropy-cand,pilot,True,2,2,raise pilot
+entropy-cand,pinch,True,4,4,raise pilot picky pinch
+entropy-cand,piney,True,3,3,raise linen piney
+entropy-cand,pinky,True,4,4,raise pilot picky pinky
+entropy-cand,pinto,True,3,3,raise pilot pinto
+entropy-cand,piper,True,5,5,raise diner giver fiber piper
+entropy-cand,pique,True,5,5,raise binge tilde piece pique
+entropy-cand,pitch,True,3,3,raise pilot pitch
+entropy-cand,pithy,True,4,4,raise pilot pitch pithy
+entropy-cand,pivot,True,3,3,raise pilot pivot
+entropy-cand,pixel,True,4,4,raise linen filet pixel
+entropy-cand,pixie,True,6,6,raise binge tilde piece pique pixie
+entropy-cand,pizza,True,4,4,raise tidal ninja pizza
+entropy-cand,place,True,4,4,raise blade plate place
+entropy-cand,plaid,True,3,3,raise tidal plaid
+entropy-cand,plain,True,4,4,raise tidal claim plain
+entropy-cand,plait,True,3,3,raise tidal plait
+entropy-cand,plane,True,5,5,raise blade plate place plane
+entropy-cand,plank,True,4,4,raise float black plank
+entropy-cand,plant,True,3,3,raise float plant
+entropy-cand,plate,True,3,3,raise blade plate
+entropy-cand,plaza,True,5,5,raise float black llama plaza
+entropy-cand,plead,True,5,5,raise cleat gleam bleak plead
+entropy-cand,pleat,True,4,4,raise cleat bleat pleat
+entropy-cand,plied,True,4,4,raise edict deign plied
+entropy-cand,plier,True,3,3,raise fried plier
+entropy-cand,pluck,True,4,4,raise mulch cluck pluck
+entropy-cand,plumb,True,3,3,raise mulch plumb
+entropy-cand,plume,True,4,4,raise lunge flume plume
+entropy-cand,plump,True,4,4,raise mulch plumb plump
+entropy-cand,plunk,True,4,4,raise mulch flunk plunk
+entropy-cand,plush,True,4,4,raise floss blush plush
+entropy-cand,poesy,True,4,4,raise chess guest poesy
+entropy-cand,point,True,4,4,raise glint joint point
+entropy-cand,poise,True,3,3,raise noise poise
+entropy-cand,poker,True,6,6,raise deter cower hover joker poker
+entropy-cand,polar,True,4,4,raise adorn molar polar
+entropy-cand,polka,True,4,4,raise float koala polka
+entropy-cand,polyp,True,4,4,raise mulch dolly polyp
+entropy-cand,pooch,True,4,4,raise mulch notch pooch
+entropy-cand,poppy,True,5,5,raise mulch goody bobby poppy
+entropy-cand,porch,True,3,3,raise court porch
+entropy-cand,poser,True,4,4,raise sheer loser poser
+entropy-cand,posit,True,3,3,raise stoic posit
+entropy-cand,posse,True,4,4,raise loose copse posse
+entropy-cand,pouch,True,4,4,raise mulch couch pouch
+entropy-cand,pound,True,5,5,raise mulch bound found pound
+entropy-cand,pouty,True,4,4,raise mulch bound pouty
+entropy-cand,power,True,6,6,raise deter cower lower mower power
+entropy-cand,prank,True,5,5,raise adorn crank frank prank
+entropy-cand,prawn,True,4,4,raise adorn brawn prawn
+entropy-cand,preen,True,4,4,raise deter creep preen
+entropy-cand,press,True,4,4,raise cress dress press
+entropy-cand,price,True,3,3,raise tripe price
+entropy-cand,prick,True,4,4,raise print primo prick
+entropy-cand,pride,True,4,4,raise tripe price pride
+entropy-cand,pried,True,5,5,raise fried cried dried pried
+entropy-cand,prime,True,5,5,raise tripe price pride prime
+entropy-cand,primo,True,3,3,raise print primo
+entropy-cand,print,True,2,2,raise print
+entropy-cand,prior,True,4,4,raise print primo prior
+entropy-cand,prism,True,4,4,raise brisk crisp prism
+entropy-cand,privy,True,5,5,raise print primo prick privy
+entropy-cand,prize,True,6,6,raise tripe price pride prime prize
+entropy-cand,probe,True,3,3,raise trope probe
+entropy-cand,prone,True,4,4,raise trope probe prone
+entropy-cand,prong,True,4,4,raise court droop prong
+entropy-cand,proof,True,4,4,raise court droop proof
+entropy-cand,prose,True,3,3,raise curse prose
+entropy-cand,proud,True,5,5,raise court furor group proud
+entropy-cand,prove,True,5,5,raise trope probe prone prove
+entropy-cand,prowl,True,5,5,raise court droop prong prowl
+entropy-cand,proxy,True,6,6,raise court droop prong prowl proxy
+entropy-cand,prude,True,3,3,raise trope prude
+entropy-cand,prune,True,4,4,raise trope prude prune
+entropy-cand,psalm,True,3,3,raise stalk psalm
+entropy-cand,pubic,True,3,3,raise pilot pubic
+entropy-cand,pudgy,True,3,3,raise mulch pudgy
+entropy-cand,puffy,True,4,4,raise mulch pudgy puffy
+entropy-cand,pulpy,True,4,4,raise mulch bully pulpy
+entropy-cand,pulse,True,3,3,raise loose pulse
+entropy-cand,punch,True,5,5,raise mulch bunch hunch punch
+entropy-cand,pupil,True,3,3,raise pilot pupil
+entropy-cand,puppy,True,5,5,raise mulch pudgy puffy puppy
+entropy-cand,puree,True,3,3,raise trope puree
+entropy-cand,purer,True,5,5,raise deter cower buyer purer
+entropy-cand,purge,True,4,4,raise trope puree purge
+entropy-cand,purse,True,4,4,raise curse nurse purse
+entropy-cand,pushy,True,5,5,raise stunk humus bushy pushy
+entropy-cand,putty,True,6,6,raise mulch pudgy puffy puppy putty
+entropy-cand,pygmy,True,3,3,raise mulch pygmy
+entropy-cand,quack,True,5,5,raise float aback knack quack
+entropy-cand,quail,True,5,5,raise tidal anvil flail quail
+entropy-cand,quake,True,5,5,raise blade heave agape quake
+entropy-cand,qualm,True,4,4,raise float amply qualm
+entropy-cand,quark,True,4,4,raise adorn chart quark
+entropy-cand,quart,True,4,4,raise adorn chart quart
+entropy-cand,quash,True,5,5,raise slash awash gnash quash
+entropy-cand,quasi,True,2,2,raise quasi
+entropy-cand,queen,True,4,4,raise betel cheek queen
+entropy-cand,queer,True,5,5,raise deter cheer freer queer
+entropy-cand,quell,True,4,4,raise betel dwell quell
+entropy-cand,query,True,4,4,raise deter clerk query
+entropy-cand,quest,True,4,4,raise chess guest quest
+entropy-cand,queue,True,4,4,raise lunge butte queue
+entropy-cand,quick,True,4,4,raise glint chick quick
+entropy-cand,quiet,True,3,3,raise edict quiet
+entropy-cand,quill,True,4,4,raise glint child quill
+entropy-cand,quilt,True,4,4,raise glint built quilt
+entropy-cand,quirk,True,3,3,raise print quirk
+entropy-cand,quite,True,3,3,raise utile quite
+entropy-cand,quota,True,3,3,raise float quota
+entropy-cand,quote,True,4,4,raise lunge butte quote
+entropy-cand,quoth,True,3,3,raise mulch quoth
+entropy-cand,rabbi,True,3,3,raise rabid rabbi
+entropy-cand,rabid,True,2,2,raise rabid
+entropy-cand,racer,True,2,2,raise racer
+entropy-cand,radar,True,3,3,raise randy radar
+entropy-cand,radii,True,3,3,raise rabid radii
+entropy-cand,radio,True,4,4,raise rabid radii radio
+entropy-cand,rainy,True,2,2,raise rainy
+entropy-cand,raise,True,1,1,raise
+entropy-cand,rajah,True,3,3,raise randy rajah
+entropy-cand,rally,True,3,3,raise randy rally
+entropy-cand,ralph,True,4,4,raise randy rajah ralph
+entropy-cand,ramen,True,3,3,raise racer ramen
+entropy-cand,ranch,True,3,3,raise randy ranch
+entropy-cand,randy,True,2,2,raise randy
+entropy-cand,range,True,2,2,raise range
+entropy-cand,rapid,True,3,3,raise rabid rapid
+entropy-cand,rarer,True,3,3,raise racer rarer
+entropy-cand,raspy,True,2,2,raise raspy
+entropy-cand,ratio,True,3,3,raise rabid ratio
+entropy-cand,ratty,True,4,4,raise randy rally ratty
+entropy-cand,raven,True,4,4,raise racer ramen raven
+entropy-cand,rayon,True,3,3,raise randy rayon
+entropy-cand,razor,True,4,4,raise randy rajah razor
+entropy-cand,reach,True,3,3,raise relay reach
+entropy-cand,react,True,4,4,raise relay reach react
+entropy-cand,ready,True,3,3,raise relay ready
+entropy-cand,realm,True,3,3,raise relay realm
+entropy-cand,rearm,True,4,4,raise relay reach rearm
+entropy-cand,rebar,True,3,3,raise relay rebar
+entropy-cand,rebel,True,3,3,raise ruler rebel
+entropy-cand,rebus,True,2,2,raise rebus
+entropy-cand,rebut,True,3,3,raise ruler rebut
+entropy-cand,recap,True,4,4,raise relay rebar recap
+entropy-cand,recur,True,3,3,raise ruler recur
+entropy-cand,recut,True,4,4,raise ruler rebut recut
+entropy-cand,reedy,True,3,3,raise ruler reedy
+entropy-cand,refer,True,4,4,raise ruler roger refer
+entropy-cand,refit,True,3,3,raise riper refit
+entropy-cand,regal,True,3,3,raise relay regal
+entropy-cand,rehab,True,4,4,raise relay rebar rehab
+entropy-cand,reign,True,2,2,raise reign
+entropy-cand,relax,True,3,3,raise relay relax
+entropy-cand,relay,True,2,2,raise relay
+entropy-cand,relic,True,4,4,raise riper refit relic
+entropy-cand,remit,True,4,4,raise riper refit remit
+entropy-cand,renal,True,4,4,raise relay regal renal
+entropy-cand,renew,True,3,3,raise ruler renew
+entropy-cand,repay,True,3,3,raise relay repay
+entropy-cand,repel,True,4,4,raise ruler rebel repel
+entropy-cand,reply,True,3,3,raise ruler reply
+entropy-cand,rerun,True,3,3,raise ruler rerun
+entropy-cand,reset,True,3,3,raise rebus reset
+entropy-cand,resin,True,2,2,raise resin
+entropy-cand,retch,True,4,4,raise ruler reedy retch
+entropy-cand,retro,True,3,3,raise ruler retro
+entropy-cand,retry,True,4,4,raise ruler retro retry
+entropy-cand,reuse,True,2,2,raise reuse
+entropy-cand,revel,True,5,5,raise ruler rebel repel revel
+entropy-cand,revue,True,3,3,raise rogue revue
+entropy-cand,rhino,True,2,2,raise rhino
+entropy-cand,rhyme,True,3,3,raise rogue rhyme
+entropy-cand,rider,True,3,3,raise riper rider
+entropy-cand,ridge,True,2,2,raise ridge
+entropy-cand,rifle,True,3,3,raise ridge rifle
+entropy-cand,right,True,3,3,raise robin right
+entropy-cand,rigid,True,3,3,raise robin rigid
+entropy-cand,rigor,True,3,3,raise robin rigor
+entropy-cand,rinse,True,2,2,raise rinse
+entropy-cand,ripen,True,3,3,raise riper ripen
+entropy-cand,riper,True,2,2,raise riper
+entropy-cand,risen,True,3,3,raise resin risen
+entropy-cand,riser,True,3,3,raise resin riser
+entropy-cand,risky,True,2,2,raise risky
+entropy-cand,rival,True,2,2,raise rival
+entropy-cand,river,True,4,4,raise riper rider river
+entropy-cand,rivet,True,3,3,raise riper rivet
+entropy-cand,roach,True,3,3,raise royal roach
+entropy-cand,roast,True,2,2,raise roast
+entropy-cand,robin,True,2,2,raise robin
+entropy-cand,robot,True,3,3,raise ruddy robot
+entropy-cand,rocky,True,3,3,raise ruddy rocky
+entropy-cand,rodeo,True,4,4,raise ruler renew rodeo
+entropy-cand,roger,True,3,3,raise ruler roger
+entropy-cand,rogue,True,2,2,raise rogue
+entropy-cand,roomy,True,4,4,raise ruddy rocky roomy
+entropy-cand,roost,True,2,2,raise roost
+entropy-cand,rotor,True,4,4,raise ruddy robot rotor
+entropy-cand,rouge,True,3,3,raise rogue rouge
+entropy-cand,rough,True,3,3,raise ruddy rough
+entropy-cand,round,True,3,3,raise ruddy round
+entropy-cand,rouse,True,3,3,raise reuse rouse
+entropy-cand,route,True,3,3,raise rogue route
+entropy-cand,rover,True,4,4,raise ruler roger rover
+entropy-cand,rowdy,True,3,3,raise ruddy rowdy
+entropy-cand,rower,True,5,5,raise ruler roger rover rower
+entropy-cand,royal,True,2,2,raise royal
+entropy-cand,ruddy,True,2,2,raise ruddy
+entropy-cand,ruder,True,3,3,raise ruler ruder
+entropy-cand,rugby,True,3,3,raise ruddy rugby
+entropy-cand,ruler,True,2,2,raise ruler
+entropy-cand,rumba,True,3,3,raise royal rumba
+entropy-cand,rumor,True,3,3,raise ruddy rumor
+entropy-cand,rupee,True,3,3,raise rogue rupee
+entropy-cand,rural,True,3,3,raise royal rural
+entropy-cand,rusty,True,2,2,raise rusty
+entropy-cand,sadly,True,3,3,raise salon sadly
+entropy-cand,safer,True,2,2,raise safer
+entropy-cand,saint,True,2,2,raise saint
+entropy-cand,salad,True,4,4,raise salon sally salad
+entropy-cand,sally,True,3,3,raise salon sally
+entropy-cand,salon,True,2,2,raise salon
+entropy-cand,salsa,True,2,2,raise salsa
+entropy-cand,salty,True,4,4,raise salon sally salty
+entropy-cand,salve,True,3,3,raise caste salve
+entropy-cand,salvo,True,3,3,raise salon salvo
+entropy-cand,sandy,True,3,3,raise salon sandy
+entropy-cand,saner,True,3,3,raise safer saner
+entropy-cand,sappy,True,3,3,raise salon sappy
+entropy-cand,sassy,True,3,3,raise salsa sassy
+entropy-cand,satin,True,3,3,raise basic satin
+entropy-cand,satyr,True,2,2,raise satyr
+entropy-cand,sauce,True,3,3,raise caste sauce
+entropy-cand,saucy,True,4,4,raise salon sappy saucy
+entropy-cand,sauna,True,4,4,raise salon sandy sauna
+entropy-cand,saute,True,3,3,raise caste saute
+entropy-cand,savor,True,3,3,raise satyr savor
+entropy-cand,savoy,True,3,3,raise salon savoy
+entropy-cand,savvy,True,5,5,raise salon sappy saucy savvy
+entropy-cand,scald,True,3,3,raise stalk scald
+entropy-cand,scale,True,5,5,raise skate spade shale scale
+entropy-cand,scalp,True,4,4,raise stalk scald scalp
+entropy-cand,scaly,True,5,5,raise stalk scald scalp scaly
+entropy-cand,scamp,True,4,4,raise stalk swamp scamp
+entropy-cand,scant,True,3,3,raise stalk scant
+entropy-cand,scare,True,2,2,raise scare
+entropy-cand,scarf,True,3,3,raise strap scarf
+entropy-cand,scary,True,4,4,raise strap scarf scary
+entropy-cand,scene,True,3,3,raise stone scene
+entropy-cand,scent,True,4,4,raise spelt sheet scent
+entropy-cand,scion,True,3,3,raise stink scion
+entropy-cand,scoff,True,4,4,raise stunk scowl scoff
+entropy-cand,scold,True,4,4,raise stunk scowl scold
+entropy-cand,scone,True,3,3,raise stone scone
+entropy-cand,scoop,True,5,5,raise stunk scowl scoff scoop
+entropy-cand,scope,True,3,3,raise stone scope
+entropy-cand,score,True,3,3,raise scree score
+entropy-cand,scorn,True,3,3,raise short scorn
+entropy-cand,scour,True,3,3,raise short scour
+entropy-cand,scout,True,3,3,raise stunk scout
+entropy-cand,scowl,True,3,3,raise stunk scowl
+entropy-cand,scram,True,3,3,raise strap scram
+entropy-cand,scrap,True,3,3,raise strap scrap
+entropy-cand,scree,True,2,2,raise scree
+entropy-cand,screw,True,3,3,raise sheer screw
+entropy-cand,scrub,True,3,3,raise short scrub
+entropy-cand,scrum,True,4,4,raise short scrub scrum
+entropy-cand,scuba,True,3,3,raise stalk scuba
+entropy-cand,sedan,True,3,3,raise steak sedan
+entropy-cand,seedy,True,3,3,raise spelt seedy
+entropy-cand,segue,True,3,3,raise stone segue
+entropy-cand,seize,True,4,4,raise snipe slime seize
+entropy-cand,semen,True,3,3,raise spelt semen
+entropy-cand,sense,True,4,4,raise loose dense sense
+entropy-cand,sepia,True,2,2,raise sepia
+entropy-cand,serif,True,3,3,raise miser serif
+entropy-cand,serum,True,3,3,raise sheer serum
+entropy-cand,serve,True,3,3,raise scree serve
+entropy-cand,setup,True,3,3,raise spelt setup
+entropy-cand,seven,True,4,4,raise spelt semen seven
+entropy-cand,sever,True,3,3,raise sheer sever
+entropy-cand,sewer,True,4,4,raise sheer sever sewer
+entropy-cand,shack,True,4,4,raise stalk shank shack
+entropy-cand,shade,True,4,4,raise skate spade shade
+entropy-cand,shady,True,4,4,raise stalk swamp shady
+entropy-cand,shaft,True,4,4,raise stalk scant shaft
+entropy-cand,shake,True,3,3,raise skate shake
+entropy-cand,shaky,True,3,3,raise stalk shaky
+entropy-cand,shale,True,4,4,raise skate spade shale
+entropy-cand,shall,True,4,4,raise stalk scald shall
+entropy-cand,shalt,True,3,3,raise stalk shalt
+entropy-cand,shame,True,5,5,raise skate spade shale shame
+entropy-cand,shank,True,3,3,raise stalk shank
+entropy-cand,shape,True,4,4,raise skate spade shape
+entropy-cand,shard,True,4,4,raise strap scarf shard
+entropy-cand,share,True,3,3,raise scare share
+entropy-cand,shark,True,5,5,raise strap scarf shard shark
+entropy-cand,sharp,True,3,3,raise strap sharp
+entropy-cand,shave,True,6,6,raise skate spade shale shame shave
+entropy-cand,shawl,True,3,3,raise stalk shawl
+entropy-cand,shear,True,2,2,raise shear
+entropy-cand,sheen,True,4,4,raise spelt seedy sheen
+entropy-cand,sheep,True,3,3,raise spelt sheep
+entropy-cand,sheer,True,2,2,raise sheer
+entropy-cand,sheet,True,3,3,raise spelt sheet
+entropy-cand,sheik,True,3,3,raise islet sheik
+entropy-cand,shelf,True,3,3,raise spelt shelf
+entropy-cand,shell,True,4,4,raise spelt shelf shell
+entropy-cand,shied,True,2,2,raise shied
+entropy-cand,shift,True,3,3,raise stink shift
+entropy-cand,shine,True,3,3,raise snipe shine
+entropy-cand,shiny,True,4,4,raise stink sling shiny
+entropy-cand,shire,True,2,2,raise shire
+entropy-cand,shirk,True,2,2,raise shirk
+entropy-cand,shirt,True,3,3,raise shirk shirt
+entropy-cand,shoal,True,3,3,raise stalk shoal
+entropy-cand,shock,True,3,3,raise stunk shock
+entropy-cand,shone,True,4,4,raise stone scone shone
+entropy-cand,shook,True,4,4,raise stunk shock shook
+entropy-cand,shoot,True,3,3,raise stunk shoot
+entropy-cand,shore,True,3,3,raise scree shore
+entropy-cand,shorn,True,3,3,raise short shorn
+entropy-cand,short,True,2,2,raise short
+entropy-cand,shout,True,4,4,raise stunk scout shout
+entropy-cand,shove,True,4,4,raise stone scope shove
+entropy-cand,shown,True,3,3,raise stunk shown
+entropy-cand,showy,True,4,4,raise stunk scowl showy
+entropy-cand,shrew,True,3,3,raise sheer shrew
+entropy-cand,shrub,True,3,3,raise short shrub
+entropy-cand,shrug,True,4,4,raise short shrub shrug
+entropy-cand,shuck,True,3,3,raise stunk shuck
+entropy-cand,shunt,True,3,3,raise stunk shunt
+entropy-cand,shush,True,4,4,raise floss hussy shush
+entropy-cand,shyly,True,4,4,raise stunk scowl shyly
+entropy-cand,siege,True,2,2,raise siege
+entropy-cand,sieve,True,3,3,raise siege sieve
+entropy-cand,sight,True,3,3,raise stoic sight
+entropy-cand,sigma,True,3,3,raise slain sigma
+entropy-cand,silky,True,3,3,raise stoic silky
+entropy-cand,silly,True,4,4,raise stoic silky silly
+entropy-cand,since,True,3,3,raise siege since
+entropy-cand,sinew,True,3,3,raise islet sinew
+entropy-cand,singe,True,3,3,raise siege singe
+entropy-cand,siren,True,3,3,raise miser siren
+entropy-cand,sissy,True,3,3,raise missy sissy
+entropy-cand,sixth,True,4,4,raise stoic sight sixth
+entropy-cand,sixty,True,4,4,raise stoic sight sixty
+entropy-cand,skate,True,2,2,raise skate
+entropy-cand,skier,True,2,2,raise skier
+entropy-cand,skiff,True,3,3,raise stink skiff
+entropy-cand,skill,True,4,4,raise stink skiff skill
+entropy-cand,skimp,True,5,5,raise stink skiff skill skimp
+entropy-cand,skirt,True,3,3,raise shirk skirt
+entropy-cand,skulk,True,4,4,raise stunk shuck skulk
+entropy-cand,skull,True,3,3,raise stunk skull
+entropy-cand,skunk,True,3,3,raise stunk skunk
+entropy-cand,slack,True,3,3,raise stalk slack
+entropy-cand,slain,True,2,2,raise slain
+entropy-cand,slang,True,4,4,raise stalk shawl slang
+entropy-cand,slant,True,3,3,raise stalk slant
+entropy-cand,slash,True,2,2,raise slash
+entropy-cand,slate,True,3,3,raise skate slate
+entropy-cand,sleek,True,3,3,raise spelt sleek
+entropy-cand,sleep,True,3,3,raise spelt sleep
+entropy-cand,sleet,True,3,3,raise spelt sleet
+entropy-cand,slept,True,3,3,raise spelt slept
+entropy-cand,slice,True,4,4,raise snipe slime slice
+entropy-cand,slick,True,3,3,raise stink slick
+entropy-cand,slide,True,5,5,raise snipe slime slice slide
+entropy-cand,slime,True,3,3,raise snipe slime
+entropy-cand,slimy,True,4,4,raise stink spicy slimy
+entropy-cand,sling,True,3,3,raise stink sling
+entropy-cand,slink,True,3,3,raise stink slink
+entropy-cand,sloop,True,4,4,raise stunk scowl sloop
+entropy-cand,slope,True,4,4,raise stone scope slope
+entropy-cand,slosh,True,3,3,raise floss slosh
+entropy-cand,sloth,True,4,4,raise stunk shoot sloth
+entropy-cand,slump,True,3,3,raise stunk slump
+entropy-cand,slung,True,3,3,raise stunk slung
+entropy-cand,slunk,True,4,4,raise stunk skunk slunk
+entropy-cand,slurp,True,3,3,raise short slurp
+entropy-cand,slush,True,3,3,raise floss slush
+entropy-cand,slyly,True,5,5,raise stunk scowl shyly slyly
+entropy-cand,smack,True,4,4,raise stalk shank smack
+entropy-cand,small,True,5,5,raise stalk scald shall small
+entropy-cand,smart,True,3,3,raise strap smart
+entropy-cand,smash,True,3,3,raise slash smash
+entropy-cand,smear,True,3,3,raise shear smear
+entropy-cand,smell,True,4,4,raise spelt shelf smell
+entropy-cand,smelt,True,3,3,raise spelt smelt
+entropy-cand,smile,True,4,4,raise snipe slime smile
+entropy-cand,smirk,True,3,3,raise shirk smirk
+entropy-cand,smite,True,4,4,raise snipe slime smite
+entropy-cand,smith,True,4,4,raise stink shift smith
+entropy-cand,smock,True,4,4,raise stunk shock smock
+entropy-cand,smoke,True,5,5,raise stone scope shove smoke
+entropy-cand,smoky,True,3,3,raise stunk smoky
+entropy-cand,smote,True,3,3,raise stone smote
+entropy-cand,snack,True,4,4,raise stalk shank snack
+entropy-cand,snail,True,3,3,raise slain snail
+entropy-cand,snake,True,4,4,raise skate shake snake
+entropy-cand,snaky,True,4,4,raise stalk shaky snaky
+entropy-cand,snare,True,4,4,raise scare share snare
+entropy-cand,snarl,True,5,5,raise strap scarf shard snarl
+entropy-cand,sneak,True,3,3,raise steak sneak
+entropy-cand,sneer,True,3,3,raise sheer sneer
+entropy-cand,snide,True,3,3,raise snipe snide
+entropy-cand,sniff,True,4,4,raise stink scion sniff
+entropy-cand,snipe,True,2,2,raise snipe
+entropy-cand,snoop,True,4,4,raise stunk shown snoop
+entropy-cand,snore,True,4,4,raise scree shore snore
+entropy-cand,snort,True,3,3,raise short snort
+entropy-cand,snout,True,3,3,raise stunk snout
+entropy-cand,snowy,True,4,4,raise stunk shown snowy
+entropy-cand,snuck,True,3,3,raise stunk snuck
+entropy-cand,snuff,True,3,3,raise stunk snuff
+entropy-cand,soapy,True,4,4,raise stalk swamp soapy
+entropy-cand,sober,True,3,3,raise sheer sober
+entropy-cand,soggy,True,4,4,raise stunk scowl soggy
+entropy-cand,solar,True,3,3,raise strap solar
+entropy-cand,solid,True,3,3,raise stoic solid
+entropy-cand,solve,True,3,3,raise stone solve
+entropy-cand,sonar,True,4,4,raise strap solar sonar
+entropy-cand,sonic,True,3,3,raise stoic sonic
+entropy-cand,sooth,True,4,4,raise stunk shoot sooth
+entropy-cand,sooty,True,4,4,raise stunk shoot sooty
+entropy-cand,sorry,True,3,3,raise short sorry
+entropy-cand,sound,True,4,4,raise stunk slung sound
+entropy-cand,south,True,3,3,raise stunk south
+entropy-cand,sower,True,4,4,raise sheer sober sower
+entropy-cand,space,True,4,4,raise skate spade space
+entropy-cand,spade,True,3,3,raise skate spade
+entropy-cand,spank,True,4,4,raise stalk shank spank
+entropy-cand,spare,True,5,5,raise scare share snare spare
+entropy-cand,spark,True,3,3,raise strap spark
+entropy-cand,spasm,True,3,3,raise slash spasm
+entropy-cand,spawn,True,4,4,raise stalk swamp spawn
+entropy-cand,speak,True,4,4,raise steak sneak speak
+entropy-cand,spear,True,4,4,raise shear smear spear
+entropy-cand,speck,True,4,4,raise spelt speed speck
+entropy-cand,speed,True,3,3,raise spelt speed
+entropy-cand,spell,True,3,3,raise spelt spell
+entropy-cand,spelt,True,2,2,raise spelt
+entropy-cand,spend,True,4,4,raise spelt speed spend
+entropy-cand,spent,True,3,3,raise spelt spent
+entropy-cand,sperm,True,3,3,raise sheer sperm
+entropy-cand,spice,True,3,3,raise snipe spice
+entropy-cand,spicy,True,3,3,raise stink spicy
+entropy-cand,spied,True,3,3,raise shied spied
+entropy-cand,spiel,True,3,3,raise shied spiel
+entropy-cand,spike,True,4,4,raise snipe spice spike
+entropy-cand,spiky,True,4,4,raise stink skiff spiky
+entropy-cand,spill,True,4,4,raise stink spicy spill
+entropy-cand,spilt,True,4,4,raise stink shift spilt
+entropy-cand,spine,True,3,3,raise snipe spine
+entropy-cand,spiny,True,5,5,raise stink sling shiny spiny
+entropy-cand,spire,True,3,3,raise shire spire
+entropy-cand,spite,True,5,5,raise snipe spice spike spite
+entropy-cand,splat,True,3,3,raise stalk splat
+entropy-cand,split,True,3,3,raise stoic split
+entropy-cand,spoil,True,3,3,raise stoic spoil
+entropy-cand,spoke,True,4,4,raise stone scope spoke
+entropy-cand,spoof,True,4,4,raise stunk scowl spoof
+entropy-cand,spook,True,4,4,raise stunk shock spook
+entropy-cand,spool,True,4,4,raise stunk scowl spool
+entropy-cand,spoon,True,4,4,raise stunk shown spoon
+entropy-cand,spore,True,5,5,raise scree shore snore spore
+entropy-cand,sport,True,4,4,raise short snort sport
+entropy-cand,spout,True,5,5,raise stunk scout shout spout
+entropy-cand,spray,True,3,3,raise strap spray
+entropy-cand,spree,True,3,3,raise scree spree
+entropy-cand,sprig,True,2,2,raise sprig
+entropy-cand,spunk,True,5,5,raise stunk skunk slunk spunk
+entropy-cand,spurn,True,4,4,raise short slurp spurn
+entropy-cand,spurt,True,3,3,raise short spurt
+entropy-cand,squad,True,4,4,raise stalk scuba squad
+entropy-cand,squat,True,3,3,raise stalk squat
+entropy-cand,squib,True,3,3,raise stoic squib
+entropy-cand,stack,True,3,3,raise stalk stack
+entropy-cand,staff,True,3,3,raise stalk staff
+entropy-cand,stage,True,3,3,raise skate stage
+entropy-cand,staid,True,3,3,raise slain staid
+entropy-cand,stain,True,3,3,raise slain stain
+entropy-cand,stair,True,2,2,raise stair
+entropy-cand,stake,True,3,3,raise skate stake
+entropy-cand,stale,True,4,4,raise skate stage stale
+entropy-cand,stalk,True,2,2,raise stalk
+entropy-cand,stall,True,3,3,raise stalk stall
+entropy-cand,stamp,True,4,4,raise stalk staff stamp
+entropy-cand,stand,True,5,5,raise stalk staff stamp stand
+entropy-cand,stank,True,4,4,raise stalk stack stank
+entropy-cand,stare,True,6,6,raise scare share snare spare stare
+entropy-cand,stark,True,3,3,raise strap stark
+entropy-cand,start,True,4,4,raise strap stark start
+entropy-cand,stash,True,4,4,raise slash smash stash
+entropy-cand,state,True,4,4,raise skate slate state
+entropy-cand,stave,True,5,5,raise skate stage stale stave
+entropy-cand,stead,True,3,3,raise steak stead
+entropy-cand,steak,True,2,2,raise steak
+entropy-cand,steal,True,4,4,raise steak stead steal
+entropy-cand,steam,True,5,5,raise steak stead steal steam
+entropy-cand,steed,True,3,3,raise spelt steed
+entropy-cand,steel,True,3,3,raise spelt steel
+entropy-cand,steep,True,3,3,raise spelt steep
+entropy-cand,steer,True,4,4,raise sheer sneer steer
+entropy-cand,stein,True,3,3,raise islet stein
+entropy-cand,stern,True,4,4,raise sheer sperm stern
+entropy-cand,stick,True,3,3,raise stink stick
+entropy-cand,stiff,True,4,4,raise stink still stiff
+entropy-cand,still,True,3,3,raise stink still
+entropy-cand,stilt,True,4,4,raise stink still stilt
+entropy-cand,sting,True,3,3,raise stink sting
+entropy-cand,stink,True,2,2,raise stink
+entropy-cand,stint,True,4,4,raise stink sting stint
+entropy-cand,stock,True,3,3,raise stunk stock
+entropy-cand,stoic,True,2,2,raise stoic
+entropy-cand,stoke,True,3,3,raise stone stoke
+entropy-cand,stole,True,4,4,raise stone stoke stole
+entropy-cand,stomp,True,3,3,raise stunk stomp
+entropy-cand,stone,True,2,2,raise stone
+entropy-cand,stony,True,3,3,raise stunk stony
+entropy-cand,stood,True,4,4,raise stunk stomp stood
+entropy-cand,stool,True,5,5,raise stunk stomp stood stool
+entropy-cand,stoop,True,4,4,raise stunk stomp stoop
+entropy-cand,store,True,6,6,raise scree shore snore spore store
+entropy-cand,stork,True,3,3,raise short stork
+entropy-cand,storm,True,4,4,raise short stork storm
+entropy-cand,story,True,5,5,raise short stork storm story
+entropy-cand,stout,True,3,3,raise stunk stout
+entropy-cand,stove,True,5,5,raise stone stoke stole stove
+entropy-cand,strap,True,2,2,raise strap
+entropy-cand,straw,True,3,3,raise strap straw
+entropy-cand,stray,True,4,4,raise strap straw stray
+entropy-cand,strip,True,3,3,raise sprig strip
+entropy-cand,strut,True,3,3,raise short strut
+entropy-cand,stuck,True,3,3,raise stunk stuck
+entropy-cand,study,True,3,3,raise stunk study
+entropy-cand,stuff,True,4,4,raise stunk study stuff
+entropy-cand,stump,True,5,5,raise stunk study stuff stump
+entropy-cand,stung,True,3,3,raise stunk stung
+entropy-cand,stunk,True,2,2,raise stunk
+entropy-cand,stunt,True,4,4,raise stunk stung stunt
+entropy-cand,style,True,3,3,raise stone style
+entropy-cand,suave,True,5,5,raise skate spade shale suave
+entropy-cand,sugar,True,4,4,raise strap solar sugar
+entropy-cand,suing,True,4,4,raise stink sling suing
+entropy-cand,suite,True,5,5,raise snipe slime seize suite
+entropy-cand,sulky,True,3,3,raise stunk sulky
+entropy-cand,sully,True,3,3,raise stunk sully
+entropy-cand,sumac,True,4,4,raise stalk scuba sumac
+entropy-cand,sunny,True,3,3,raise stunk sunny
+entropy-cand,super,True,4,4,raise sheer sober super
+entropy-cand,surer,True,5,5,raise sheer sober super surer
+entropy-cand,surge,True,3,3,raise scree surge
+entropy-cand,surly,True,4,4,raise short scrub surly
+entropy-cand,sushi,True,4,4,raise stoic silky sushi
+entropy-cand,swami,True,3,3,raise slain swami
+entropy-cand,swamp,True,3,3,raise stalk swamp
+entropy-cand,swarm,True,6,6,raise strap scarf shard snarl swarm
+entropy-cand,swash,True,5,5,raise slash smash stash swash
+entropy-cand,swath,True,4,4,raise stalk scant swath
+entropy-cand,swear,True,5,5,raise shear smear spear swear
+entropy-cand,sweat,True,3,3,raise steak sweat
+entropy-cand,sweep,True,4,4,raise spelt sheep sweep
+entropy-cand,sweet,True,4,4,raise spelt sheet sweet
+entropy-cand,swell,True,5,5,raise spelt shelf smell swell
+entropy-cand,swept,True,3,3,raise spelt swept
+entropy-cand,swift,True,4,4,raise stink shift swift
+entropy-cand,swill,True,4,4,raise stink spicy swill
+entropy-cand,swine,True,4,4,raise snipe shine swine
+entropy-cand,swing,True,5,5,raise stink sling suing swing
+entropy-cand,swirl,True,3,3,raise shirk swirl
+entropy-cand,swish,True,3,3,raise hoist swish
+entropy-cand,swoon,True,4,4,raise stunk shown swoon
+entropy-cand,swoop,True,4,4,raise stunk scowl swoop
+entropy-cand,sword,True,4,4,raise short scorn sword
+entropy-cand,swore,False,6,7,raise scree shore snore spore store
+entropy-cand,sworn,True,4,4,raise short scorn sworn
+entropy-cand,swung,True,4,4,raise stunk slung swung
+entropy-cand,synod,True,4,4,raise stunk shown synod
+entropy-cand,syrup,True,4,4,raise short scrub syrup
+entropy-cand,tabby,True,3,3,raise tangy tabby
+entropy-cand,table,True,4,4,raise cable fable table
+entropy-cand,taboo,True,3,3,raise tangy taboo
+entropy-cand,tacit,True,4,4,raise panic cavil tacit
+entropy-cand,tacky,True,4,4,raise tangy tabby tacky
+entropy-cand,taffy,True,5,5,raise tangy tabby tacky taffy
+entropy-cand,taint,True,4,4,raise faint paint taint
+entropy-cand,taken,True,3,3,raise navel taken
+entropy-cand,taker,True,3,3,raise taper taker
+entropy-cand,tally,True,6,6,raise tangy tabby tacky taffy tally
+entropy-cand,talon,True,3,3,raise tangy talon
+entropy-cand,tamer,True,4,4,raise taper taker tamer
+entropy-cand,tango,True,3,3,raise tangy tango
+entropy-cand,tangy,True,2,2,raise tangy
+entropy-cand,taper,True,2,2,raise taper
+entropy-cand,tapir,True,3,3,raise nadir tapir
+entropy-cand,tardy,True,3,3,raise party tardy
+entropy-cand,tarot,True,4,4,raise party carat tarot
+entropy-cand,taste,True,6,6,raise caste baste haste paste taste
+entropy-cand,tasty,True,5,5,raise salon hasty pasty tasty
+entropy-cand,tatty,False,6,7,raise tangy tabby tacky taffy tally
+entropy-cand,taunt,True,4,4,raise tangy talon taunt
+entropy-cand,tawny,True,3,3,raise tangy tawny
+entropy-cand,teach,True,3,3,raise cleat teach
+entropy-cand,teary,True,4,4,raise alert extra teary
+entropy-cand,tease,True,4,4,raise cease lease tease
+entropy-cand,teddy,True,4,4,raise betel depth teddy
+entropy-cand,teeth,True,3,3,raise betel teeth
+entropy-cand,tempo,True,4,4,raise betel depth tempo
+entropy-cand,tenet,True,3,3,raise betel tenet
+entropy-cand,tenor,True,3,3,raise deter tenor
+entropy-cand,tense,True,5,5,raise loose dense sense tense
+entropy-cand,tenth,True,4,4,raise betel depth tenth
+entropy-cand,tepee,True,4,4,raise lunge theme tepee
+entropy-cand,tepid,True,4,4,raise linen fetid tepid
+entropy-cand,terra,True,4,4,raise alert extra terra
+entropy-cand,terse,True,4,4,raise curse horse terse
+entropy-cand,testy,True,3,3,raise spelt testy
+entropy-cand,thank,True,4,4,raise float aunty thank
+entropy-cand,theft,True,4,4,raise betel empty theft
+entropy-cand,their,True,3,3,raise diner their
+entropy-cand,theme,True,3,3,raise lunge theme
+entropy-cand,there,True,3,3,raise trope there
+entropy-cand,these,True,4,4,raise loose dense these
+entropy-cand,theta,True,3,3,raise cleat theta
+entropy-cand,thick,True,3,3,raise glint thick
+entropy-cand,thief,True,3,3,raise edict thief
+entropy-cand,thigh,True,3,3,raise glint thigh
+entropy-cand,thing,True,3,3,raise glint thing
+entropy-cand,think,True,3,3,raise glint think
+entropy-cand,third,True,3,3,raise print third
+entropy-cand,thong,True,4,4,raise mulch whoop thong
+entropy-cand,thorn,True,3,3,raise court thorn
+entropy-cand,those,True,4,4,raise loose chose those
+entropy-cand,three,True,4,4,raise trope there three
+entropy-cand,threw,True,3,3,raise deter threw
+entropy-cand,throb,True,3,3,raise court throb
+entropy-cand,throw,True,4,4,raise court throb throw
+entropy-cand,thrum,True,3,3,raise court thrum
+entropy-cand,thumb,True,3,3,raise mulch thumb
+entropy-cand,thump,True,4,4,raise mulch thumb thump
+entropy-cand,thyme,True,4,4,raise lunge theme thyme
+entropy-cand,tiara,True,3,3,raise trail tiara
+entropy-cand,tibia,True,3,3,raise tidal tibia
+entropy-cand,tidal,True,2,2,raise tidal
+entropy-cand,tiger,True,4,4,raise diner giver tiger
+entropy-cand,tight,True,6,6,raise pilot fight might night tight
+entropy-cand,tilde,True,3,3,raise binge tilde
+entropy-cand,timer,True,6,6,raise diner giver fiber piper timer
+entropy-cand,timid,True,4,4,raise pilot width timid
+entropy-cand,tipsy,True,4,4,raise missy gipsy tipsy
+entropy-cand,titan,True,3,3,raise tidal titan
+entropy-cand,tithe,True,4,4,raise binge tilde tithe
+entropy-cand,title,True,4,4,raise binge tilde title
+entropy-cand,toast,True,5,5,raise slash boast coast toast
+entropy-cand,today,True,3,3,raise float today
+entropy-cand,toddy,True,5,5,raise mulch goody dowdy toddy
+entropy-cand,token,True,4,4,raise betel comet token
+entropy-cand,tonal,True,4,4,raise float octal tonal
+entropy-cand,tonga,True,3,3,raise float tonga
+entropy-cand,tonic,True,3,3,raise pilot tonic
+entropy-cand,tooth,True,4,4,raise mulch booth tooth
+entropy-cand,topaz,True,4,4,raise float today topaz
+entropy-cand,topic,True,4,4,raise pilot optic topic
+entropy-cand,torch,True,3,3,raise court torch
+entropy-cand,torso,True,3,3,raise crust torso
+entropy-cand,torus,True,3,3,raise short torus
+entropy-cand,total,True,4,4,raise float octal total
+entropy-cand,totem,True,4,4,raise betel octet totem
+entropy-cand,touch,True,5,5,raise mulch couch pouch touch
+entropy-cand,tough,True,5,5,raise mulch bough dough tough
+entropy-cand,towel,True,3,3,raise betel towel
+entropy-cand,tower,True,4,4,raise deter truer tower
+entropy-cand,toxic,True,4,4,raise pilot tonic toxic
+entropy-cand,toxin,True,4,4,raise pilot tonic toxin
+entropy-cand,trace,True,4,4,raise grace brace trace
+entropy-cand,track,True,4,4,raise adorn tract track
+entropy-cand,tract,True,3,3,raise adorn tract
+entropy-cand,trade,True,4,4,raise grace drake trade
+entropy-cand,trail,True,2,2,raise trail
+entropy-cand,train,True,3,3,raise trail train
+entropy-cand,trait,True,4,4,raise trail train trait
+entropy-cand,tramp,True,4,4,raise adorn tract tramp
+entropy-cand,trash,True,4,4,raise brash crash trash
+entropy-cand,trawl,True,5,5,raise adorn tract tramp trawl
+entropy-cand,tread,True,3,3,raise alert tread
+entropy-cand,treat,True,4,4,raise alert great treat
+entropy-cand,trend,True,3,3,raise deter trend
+entropy-cand,triad,True,3,3,raise briar triad
+entropy-cand,trial,True,4,4,raise briar triad trial
+entropy-cand,tribe,True,3,3,raise tripe tribe
+entropy-cand,trice,True,4,4,raise tripe tribe trice
+entropy-cand,trick,True,4,4,raise print fritz trick
+entropy-cand,tried,True,6,6,raise fried cried dried pried tried
+entropy-cand,tripe,True,2,2,raise tripe
+entropy-cand,trite,True,5,5,raise tripe tribe trice trite
+entropy-cand,troll,True,4,4,raise court throb troll
+entropy-cand,troop,True,4,4,raise court throb troop
+entropy-cand,trope,True,2,2,raise trope
+entropy-cand,trout,True,4,4,raise court grout trout
+entropy-cand,trove,True,3,3,raise trope trove
+entropy-cand,truce,True,3,3,raise trope truce
+entropy-cand,truck,True,3,3,raise court truck
+entropy-cand,truer,True,3,3,raise deter truer
+entropy-cand,truly,True,3,3,raise court truly
+entropy-cand,trump,True,4,4,raise court truly trump
+entropy-cand,trunk,True,5,5,raise court truly trump trunk
+entropy-cand,truss,True,3,3,raise crust truss
+entropy-cand,trust,True,3,3,raise crust trust
+entropy-cand,truth,True,6,6,raise court truly trump trunk truth
+entropy-cand,tryst,True,4,4,raise crust frost tryst
+entropy-cand,tubal,True,3,3,raise float tubal
+entropy-cand,tuber,True,4,4,raise deter truer tuber
+entropy-cand,tulip,True,3,3,raise pilot tulip
+entropy-cand,tulle,True,3,3,raise lunge tulle
+entropy-cand,tumor,True,3,3,raise court tumor
+entropy-cand,tunic,True,4,4,raise pilot itchy tunic
+entropy-cand,turbo,True,4,4,raise court tumor turbo
+entropy-cand,tutor,True,4,4,raise court tumor tutor
+entropy-cand,twang,True,5,5,raise float aunty thank twang
+entropy-cand,tweak,True,3,3,raise cleat tweak
+entropy-cand,tweed,True,3,3,raise betel tweed
+entropy-cand,tweet,True,4,4,raise betel tweed tweet
+entropy-cand,twice,True,3,3,raise utile twice
+entropy-cand,twine,True,4,4,raise utile twice twine
+entropy-cand,twirl,True,4,4,raise print third twirl
+entropy-cand,twist,True,3,3,raise hoist twist
+entropy-cand,twixt,True,4,4,raise glint idiot twixt
+entropy-cand,tying,True,4,4,raise glint thing tying
+entropy-cand,udder,True,4,4,raise deter odder udder
+entropy-cand,ulcer,True,4,4,raise deter cower ulcer
+entropy-cand,ultra,True,4,4,raise adorn chart ultra
+entropy-cand,umbra,True,4,4,raise adorn chart umbra
+entropy-cand,uncle,True,3,3,raise lunge uncle
+entropy-cand,uncut,True,4,4,raise mulch count uncut
+entropy-cand,under,True,4,4,raise deter odder under
+entropy-cand,undid,True,4,4,raise pilot cubic undid
+entropy-cand,undue,True,3,3,raise lunge undue
+entropy-cand,unfed,True,4,4,raise betel women unfed
+entropy-cand,unfit,True,3,3,raise pilot unfit
+entropy-cand,unify,True,4,4,raise glint onion unify
+entropy-cand,union,True,4,4,raise glint onion union
+entropy-cand,unite,True,3,3,raise utile unite
+entropy-cand,unity,True,3,3,raise glint unity
+entropy-cand,unlit,True,3,3,raise pilot unlit
+entropy-cand,unmet,True,4,4,raise betel comet unmet
+entropy-cand,unset,True,4,4,raise spelt onset unset
+entropy-cand,untie,True,3,3,raise binge untie
+entropy-cand,until,True,3,3,raise pilot until
+entropy-cand,unwed,True,4,4,raise betel women unwed
+entropy-cand,unzip,True,3,3,raise pilot unzip
+entropy-cand,upper,True,5,5,raise deter cower buyer upper
+entropy-cand,upset,True,3,3,raise spelt upset
+entropy-cand,urban,True,4,4,raise adorn brawn urban
+entropy-cand,urine,True,5,5,raise tripe bride crime urine
+entropy-cand,usage,True,3,3,raise skate usage
+entropy-cand,usher,True,3,3,raise sheer usher
+entropy-cand,using,True,3,3,raise stink using
+entropy-cand,usual,True,3,3,raise stalk usual
+entropy-cand,usurp,True,3,3,raise short usurp
+entropy-cand,utile,True,2,2,raise utile
+entropy-cand,utter,True,4,4,raise deter otter utter
+entropy-cand,vague,True,4,4,raise cable gauge vague
+entropy-cand,valet,True,3,3,raise navel valet
+entropy-cand,valid,True,5,5,raise panic mafia habit valid
+entropy-cand,valor,True,3,3,raise party valor
+entropy-cand,value,True,4,4,raise cable halve value
+entropy-cand,valve,True,4,4,raise cable halve valve
+entropy-cand,vapid,True,3,3,raise panic vapid
+entropy-cand,vapor,True,3,3,raise party vapor
+entropy-cand,vault,True,5,5,raise tangy caput fault vault
+entropy-cand,vaunt,True,6,6,raise tangy daunt haunt jaunt vaunt
+entropy-cand,vegan,True,4,4,raise cleat began vegan
+entropy-cand,venom,True,4,4,raise betel decoy venom
+entropy-cand,venue,True,3,3,raise lunge venue
+entropy-cand,verge,True,4,4,raise trope nerve verge
+entropy-cand,verse,True,5,5,raise curse horse terse verse
+entropy-cand,verso,True,3,3,raise cress verso
+entropy-cand,verve,True,4,4,raise trope nerve verve
+entropy-cand,vicar,True,4,4,raise trail cigar vicar
+entropy-cand,video,True,4,4,raise linen bicep video
+entropy-cand,vigil,True,4,4,raise pilot civil vigil
+entropy-cand,vigor,True,4,4,raise droit micro vigor
+entropy-cand,villa,True,3,3,raise tidal villa
+entropy-cand,vinyl,True,4,4,raise pilot civil vinyl
+entropy-cand,viola,True,4,4,raise tidal villa viola
+entropy-cand,viper,True,4,4,raise diner giver viper
+entropy-cand,viral,True,3,3,raise trail viral
+entropy-cand,virus,True,3,3,raise sprig virus
+entropy-cand,visit,True,3,3,raise stoic visit
+entropy-cand,visor,True,3,3,raise sprig visor
+entropy-cand,vista,True,3,3,raise slain vista
+entropy-cand,vital,True,3,3,raise tidal vital
+entropy-cand,vivid,True,4,4,raise pilot windy vivid
+entropy-cand,vixen,True,4,4,raise linen given vixen
+entropy-cand,vocal,True,4,4,raise float local vocal
+entropy-cand,vodka,True,4,4,raise float comma vodka
+entropy-cand,vogue,True,3,3,raise lunge vogue
+entropy-cand,voice,True,4,4,raise utile opine voice
+entropy-cand,voila,True,3,3,raise align voila
+entropy-cand,vomit,True,3,3,raise pilot vomit
+entropy-cand,voter,True,4,4,raise deter otter voter
+entropy-cand,vouch,True,6,6,raise mulch couch pouch touch vouch
+entropy-cand,vowel,True,4,4,raise betel dowel vowel
+entropy-cand,vying,True,5,5,raise glint doing icing vying
+entropy-cand,wacky,True,4,4,raise tangy bawdy wacky
+entropy-cand,wafer,True,5,5,raise taper lager baker wafer
+entropy-cand,wager,True,5,5,raise taper lager eager wager
+entropy-cand,wagon,True,4,4,raise tangy pagan wagon
+entropy-cand,waist,True,3,3,raise daisy waist
+entropy-cand,waive,True,3,3,raise naive waive
+entropy-cand,waltz,True,5,5,raise tangy caput fatal waltz
+entropy-cand,warty,True,3,3,raise party warty
+entropy-cand,waste,False,6,7,raise caste baste haste paste taste
+entropy-cand,watch,False,6,7,raise tangy caput batch hatch latch
+entropy-cand,water,False,6,7,raise taper cater eater hater later
+entropy-cand,waver,True,6,6,raise taper lager baker wafer waver
+entropy-cand,waxen,True,4,4,raise navel taken waxen
+entropy-cand,weary,True,4,4,raise alert beard weary
+entropy-cand,weave,True,4,4,raise blade heave weave
+entropy-cand,wedge,True,4,4,raise lunge hedge wedge
+entropy-cand,weedy,True,4,4,raise betel needy weedy
+entropy-cand,weigh,True,4,4,raise edict feign weigh
+entropy-cand,weird,True,3,3,raise fried weird
+entropy-cand,welch,True,4,4,raise betel cello welch
+entropy-cand,welsh,True,3,3,raise chess welsh
+entropy-cand,whack,True,6,6,raise float aback knack quack whack
+entropy-cand,whale,True,4,4,raise blade leave whale
+entropy-cand,wharf,True,4,4,raise adorn chart wharf
+entropy-cand,wheat,True,3,3,raise cleat wheat
+entropy-cand,wheel,True,5,5,raise betel excel kneel wheel
+entropy-cand,whelp,True,4,4,raise betel fleck whelp
+entropy-cand,where,True,4,4,raise trope nerve where
+entropy-cand,which,True,4,4,raise glint chick which
+entropy-cand,whiff,True,4,4,raise glint chick whiff
+entropy-cand,while,True,4,4,raise utile exile while
+entropy-cand,whine,True,4,4,raise utile opine whine
+entropy-cand,whiny,True,3,3,raise glint whiny
+entropy-cand,whirl,True,4,4,raise print quirk whirl
+entropy-cand,whisk,True,4,4,raise hoist swish whisk
+entropy-cand,white,True,4,4,raise utile twice white
+entropy-cand,whole,True,5,5,raise lunge belle cycle whole
+entropy-cand,whoop,True,3,3,raise mulch whoop
+entropy-cand,whose,True,5,5,raise loose chose those whose
+entropy-cand,widen,True,4,4,raise linen given widen
+entropy-cand,wider,True,4,4,raise diner cider wider
+entropy-cand,widow,True,3,3,raise pilot widow
+entropy-cand,width,True,3,3,raise pilot width
+entropy-cand,wield,True,4,4,raise linen field wield
+entropy-cand,wight,False,6,7,raise pilot fight might night tight
+entropy-cand,willy,False,6,7,raise pilot filly billy dilly hilly
+entropy-cand,wimpy,True,4,4,raise pilot hippy wimpy
+entropy-cand,wince,True,4,4,raise binge mince wince
+entropy-cand,winch,True,4,4,raise pilot windy winch
+entropy-cand,windy,True,3,3,raise pilot windy
+entropy-cand,wiser,True,3,3,raise miser wiser
+entropy-cand,wispy,True,4,4,raise stoic fishy wispy
+entropy-cand,witch,True,4,4,raise pilot width witch
+entropy-cand,witty,True,4,4,raise pilot width witty
+entropy-cand,woken,True,4,4,raise betel women woken
+entropy-cand,woman,True,4,4,raise float gonad woman
+entropy-cand,women,True,3,3,raise betel women
+entropy-cand,woody,True,4,4,raise mulch goody woody
+entropy-cand,wooer,True,4,4,raise deter cower wooer
+entropy-cand,wooly,True,4,4,raise mulch blown wooly
+entropy-cand,woozy,True,5,5,raise mulch goody booby woozy
+entropy-cand,wordy,True,4,4,raise court donor wordy
+entropy-cand,world,True,5,5,raise court donor wordy world
+entropy-cand,worry,True,4,4,raise court dowry worry
+entropy-cand,worse,True,4,4,raise curse horse worse
+entropy-cand,worst,True,3,3,raise crust worst
+entropy-cand,worth,True,5,5,raise court forth north worth
+entropy-cand,would,True,4,4,raise mulch flunk would
+entropy-cand,wound,True,6,6,raise mulch bound found pound wound
+entropy-cand,woven,True,5,5,raise betel women woken woven
+entropy-cand,wrack,True,5,5,raise adorn tract crack wrack
+entropy-cand,wrath,True,4,4,raise adorn tract wrath
+entropy-cand,wreak,True,6,6,raise alert bread creak freak wreak
+entropy-cand,wreck,True,4,4,raise deter clerk wreck
+entropy-cand,wrest,True,4,4,raise cress fresh wrest
+entropy-cand,wring,True,4,4,raise print bring wring
+entropy-cand,wrist,True,4,4,raise brisk crisp wrist
+entropy-cand,write,True,3,3,raise tripe write
+entropy-cand,wrong,True,5,5,raise court droop brown wrong
+entropy-cand,wrote,True,3,3,raise trope wrote
+entropy-cand,wrung,True,4,4,raise court drunk wrung
+entropy-cand,wryly,True,4,4,raise court dryly wryly
+entropy-cand,yacht,True,3,3,raise tangy yacht
+entropy-cand,yearn,True,5,5,raise alert beard weary yearn
+entropy-cand,yeast,True,5,5,raise beast feast least yeast
+entropy-cand,yield,True,5,5,raise linen field wield yield
+entropy-cand,young,True,4,4,raise mulch bound young
+entropy-cand,youth,True,4,4,raise mulch bough youth
+entropy-cand,zebra,True,4,4,raise alert beard zebra
+entropy-cand,zesty,True,4,4,raise spelt testy zesty
+entropy-cand,zonal,True,5,5,raise float local modal zonal

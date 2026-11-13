@@ -1,0 +1,3 @@
+solver,games,solve_rate,mean_guesses_solved,mean_score,median,max,opener,n1,n2,n3,n4,n5,n6,fails,seconds
+entropy,2309,1.0,3.4634040710264182,3.4634040710264182,3.0,6,soare,0,47,1211,986,64,1,0,10.2
+entropy-cand,2309,0.9952360329146817,3.5822454308093996,3.5985275010827196,4.0,7,raise,1,131,996,916,207,47,11,12.3
