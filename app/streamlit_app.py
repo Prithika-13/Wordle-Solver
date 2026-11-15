@@ -21,7 +21,9 @@ import streamlit as st
 from src.coach import analyze as coach_analyze
 from src.coach import parse_game
 from src.coach_agent import DEFAULT_MODEL, ask_coach, make_client
+from src.coach_summary import build_facts, generate_summary
 from src.coach_tools import CoachTools
+from src.memory import PlayerMemory, default_path, is_finished
 from src.feedback import ALL_GREEN, decode, encode, feedback as fb_code
 from src.solvers.entropy import EntropySolver, entropy_scores
 from src.solvers.heuristic import FrequencyHeuristic
@@ -228,8 +230,8 @@ st.markdown(
 if not RL_OK:
     st.warning("PyTorch isn't installed, so the RL agents are hidden. Run `pip install torch` to enable them.")
 
-tab_play, tab_coach, tab_watch, tab_results, tab_insights, tab_about = st.tabs(
-    ["🎮 Solve a game", "🎓 Coach report", "🔎 Watch a word", "📊 Results", "🧠 Why words are hard", "📖 How it works"]
+tab_play, tab_coach, tab_history, tab_watch, tab_results, tab_insights, tab_about = st.tabs(
+    ["🎮 Solve a game", "🎓 Coach report", "📈 My history", "🔎 Watch a word", "📊 Results", "🧠 Why words are hard", "📖 How it works"]
 )
 
 # ==============================================================================================
@@ -386,14 +388,15 @@ EXAMPLES = {
 }
 
 
-def coach_load(game):
+def coach_load(game, source: str = "pasted"):
     st.session_state.coach_game = game
+    st.session_state.coach_source = source  # "example" games can't be saved to memory
     st.session_state.coach_err = None
 
 
 def coach_parse():
     try:
-        coach_load(parse_game(st.session_state.coach_text))
+        coach_load(parse_game(st.session_state.coach_text), "pasted")
         if not st.session_state.coach_game:
             raise ValueError("paste at least one line, e.g.  soare -Y--G")
     except (ValueError, KeyError) as e:
@@ -403,10 +406,13 @@ def coach_parse():
 
 def coach_reset():
     st.session_state.coach_game = None
+    st.session_state.coach_source = None
     st.session_state.coach_err = None
 
 
 st.session_state.setdefault("coach_game", None)
+st.session_state.setdefault("coach_source", None)
+st.session_state.setdefault("coach_summaries", {})
 st.session_state.setdefault("coach_err", None)
 st.session_state.setdefault("coach_text", "")
 
@@ -485,10 +491,12 @@ def render_coach_chat(game: list[tuple[str, str]]):
             if m.get("tools"):
                 render_tool_calls(m["tools"])
     if not chat:
-        qs = SUGGESTED_QUESTIONS if game else SUGGESTED_QUESTIONS[2:3]
-        cols = st.columns(len(qs))
-        for i, (col, q) in enumerate(zip(cols, qs)):
-            col.button(q, key=f"sq_{i}", on_click=coach_ask_later, args=(q,), width="stretch")
+        qs = list(SUGGESTED_QUESTIONS if game else SUGGESTED_QUESTIONS[2:3])
+        if PlayerMemory().games():
+            qs.append("What patterns do you see across my saved games?")
+        for row in range(0, len(qs), 3):
+            for i, (col, q) in enumerate(zip(st.columns(3), qs[row : row + 3]), start=row):
+                col.button(q, key=f"sq_{i}", on_click=coach_ask_later, args=(q,), width="stretch")
 
     pending = st.session_state.pop("coach_pending", None)
     q = st.chat_input("Ask about your game...") or pending
@@ -497,7 +505,7 @@ def render_coach_chat(game: list[tuple[str, str]]):
     history = [{"role": m["role"], "content": m["content"]} for m in chat]
     try:
         with st.spinner("The coach is checking the numbers..."):
-            tools = CoachTools(ENT, game, load_difficulty()[0])
+            tools = CoachTools(ENT, game, load_difficulty()[0], PlayerMemory())
             res = ask_coach(make_client(key), tools, q, history)
     except Exception as e:  # network / auth / API errors are shown, not raised
         st.error(llm_error_message(e))
@@ -507,18 +515,87 @@ def render_coach_chat(game: list[tuple[str, str]]):
     st.rerun()
 
 
+def save_game_cb(rep: dict, source: str):
+    try:
+        r = PlayerMemory().save_game(rep, source)
+        st.session_state.memory_msg = ("success", "Saved. The coach will remember this game.") if r["saved"] else ("info", "This game was already saved.")
+    except (ValueError, OSError) as e:
+        st.session_state.memory_msg = ("error", f"Couldn't save the game: {e}")
+
+
+def render_save_row(rep: dict, game: list, source: str | None):
+    mem = PlayerMemory()
+    is_example, finished, saved = source == "example", is_finished(rep), mem.has(game)
+    c1, c2 = st.columns([2, 5], vertical_alignment="center")
+    c1.button("💾 Save to my history", on_click=save_game_cb, args=(rep, source or "played"),
+              disabled=is_example or not finished or saved, width="stretch")
+    if saved:
+        c2.caption("✅ Saved. See the **My history** tab.")
+    elif is_example:
+        c2.caption("Example games can't be saved.")
+    elif not finished:
+        c2.caption("Finish the game (solve it or use all 6 guesses) to save it.")
+    else:
+        c2.caption(f"Stores this game's grades in a local file ({default_path().name}) so the coach can spot patterns over time.")
+    msg = st.session_state.pop("memory_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+
+
+def render_ai_summary(game: list):
+    """LLM-written narrative from code-computed facts, with every figure and word checked against them."""
+    st.markdown("#### ✍️ AI coach summary")
+    key = llm_key()
+    has_creds = bool(key) or bool(os.environ.get("ANTHROPIC_AUTH_TOKEN"))
+    mem = PlayerMemory()
+    ck = f"{DEFAULT_MODEL}|{len(mem.games())}|" + "|".join(f"{w}:{p}" for w, p in game)
+    cached = st.session_state.coach_summaries.get(ck)
+
+    if st.button("✍️ Rewrite summary" if cached else "✍️ Write AI summary", disabled=not has_creds, key="write_summary"):
+        try:
+            with st.spinner("Writing the summary and checking every figure against the report..."):
+                tools = CoachTools(ENT, game, load_difficulty()[0], mem)
+                facts = build_facts(tools.get_game_report(), mem.profile(), this_game_saved=mem.has(game))
+                cached = generate_summary(make_client(key), facts, DEFAULT_MODEL)
+            st.session_state.coach_summaries[ck] = cached
+        except Exception as e:
+            st.error(llm_error_message(e))
+            return
+    if not has_creds:
+        st.caption("Add `ANTHROPIC_API_KEY` to your `.env` file to enable AI-written summaries (see the Ask the coach section below).")
+    if not cached:
+        st.caption("The numbers above come from code. The AI only writes the narrative, and every figure it cites is checked against the report.")
+        return
+    if cached.error:
+        st.warning(cached.error)
+        return
+    sm = cached.summary
+    with st.container(border=True):
+        st.markdown(f"**{sm.headline}**")
+        a, b = st.columns(2)
+        a.markdown("**What went well**\n" + "\n".join(f"- {x}" for x in sm.went_well))
+        b.markdown("**What to improve**\n" + "\n".join(f"- {x}" for x in sm.to_improve))
+        st.markdown(f"<div class='takeaway'><b>Next drill:</b> {sm.next_drill}</div>", unsafe_allow_html=True)
+    if cached.verified:
+        st.caption("✅ Every figure and word in this summary was checked against the report"
+                   + (" (after one rewrite)" if cached.attempts > 1 else "") + f" · {cached.usage.get('output_tokens', 0):,} output tokens")
+    else:
+        st.warning("⚠️ Could not verify: " + "; ".join(cached.problems) + ". Treat these as unconfirmed and trust the numbers above.")
+
+
 with tab_coach:
     st.subheader("Coach report")
     st.caption("Every guess is graded against the best possible guess. **Skill** = did you ask a good question? **Luck** = was the answer kind to you?")
     game = st.session_state.coach_game
     using_own = game is None
+    source = "played" if using_own else st.session_state.coach_source
     game = [tuple(x) for x in (st.session_state.history if using_own else game)]
 
     src_cols = st.columns([3, 2.2, 2.2, 1])
     src_cols[0].markdown(
         f"Analysing: **{'your game from the Solve tab' if using_own else 'a loaded game'}** ({len(game)} guess{'es' if len(game) != 1 else ''})")
     for col, (label, g) in zip(src_cols[1:], list(EXAMPLES.items())):
-        col.button(f"Try: {label}", key=f"ex_{label}", on_click=coach_load, args=(g,), width="stretch")
+        col.button(f"Try: {label}", key=f"ex_{label}", on_click=coach_load, args=(g, "example"), width="stretch")
     with st.expander("Paste a game to analyse", expanded=False):
         st.text_area("One guess per line: word then colours (G = green, Y = yellow, - = gray, or the 🟩🟨⬛ squares)",
                      key="coach_text", height=140, placeholder="soare -----\nclint --Y-Y\nditty -GGGG\nwitty GGGGG")
@@ -544,6 +621,8 @@ with tab_coach:
             m3.metric("Luck", f"{rep['luck_bits']:+.1f} bits", help="Information you actually got minus what your guesses were expected to give. Positive = lucky.")
             m4.metric("Result", "Solved ✅" if rep["solved"] else f"{rep['remaining']:,} left")
             st.markdown(f"<div class='takeaway'>{rep['verdict']}</div>", unsafe_allow_html=True)
+            render_save_row(rep, game, source)
+            render_ai_summary(game)
 
             if sg:
                 bc1, bc2 = st.columns(2)
@@ -619,7 +698,89 @@ with tab_coach:
     render_coach_chat(game)
 
 # ==============================================================================================
-# TAB 3 - watch solvers play a word
+# TAB 3 - my history (memory)
+# ==============================================================================================
+def clear_history_cb():
+    n = PlayerMemory().clear()
+    st.session_state.history_msg = f"Deleted {n} saved game{'s' if n != 1 else ''}."
+    st.session_state.coach_summaries = {}
+    st.session_state.pop("confirm_clear", None)
+
+
+with tab_history:
+    st.subheader("My history")
+    st.caption("What the coach remembers: the grades of games **you chose to save** in the Coach report tab. It stores computed facts only "
+               "(guesses, bits, skill, luck), never AI-written text, in a local file you can download or delete below.")
+    mem = PlayerMemory()
+    prof = mem.profile(10)
+    if st.session_state.get("history_msg"):
+        st.success(st.session_state.pop("history_msg"))
+    if not prof:
+        st.info("No games saved yet. Play a game, open the **Coach report** tab and press **💾 Save to my history**. "
+                "After a few games this page shows your habits, and the coach can answer questions about them.")
+    else:
+        n = prof["games_saved"]
+        g1, g2, g3, g4 = st.columns(4)
+        g1.metric("Games saved", n)
+        g2.metric("Average skill", f"{prof['avg_skill']:.0%}", help="How close your guesses are to the best available ones, on average.")
+        g3.metric("Average luck", f"{prof['avg_luck_bits']:+.1f} bits", help="Positive = the colours were kind to you on average.")
+        g4.metric("Average guesses", f"{prof['avg_guesses']:.2f}", f"{prof['solved_rate']:.0%} solved", delta_color="off")
+        if n < 3:
+            st.caption("Save at least 3 games before reading much into these numbers.")
+        tr = prof["skill_trend"]
+        if tr:
+            st.markdown(f"<div class='takeaway'><b>Trend:</b> your last 3 games average {tr['recent_3_avg_skill']:.0%} skill versus "
+                        f"{tr['earlier_avg_skill']:.0%} before that, so you are <b>{tr['direction']}</b>.</div>", unsafe_allow_html=True)
+        elif n >= 3:
+            st.caption("A skill trend appears once you have saved 6 games.")
+
+        games = mem.games()
+        sk = pd.DataFrame({"game": range(1, len(games) + 1), "skill": [g["skill"] for g in games],
+                           "opener": [g["opener"].upper() for g in games], "guesses": [g["n_guesses"] for g in games],
+                           "answer": [(g["answer"] or "unsolved").upper() for g in games]})
+        c1, c2 = st.columns(2, gap="large")
+        with c1:
+            st.markdown("**Skill per game**")
+            line = alt.Chart(sk).mark_line(point=True, color=GROUP_COLORS["RL assisted"]).encode(
+                x=alt.X("game:Q", title="game", axis=alt.Axis(tickMinStep=1)),
+                y=alt.Y("skill:Q", scale=alt.Scale(domain=[0, 1]), axis=alt.Axis(format="%"), title="skill"),
+                tooltip=["game", "answer", "opener", "guesses", alt.Tooltip("skill:Q", format=".0%")])
+            st.altair_chart(line.properties(height=240), width="stretch")
+        with c2:
+            st.markdown("**Guess quality by guess number** (1 = perfect)")
+            rows = [(f"Guess {s_['guess_number']}  ({s_['n']} graded)", s_["avg_efficiency"],
+                     GREEN if s_["avg_efficiency"] >= 0.9 else YELLOW if s_["avg_efficiency"] >= 0.75 else "#c0504d")
+                    for s_ in prof["by_guess_number"]]
+            st.markdown(hbars(rows, 0.0, 1.0, label_w="9.5rem"), unsafe_allow_html=True)
+            if prof["weakest_guess_number"]:
+                st.caption(f"Your weakest position so far is guess {prof['weakest_guess_number']} (based on at least 3 graded guesses).")
+
+        c3, c4 = st.columns(2, gap="large")
+        with c3:
+            st.markdown("**Your openers**")
+            st.dataframe(pd.DataFrame([{"opener": o["word"].upper(), "games": o["games"], "avg quality": o["avg_efficiency"]}
+                                       for o in prof["openers"]]), hide_index=True, width="stretch",
+                         column_config={"avg quality": st.column_config.ProgressColumn("avg quality", min_value=0.0, max_value=1.0, format="%.2f")})
+        with c4:
+            st.markdown("**Recent games**")
+            st.dataframe(pd.DataFrame([{"date": r["date"], "answer": (r["answer"] or "unsolved").upper(), "guesses": r["guesses"],
+                                        "solver": r["solver_guesses"], "skill": f"{r['skill']:.0%}", "luck": f"{r['luck_bits']:+.1f}"}
+                                       for r in reversed(prof["recent_games"])]), hide_index=True, width="stretch")
+        if prof["weak_words_played_more_than_once"]:
+            st.markdown("**Weak words you repeat:** " + ", ".join(f"{w['word'].upper()} (x{w['times']})" for w in prof["weak_words_played_more_than_once"]))
+        st.caption("Ask the coach about these on the Coach report tab, for example *What patterns do you see across my saved games?*")
+
+    with st.expander("Your data and privacy"):
+        st.markdown(f"Saved games live in `{default_path()}` on the machine running this app. Nothing is uploaded unless you ask the "
+                    "coach a question or write an AI summary, in which case the relevant statistics are sent to the Anthropic API.")
+        if prof:
+            st.download_button("⬇️ Download my history (JSON)", data=default_path().read_text(), file_name="player_history.json",
+                               mime="application/json")
+            st.checkbox("I understand this permanently deletes all saved games", key="confirm_clear")
+            st.button("🗑️ Delete my history", on_click=clear_history_cb, disabled=not st.session_state.get("confirm_clear"))
+
+# ==============================================================================================
+# TAB 4 - watch solvers play a word
 # ==============================================================================================
 diff_df, diff_rep = load_difficulty()
 
@@ -682,7 +843,7 @@ with tab_watch:
     st.caption("“left” = answers still possible after that guess · “bits” = information that guess revealed.")
 
 # ==============================================================================================
-# TAB 4 - results
+# TAB 5 - results
 # ==============================================================================================
 with tab_results:
     ev = load_eval()
@@ -772,7 +933,7 @@ with tab_results:
             )
 
 # ==============================================================================================
-# TAB 5 - difficulty analysis
+# TAB 6 - difficulty analysis
 # ==============================================================================================
 with tab_insights:
     if diff_df is None:
@@ -885,7 +1046,7 @@ with tab_insights:
         st.caption("Difficulty is measured for these solvers, not for human players. Humans use word familiarity and intuition that this analysis doesn't model.")
 
 # ==============================================================================================
-# TAB 6 - how it works
+# TAB 7 - how it works
 # ==============================================================================================
 with tab_about:
     st.subheader("How it works")
@@ -914,7 +1075,9 @@ with tab_about:
     st.markdown(
         "- **Solve a game / Watch a word** run the trained solvers live.\n"
         "- **Coach report** grades each of your guesses by information gained (skill) versus what the feedback happened to give (luck). "
-        "**Ask the coach** adds a Claude agent that answers questions by calling those same functions as tools.\n"
+        "**Ask the coach** adds a Claude agent that answers questions by calling those same functions as tools. "
+        "**AI coach summary** has Claude write the narrative from those facts, then code checks every figure and word it cites. "
+        "**My history** is the coach's memory: grades of games you saved, computed by code and kept in a local file you control.\n"
         "- **Results** come from `results/eval_all.csv`, every solver playing every answer.\n"
         "- **Why words are hard** comes from `scripts/difficulty.py`, which regresses each word's difficulty on interpretable features."
     )

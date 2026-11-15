@@ -17,6 +17,7 @@ import pandas as pd
 
 from src.coach import analyze
 from src.feedback import decode, encode
+from src.memory import PlayerMemory
 from src.solvers.entropy import EntropySolver, entropy_scores
 
 _AFTER_TURN = {
@@ -79,6 +80,19 @@ TOOL_SCHEMAS: list[dict[str, Any]] = [
         },
     },
     {
+        "name": "get_player_history",
+        "description": "The player's saved history across past games (memory): number of games, average skill and luck, how often "
+                       "they solve, their usual openers and how good each is, which guess number they play worst, weak words they "
+                       "repeat, a skill trend (only with 6+ games) and their most recent games. Use it for questions about patterns, "
+                       "progress or habits. The statistics are computed from games the player chose to save; say how many games "
+                       "they are based on and avoid conclusions from fewer than 3 games.",
+        "input_schema": {
+            "type": "object",
+            "properties": {"last_n": {"type": "integer", "description": "How many recent games to list (1-10, default 5)."}},
+            "additionalProperties": False,
+        },
+    },
+    {
         "name": "word_difficulty",
         "description": "How hard is a word for the solvers, and why? Returns its average guesses, difficulty rank out of all "
                        "answers, look-alike cluster (e.g. _ATCH with the other words in it) and letter-rarity features.",
@@ -99,8 +113,10 @@ def _r(x: float, nd: int = 3) -> float:
 class CoachTools:
     """Executes the coach's tool calls against one game."""
 
-    def __init__(self, solver: EntropySolver, history: list[tuple[str, str]], difficulty: pd.DataFrame | None = None):
+    def __init__(self, solver: EntropySolver, history: list[tuple[str, str]], difficulty: pd.DataFrame | None = None,
+                 memory: PlayerMemory | None = None):
         self.s = solver
+        self.memory = memory
         self.history = [tuple(x) for x in history]
         self.difficulty = difficulty
         self._answers = set(solver.answers)
@@ -184,6 +200,16 @@ class CoachTools:
         gs = self.s.play(ai, max_turns=10)
         return {"answer": a, "guesses_needed": len(gs),
                 "game": [{"word": self.s.guesses[g], "pattern": decode(int(self.s.M[g, ai]))} for g in gs]}
+
+    def get_player_history(self, last_n: Any = 5) -> dict:
+        last_n = 5 if last_n is None else last_n
+        if isinstance(last_n, bool) or not isinstance(last_n, int) or not 1 <= last_n <= 10:
+            raise ValueError("last_n must be an integer from 1 to 10")
+        prof = self.memory.profile(last_n) if self.memory else None
+        if prof is None:
+            return {"games_saved": 0, "note": "No games have been saved yet, so there is no history to draw on. "
+                                              "The player can save a finished game from the Coach report tab."}
+        return prof
 
     def word_difficulty(self, word: Any) -> dict:
         w = self._word(word)

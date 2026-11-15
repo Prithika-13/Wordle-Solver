@@ -55,12 +55,13 @@ On all 2,309 answers the entropy solver averages **3.463** (opener `soare`, 100%
 
 ## Interactive dashboard
 
-`streamlit run app/streamlit_app.py` opens **Wordle Solver Lab** with six tabs:
+`streamlit run app/streamlit_app.py` opens **Wordle Solver Lab** with seven tabs:
 
 | Tab | What it does |
 |---|---|
 | 🎮 Solve a game | Enter your real guesses and colours (click a square to cycle gray/yellow/green). See what all four solvers would play next, with expected bits. |
 | 🎓 Coach report | Grades every guess of your game (or a pasted one): **skill** (was it a good question?) versus **luck** (was the feedback kind?), with the best alternative for each guess and a replay of the entropy solver on the same answer. |
+| 📈 My history | The coach's memory: the games you saved, with your average skill and luck, skill trend, openers, weakest guess number and repeated weak words. Download or delete it any time. |
 | 🔎 Watch a word | Pick any answer and watch every solver play it side by side, with the information each guess revealed. |
 | 📊 Results | Held-out comparison, guess distribution and the RL learning curves. |
 | 🧠 Why words are hard | The difficulty analysis below, a top-20 table and a lookup for any word. |
@@ -68,6 +69,8 @@ On all 2,309 answers the entropy solver averages **3.463** (opener `soare`, 100%
 
 ![play](docs/ui_play.png)
 ![coach](docs/ui_coach.png)
+![history](docs/ui_history.png)
+*(The history screenshot uses demo games played by a script, to show the layout.)*
 ![results](docs/ui_results.png)
 ![insights](docs/ui_insights.png)
 
@@ -95,6 +98,7 @@ answer comes with a collapsible panel showing the tool calls and their raw outpu
 | `best_guesses` | top guesses by expected information at a position |
 | `remaining_answers` | the candidate filter: how many and which answers are still possible |
 | `solve_with_entropy_solver` | a full entropy-solver game against a given answer |
+| `get_player_history` | the memory below: habits and progress across saved games |
 | `word_difficulty` | the difficulty table from the analysis above |
 
 - **Agent loop** (`src/coach_agent.py`): a manual tool-use loop on the Anthropic SDK. All tool results of a
@@ -106,10 +110,44 @@ answer comes with a collapsible panel showing the tool calls and their raw outpu
   startup, and an exported `ANTHROPIC_API_KEY` takes priority), or use a Streamlit secret, or paste a key
   into the tab; a pasted key is kept in memory for that browser session only. Without a key the section explains this and
   the rest of the app works unchanged. Your question and the tool results are sent to the Anthropic API.
-- **Testing:** the tools and the loop are unit-tested against a scripted fake client (tool-result message
-  format, error handling, request parameters, history). I could not call the live API from the build
+- **Testing:** the tools, the loop, the summary and its grounding check are unit-tested against a scripted fake client (tool-result message
+  format, error handling, request parameters, history, retry on ungrounded figures). I could not call the live API from the build
   environment, so the end-to-end behaviour with a real model is untested; try a few questions and check the
   tool panel against the report above.
+
+## AI coach summary (LLM-written, programmatically verified)
+
+Press **✍️ Write AI summary** in the Coach tab and Claude writes a short, personal summary: a headline, what went
+well, what to improve and one drill. It is generated as **structured output** (a fixed JSON schema, validated with
+Pydantic) from facts that code has already computed. Nothing is calculated by the model, and a checker
+(`src/coach_summary.py`) then verifies the result:
+
+- every **figure** it cites must exist in the facts (allowing honest rounding, e.g. 5.885 written as 5.89, and 0.71 written as 71%);
+- every **capitalised word** must be a word from the game or the solver's analysis;
+- if something fails, the model is shown the problems and asked **once** to rewrite; anything still unverified is
+  shown to you as a warning instead of being hidden.
+
+Known limits of the check: integers 0-10 are always allowed (they are mostly ordinals such as "guess 3"), and it
+verifies that a figure exists in the facts, not that it is attached to the right guess. The template verdict above
+the card is kept as a deterministic fallback and works without an API key.
+
+## Memory: the coach remembers your games
+
+Press **💾 Save to my history** on a finished game (solved, or all six guesses used; example games can't be
+saved) and `src/memory.py` stores that game's grades. The coach then knows your habits across games, both on
+the **My history** tab and through the `get_player_history` tool that Ask the coach and the AI summary can use.
+
+- **What is stored:** only facts computed by the grader (guesses, colours, bits, skill, luck, ratings), never
+  AI-written text. The coach therefore can't "remember" something that didn't happen, and stored text can't
+  carry injected instructions.
+- **Where:** a plain JSON file, `data/player_history.json` by default (git-ignored; override with
+  `WORDLE_MEMORY_PATH`). Saving is explicit and idempotent (the same game is never stored twice), writes are
+  atomic, and an unreadable file is kept as `*.corrupt.json` instead of being overwritten.
+- **What it computes:** games saved, solve rate, average skill, luck and guesses, a skill trend (only from 6
+  games), openers and how good each is, average quality per guess number, repeated weak words and recent games.
+  The coach is instructed to say how many games a pattern rests on and not to call anything a habit from fewer
+  than 3 games.
+- **Control:** the tab has a JSON download and a delete button that needs a confirmation tick.
 
 ## Why are some words hard? (difficulty analysis)
 
@@ -145,13 +183,15 @@ src/
   coach.py         per-guess skill / luck grading of a game
   coach_tools.py   the 6 tools the coach LLM can call (pure, tested without an LLM)
   coach_agent.py   Claude tool-use loop behind "Ask the coach"
+  coach_summary.py LLM-written summary (structured output) + grounding check
+  memory.py        player memory: saved games and the statistics computed from them
   env.py           Gymnasium environment
   evaluate.py      run solvers over all answers
   solvers/         random, frequency, entropy, rl_agent
 scripts/
   train_rl.py      PPO training    compare.py   held-out comparison    plots.py   figures
   difficulty.py    why are some words hard?  (results/difficulty.csv, difficulty_report.json)
-app/streamlit_app.py   the 6-tab dashboard
+app/streamlit_app.py   the 7-tab dashboard
 tests/             pytest suite (feedback edge cases, solvers, env)
 results/           CSVs, figures, trained policies (*.pt)
 ```

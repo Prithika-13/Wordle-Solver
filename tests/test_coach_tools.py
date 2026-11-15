@@ -26,7 +26,7 @@ def call(tools, name, **kw):
 
 def test_schemas_are_valid_and_complete():
     names = [t["name"] for t in TOOL_SCHEMAS]
-    assert len(names) == len(set(names)) == 6
+    assert len(names) == len(set(names)) == 7
     for t in TOOL_SCHEMAS:
         assert t["input_schema"]["type"] == "object" and t["input_schema"]["additionalProperties"] is False
         assert t["description"] and all(r in t["input_schema"]["properties"] for r in t["input_schema"].get("required", []))
@@ -81,3 +81,20 @@ def test_solver_and_difficulty_tools(solver, diff):
 def test_bad_input_becomes_error_result_never_raises(solver, diff, name, kw):
     out, err = CoachTools(solver, GAME, diff).run(name, kw)
     assert err is True and "error" in json.loads(out)
+
+
+def test_get_player_history_tool(solver, tmp_path):
+    from src.coach import analyze
+    from src.memory import PlayerMemory
+
+    t_none = CoachTools(solver, GAME)  # no memory configured
+    out, err = call(t_none, "get_player_history")
+    assert not err and out["games_saved"] == 0 and "No games" in out["note"]
+
+    mem = PlayerMemory(tmp_path / "h.json")
+    t = CoachTools(solver, GAME, memory=mem)
+    assert call(t, "get_player_history")[0]["games_saved"] == 0
+    mem.save_game(analyze(solver, GAME))
+    out, err = call(t, "get_player_history", last_n=1)
+    assert not err and out["games_saved"] == 1 and out["openers"][0]["word"] == "soare" and len(out["recent_games"]) == 1
+    assert call(t, "get_player_history", last_n=99)[1] is True

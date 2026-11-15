@@ -5,3 +5,5 @@ data/feedback_matrix.npy
 logs/
 .env
 .streamlit/secrets.toml
+data/player_history*.json
+data/*.tmp

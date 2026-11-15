@@ -8,7 +8,7 @@ APP = str(Path(__file__).resolve().parent.parent / "app" / "streamlit_app.py")
 def test_app_runs_without_exception():
     at = AppTest.from_file(APP, default_timeout=180).run()
     assert not at.exception, at.exception
-    assert len(at.tabs) == 6
+    assert len(at.tabs) == 7
 
 
 def test_add_guess_updates_state():
@@ -99,3 +99,116 @@ def test_ask_coach_api_error_is_shown_not_raised(monkeypatch):
     assert not at.exception, at.exception
     assert at.error and "RuntimeError" in at.error[0].value
     assert at.session_state.coach_chat == []
+
+
+# ----------------------------------------------------------------------------------------------
+# memory + AI summary flows
+# ----------------------------------------------------------------------------------------------
+def _game_text(words, answer):
+    from src.feedback import decode, feedback
+
+    return "\n".join(f"{w} {decode(feedback(w, answer))}" for w in words)
+
+
+PASTED = _game_text(["funny", "bacon", "stove", "poker", "joker"], "joker")
+
+
+def _paste_and_analyse(at, text=PASTED):
+    at.text_area(key="coach_text").set_value(text).run()
+    at.button[[b.label for b in at.button].index("Analyse pasted game")].click().run()
+    assert not at.exception, at.exception
+
+
+def _btn(at, label):
+    return at.button[[b.label for b in at.button].index(label)]
+
+
+def test_save_game_to_memory_and_history_tab(monkeypatch, tmp_path):
+    import json
+
+    mem = tmp_path / "h.json"
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(mem))
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _paste_and_analyse(at)
+    save = _btn(at, "💾 Save to my history")
+    assert not save.disabled
+    save.click().run()
+    assert not at.exception, at.exception
+    games = json.loads(mem.read_text())["games"]
+    assert len(games) == 1 and games[0]["answer"] == "joker" and games[0]["source"] == "pasted" and games[0]["opener"] == "funny"
+    assert _btn(at, "💾 Save to my history").disabled  # same game can't be saved twice
+    assert any("Games saved" == m.label and m.value == "1" for m in at.metric)  # the History tab sees it
+
+
+def test_examples_and_unfinished_games_cannot_be_saved(monkeypatch, tmp_path):
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(tmp_path / "h.json"))
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _btn(at, "Try: A rough game").click().run()
+    assert _btn(at, "💾 Save to my history").disabled
+    _paste_and_analyse(at, _game_text(["funny", "bacon"], "joker"))  # unfinished
+    assert _btn(at, "💾 Save to my history").disabled
+    assert not (tmp_path / "h.json").exists()
+
+
+def _summary_client(payload):
+    import json
+    from types import SimpleNamespace as NS
+
+    resp = NS(content=[NS(type="text", text=json.dumps(payload))], stop_reason="end_turn", usage=NS(input_tokens=10, output_tokens=7))
+    return NS(messages=NS(create=lambda **kw: resp), beta=NS(messages=NS(create=lambda **kw: resp)))
+
+
+GOOD_SUMMARY = dict(headline="A weak opener cost you, but you solved it.", went_well=["POKER turned a bad start around."],
+                    to_improve=["FUNNY gave 3.33 bits while SOARE gives 5.89."], next_drill="Open with SOARE in your next game.")
+
+
+def test_ai_summary_is_written_and_verified(monkeypatch, tmp_path):
+    import src.coach_agent as ca
+
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(tmp_path / "h.json"))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+    monkeypatch.setattr(ca, "make_client", lambda key=None: _summary_client(GOOD_SUMMARY))
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _btn(at, "Try: A rough game").click().run()
+    _btn(at, "✍️ Write AI summary").click().run()
+    assert not at.exception, at.exception
+    res = next(iter(at.session_state.coach_summaries.values()))
+    assert res.verified and res.summary.headline.startswith("A weak opener")
+    assert any("checked against the report" in c.value for c in at.caption)
+
+
+def test_ai_summary_flags_invented_figure(monkeypatch, tmp_path):
+    import src.coach_agent as ca
+
+    bad = dict(GOOD_SUMMARY, to_improve=["FUNNY gave 9.99 bits."])
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(tmp_path / "h.json"))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+    monkeypatch.setattr(ca, "make_client", lambda key=None: _summary_client(bad))
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _btn(at, "Try: A rough game").click().run()
+    _btn(at, "✍️ Write AI summary").click().run()
+    assert not at.exception, at.exception
+    assert any("Could not verify" in w.value and "9.99" in w.value for w in at.warning)
+
+
+def test_ai_summary_disabled_without_key(monkeypatch, tmp_path):
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(tmp_path / "h.json"))
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_AUTH_TOKEN", raising=False)
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _btn(at, "Try: A rough game").click().run()
+    assert _btn(at, "✍️ Write AI summary").disabled
+
+
+def test_history_delete_requires_confirmation(monkeypatch, tmp_path):
+    mem = tmp_path / "h.json"
+    monkeypatch.setenv("WORDLE_MEMORY_PATH", str(mem))
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    _paste_and_analyse(at)
+    _btn(at, "💾 Save to my history").click().run()
+    assert mem.exists()
+    assert _btn(at, "🗑️ Delete my history").disabled
+    at.checkbox(key="confirm_clear").check().run()
+    _btn(at, "🗑️ Delete my history").click().run()
+    assert not at.exception, at.exception
+    assert not mem.exists()
