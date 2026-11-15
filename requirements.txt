@@ -8,3 +8,4 @@ streamlit>=1.50
 scikit-learn>=1.4
 scipy>=1.11
 altair>=5.0
+anthropic>=2.8

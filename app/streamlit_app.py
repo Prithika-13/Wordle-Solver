@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 import sys
 from pathlib import Path
@@ -19,6 +20,8 @@ import streamlit as st
 
 from src.coach import analyze as coach_analyze
 from src.coach import parse_game
+from src.coach_agent import DEFAULT_MODEL, ask_coach, make_client
+from src.coach_tools import CoachTools
 from src.feedback import ALL_GREEN, decode, encode, feedback as fb_code
 from src.solvers.entropy import EntropySolver, entropy_scores
 from src.solvers.heuristic import FrequencyHeuristic
@@ -407,6 +410,103 @@ st.session_state.setdefault("coach_game", None)
 st.session_state.setdefault("coach_err", None)
 st.session_state.setdefault("coach_text", "")
 
+SUGGESTED_QUESTIONS = [
+    "Which of my guesses cost me the most, and what should I have played instead?",
+    "Was I unlucky, or did I actually play badly?",
+    "What is the best opening word and why?",
+    "How would the entropy solver have played my answer?",
+]
+
+
+def llm_key() -> str | None:
+    """API key from the session box, the environment, or Streamlit secrets (never stored on disk)."""
+    key = st.session_state.get("llm_key") or os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        try:
+            key = st.secrets.get("ANTHROPIC_API_KEY")
+        except Exception:
+            key = None
+    return key or None
+
+
+def coach_ask_later(q: str):
+    st.session_state.coach_pending = q
+
+
+def llm_error_message(e: Exception) -> str:
+    try:
+        import anthropic
+    except ImportError:
+        return "The `anthropic` package isn't installed. Run `pip install anthropic`."
+    if isinstance(e, anthropic.AuthenticationError):
+        return "The API key was rejected. Check it and try again."
+    if isinstance(e, anthropic.PermissionDeniedError):
+        return "This API key doesn't have access to the model."
+    if isinstance(e, anthropic.RateLimitError):
+        return "Rate limited by the API. Wait a moment and try again."
+    if isinstance(e, anthropic.APIConnectionError):
+        return "Couldn't reach the API. Check your network connection."
+    if isinstance(e, anthropic.APIStatusError):
+        return f"The API returned an error ({e.status_code}): {e.message}"
+    return f"Something went wrong calling the model ({type(e).__name__})."
+
+
+def render_tool_calls(calls: list[dict]):
+    with st.expander(f"🔧 What the coach looked at ({len(calls)} tool call{'s' if len(calls) != 1 else ''})"):
+        st.caption("Every number in the answer comes from these exact tool results, not from the model's memory.")
+        for c in calls:
+            args = ", ".join(f"{k}={v!r}" for k, v in c["input"].items())
+            st.markdown(f"**{c['name']}**({args})" + ("  ⚠️ error" if c["is_error"] else ""))
+            st.json(c["output"], expanded=False)
+
+
+def render_coach_chat(game: list[tuple[str, str]]):
+    st.markdown("<div style='height:1.2rem'></div>", unsafe_allow_html=True)
+    st.markdown("#### 💬 Ask the coach")
+    st.caption(
+        "A Claude agent answers your questions by calling the grader and solver as tools. It explains; the numbers come from the tools. "
+        "Your question and the game's analysis are sent to the Anthropic API."
+    )
+    key = llm_key()
+    if st.session_state.get("coach_chat_game") != tuple(game):  # new game -> old answers would be stale
+        st.session_state.coach_chat = []
+        st.session_state.coach_chat_game = tuple(game)
+    if not key and not os.environ.get("ANTHROPIC_AUTH_TOKEN"):
+        st.info("To enable this, set the `ANTHROPIC_API_KEY` environment variable (or Streamlit secret) before launching the app, "
+                "or paste a key below for this browser session only.")
+        st.text_input("Anthropic API key (kept in memory for this session, never saved)", type="password", key="llm_key")
+        return
+    st.caption(f"Model: `{DEFAULT_MODEL}`")
+
+    chat = st.session_state.setdefault("coach_chat", [])
+    for m in chat:
+        with st.chat_message(m["role"]):
+            st.markdown(m["content"])
+            if m.get("tools"):
+                render_tool_calls(m["tools"])
+    if not chat:
+        qs = SUGGESTED_QUESTIONS if game else SUGGESTED_QUESTIONS[2:3]
+        cols = st.columns(len(qs))
+        for i, (col, q) in enumerate(zip(cols, qs)):
+            col.button(q, key=f"sq_{i}", on_click=coach_ask_later, args=(q,), width="stretch")
+
+    pending = st.session_state.pop("coach_pending", None)
+    q = st.chat_input("Ask about your game...") or pending
+    if not q:
+        return
+    history = [{"role": m["role"], "content": m["content"]} for m in chat]
+    try:
+        with st.spinner("The coach is checking the numbers..."):
+            tools = CoachTools(ENT, game, load_difficulty()[0])
+            res = ask_coach(make_client(key), tools, q, history)
+    except Exception as e:  # network / auth / API errors are shown, not raised
+        st.error(llm_error_message(e))
+        return
+    chat.append({"role": "user", "content": q})
+    chat.append({"role": "assistant", "content": res.text, "tools": res.tool_calls})
+    st.rerun()
+
+
 with tab_coach:
     st.subheader("Coach report")
     st.caption("Every guess is graded against the best possible guess. **Skill** = did you ask a good question? **Luck** = was the answer kind to you?")
@@ -515,6 +615,8 @@ with tab_coach:
             "- A guess that was still a possible answer is never marked down when two or fewer words remain.\n"
             "- Limits: the grader assumes every remaining word is equally likely, so it can't judge guesses by word familiarity."
         )
+
+    render_coach_chat(game)
 
 # ==============================================================================================
 # TAB 3 - watch solvers play a word
@@ -811,7 +913,8 @@ with tab_about:
     st.markdown("#### Where this app gets its numbers")
     st.markdown(
         "- **Solve a game / Watch a word** run the trained solvers live.\n"
-        "- **Coach report** grades each of your guesses by information gained (skill) versus what the feedback happened to give (luck).\n"
+        "- **Coach report** grades each of your guesses by information gained (skill) versus what the feedback happened to give (luck). "
+        "**Ask the coach** adds a Claude agent that answers questions by calling those same functions as tools.\n"
         "- **Results** come from `results/eval_all.csv`, every solver playing every answer.\n"
         "- **Why words are hard** comes from `scripts/difficulty.py`, which regresses each word's difficulty on interpretable features."
     )

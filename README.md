@@ -81,6 +81,35 @@ guess), and it was also unlucky (-2.15 bits). Pass a finished game and the repor
 entropy solver on the same answer. Logic lives in `src/coach.py` (unit-tested); limits: it assumes
 all remaining words are equally likely, so it can't judge guesses by word familiarity.
 
+## Ask the coach (LLM with tool calling)
+
+The Coach tab ends with **Ask the coach**, a Claude agent that answers questions such as *"Was I
+unlucky, or did I play badly?"* or *"Why is WATCH so hard?"*. The LLM does **no arithmetic and has no
+memory of the game**: it decides which tool to call, reads the exact result and explains it. Every
+answer comes with a collapsible panel showing the tool calls and their raw outputs.
+
+| Tool (`src/coach_tools.py`) | Wraps |
+|---|---|
+| `get_game_report` | the coach grader (`src/coach.py`): per-guess skill, luck, ratings, solver replay |
+| `score_guess` | entropy scoring: how good is any word at any position of the game |
+| `best_guesses` | top guesses by expected information at a position |
+| `remaining_answers` | the candidate filter: how many and which answers are still possible |
+| `solve_with_entropy_solver` | a full entropy-solver game against a given answer |
+| `word_difficulty` | the difficulty table from the analysis above |
+
+- **Agent loop** (`src/coach_agent.py`): a manual tool-use loop on the Anthropic SDK. All tool results of a
+  turn go back in one message, bad tool input comes back as an `is_error` result instead of crashing, and
+  the loop is capped at 8 steps. Refusals, truncated answers and API errors are handled and shown.
+- **Model:** `claude-opus-5-5` by default (override with `COACH_MODEL`). The request opts into the API's
+  server-side refusal fallback for models that support it.
+- **Setup:** set `ANTHROPIC_API_KEY` before launching the app (or a Streamlit secret), or paste a key into
+  the tab; it is kept in memory for that browser session only. Without a key the section explains this and
+  the rest of the app works unchanged. Your question and the tool results are sent to the Anthropic API.
+- **Testing:** the tools and the loop are unit-tested against a scripted fake client (tool-result message
+  format, error handling, request parameters, history). I could not call the live API from the build
+  environment, so the end-to-end behaviour with a real model is untested; try a few questions and check the
+  tool panel against the report above.
+
 ## Why are some words hard? (difficulty analysis)
 
 `python scripts/difficulty.py` measures how many guesses each of the 2,309 answers needs
@@ -113,6 +142,8 @@ src/
   features.py      per-word features + shortlist for the RL agent
   difficulty.py    word-difficulty features (look-alike clusters, letter rarity, ...)
   coach.py         per-guess skill / luck grading of a game
+  coach_tools.py   the 6 tools the coach LLM can call (pure, tested without an LLM)
+  coach_agent.py   Claude tool-use loop behind "Ask the coach"
   env.py           Gymnasium environment
   evaluate.py      run solvers over all answers
   solvers/         random, frequency, entropy, rl_agent
