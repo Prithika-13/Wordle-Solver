@@ -97,3 +97,27 @@ def test_refusal_and_max_tokens_and_step_cap(tools):
 
 def test_default_model_is_opus_5_5():
     assert coach_agent.DEFAULT_MODEL in {"claude-opus-5-5"} or "COACH_MODEL" in __import__("os").environ
+
+
+def test_load_env_reads_file_but_real_env_wins(tmp_path, monkeypatch):
+    env = tmp_path / ".env"
+    env.write_text("ANTHROPIC_API_KEY=from-file\nCOACH_MODEL=claude-test\nEXTRA_FLAG=1\n")
+    monkeypatch.delenv("WORDLE_NO_DOTENV", raising=False)
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.setenv("COACH_MODEL", "already-set")
+    assert coach_agent.load_env(env) is True
+    import os
+    assert os.environ["ANTHROPIC_API_KEY"] == "from-file"   # read from the file
+    assert os.environ["COACH_MODEL"] == "already-set"        # an exported variable takes priority
+    monkeypatch.delenv("ANTHROPIC_API_KEY"); monkeypatch.delenv("EXTRA_FLAG")
+
+
+def test_load_env_missing_file_and_opt_out(tmp_path, monkeypatch):
+    monkeypatch.delenv("WORDLE_NO_DOTENV", raising=False)
+    assert coach_agent.load_env(tmp_path / "nope.env") is False
+    (tmp_path / ".env").write_text("ANTHROPIC_API_KEY=x\n")
+    monkeypatch.setenv("WORDLE_NO_DOTENV", "1")
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    assert coach_agent.load_env(tmp_path / ".env") is False
+    import os
+    assert "ANTHROPIC_API_KEY" not in os.environ

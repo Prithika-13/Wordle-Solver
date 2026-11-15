@@ -3,3 +3,5 @@ __pycache__/
 .pytest_cache/
 data/feedback_matrix.npy
 logs/
+.env
+.streamlit/secrets.toml

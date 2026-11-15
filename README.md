@@ -102,8 +102,9 @@ answer comes with a collapsible panel showing the tool calls and their raw outpu
   the loop is capped at 8 steps. Refusals, truncated answers and API errors are handled and shown.
 - **Model:** `claude-opus-5-5` by default (override with `COACH_MODEL`). The request opts into the API's
   server-side refusal fallback for models that support it.
-- **Setup:** set `ANTHROPIC_API_KEY` before launching the app (or a Streamlit secret), or paste a key into
-  the tab; it is kept in memory for that browser session only. Without a key the section explains this and
+- **Setup:** put the key in a git-ignored `.env` file (copy `.env.example` to `.env`; the app loads it at
+  startup, and an exported `ANTHROPIC_API_KEY` takes priority), or use a Streamlit secret, or paste a key
+  into the tab; a pasted key is kept in memory for that browser session only. Without a key the section explains this and
   the rest of the app works unchanged. Your question and the tool results are sent to the Anthropic API.
 - **Testing:** the tools and the loop are unit-tested against a scripted fake client (tool-result message
   format, error handling, request parameters, history). I could not call the live API from the build

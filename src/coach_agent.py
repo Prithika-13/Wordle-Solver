@@ -10,9 +10,30 @@ from __future__ import annotations
 import json
 import os
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 from src.coach_tools import TOOL_SCHEMAS, CoachTools
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def load_env(path: str | Path | None = None) -> bool:
+    """Load KEY=value pairs from a .env file (default: <repo>/.env) into the environment.
+
+    Variables that are already set win over the file, so `export ANTHROPIC_API_KEY=...` still takes priority.
+    Returns True if a file was read. Does nothing if python-dotenv isn't installed or WORDLE_NO_DOTENV is set.
+    """
+    if os.environ.get("WORDLE_NO_DOTENV"):
+        return False
+    try:
+        from dotenv import load_dotenv
+    except ImportError:
+        return False
+    return bool(load_dotenv(Path(path) if path else ROOT / ".env", override=False))
+
+
+load_env()  # before DEFAULT_MODEL, so COACH_MODEL can be set in .env too
 
 DEFAULT_MODEL = os.environ.get("COACH_MODEL", "claude-opus-5-5")
 # Server-side fallback if a safety classifier declines a request (opt-in per the API docs for these models).

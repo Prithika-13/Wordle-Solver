@@ -9,3 +9,4 @@ scikit-learn>=1.4
 scipy>=1.11
 altair>=5.0
 anthropic>=2.8
+python-dotenv>=1.0
